@@ -1028,44 +1028,35 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""ChooseFirstHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""994e835a-3073-431b-98de-ba7207d03250"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""ChooseSecondHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""eacaa702-a696-49cc-9e54-38ab3afb44fc"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""ChooseThirdHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""6a878c98-8357-408b-ac6c-f2a4c96ab0bf"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""ChooseFourthHarp"",
-                    ""type"": ""Value"",
-                    ""id"": ""4982cf4a-5bb8-4f6b-8930-0d18409f46ce"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""PlaySong"",
                     ""type"": ""Button"",
-                    ""id"": ""564ffdf2-6526-48bf-b269-72e7b1cec74e"",
+                    ""id"": ""4982cf4a-5bb8-4f6b-8930-0d18409f46ce"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1076,7 +1067,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ab34d5d5-9aa2-43ff-8af9-552bb7cd90fc"",
-                    ""path"": ""<MidiDevice>/control000"",
+                    ""path"": ""<MidiDevice>/note048"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1098,7 +1089,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7361107f-4dd3-41bc-9e60-704dd5f77995"",
-                    ""path"": ""<MidiDevice>/control001"",
+                    ""path"": ""<MidiDevice>/note049"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1120,7 +1111,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3c063d2b-6c81-40ac-8137-fa69c655da9a"",
-                    ""path"": ""<MidiDevice>/control002"",
+                    ""path"": ""<MidiDevice>/note050"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1142,7 +1133,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""499aad59-93d4-4c3e-87f4-5ee55018fc55"",
-                    ""path"": ""<MidiDevice>/control003"",
+                    ""path"": ""<MidiDevice>/note051"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1160,28 +1151,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""ChooseFourthHarp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""543645bb-1cfe-4e5b-860b-aa7f37bb855b"",
-                    ""path"": ""<MidiDevice>/note094"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PlaySong"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0567cc03-2797-44cb-a2ef-dbc91303e68e"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PlaySong"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1190,7 +1159,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""id"": ""ff07dd6a-0150-420e-b331-216dd6ae0c0a"",
             ""actions"": [
                 {
-                    ""name"": ""Column1"",
+                    ""name"": ""Column 1"",
                     ""type"": ""Value"",
                     ""id"": ""e8274ae3-ceb1-4ab8-baf2-b4c305e1bf01"",
                     ""expectedControlType"": """",
@@ -1199,81 +1168,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Column2"",
-                    ""type"": ""Value"",
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
                     ""id"": ""5c059234-aea2-4424-b8d3-6387947113ca"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Column3"",
-                    ""type"": ""Value"",
-                    ""id"": ""dc35aaae-ccba-46bd-b9e5-796ef4ae1639"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Column4"",
-                    ""type"": ""Value"",
-                    ""id"": ""01470abf-cc55-4ced-a35a-f57fc4be9b43"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""F1"",
-                    ""type"": ""Value"",
-                    ""id"": ""8f7e46cf-dfeb-4cd1-863a-82fa7753864a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""F2"",
-                    ""type"": ""Value"",
-                    ""id"": ""69eabf8c-0e4a-4596-899a-69d6a1d1632d"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""F3"",
-                    ""type"": ""Value"",
-                    ""id"": ""64b96b6f-a659-4432-b233-3d66ef317a7a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""F4"",
-                    ""type"": ""Value"",
-                    ""id"": ""950d249b-e5ae-48f2-b216-5cef0da5e18b"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Play"",
-                    ""type"": ""Button"",
-                    ""id"": ""6dd05e47-5c70-4323-936d-581633c55145"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Stop"",
-                    ""type"": ""Button"",
-                    ""id"": ""b73ff76c-0365-4359-9b94-895df33ea4b4"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1287,336 +1184,142 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""path"": ""<MidiDevice>/control007"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Column1"",
+                    ""groups"": """",
+                    ""action"": ""Column 1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""80e44749-c59d-40a2-8e3e-f3bdabc10542"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""c9de7dc1-9fa9-468b-af6d-7672301dfd3a"",
+                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Column1"",
-                    ""isComposite"": true,
+                    ""action"": ""Column 1"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""6e60227c-29fc-4844-b030-bc685e4cd295"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""a318e6ce-638f-48f5-81be-6d4053ce147f"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
                     ""id"": ""7709417f-0016-4430-8a56-8564a5ad9dea"",
-                    ""path"": ""<MidiDevice>/control074"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Column2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""b733057b-28f5-49ef-a754-5a3c13f54fa4"",
-                    ""path"": ""1DAxis"",
+                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Column2"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""3e3199fc-9199-4b0a-803c-155615c1ea1b"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""dd4cd21b-a0b9-480b-a58f-af8bf92f3776"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6c6325db-e1e6-44ef-881f-42a274f72490"",
-                    ""path"": ""<MidiDevice>/control071"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Column3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""e6fbb6d7-c3b8-4b79-ab43-9234fc9e29cc"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Column3"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""10950353-a211-4da2-be1b-a89c5931c103"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""ffb78253-7b78-4814-b2e3-6dfadbbabb5d"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2a42702b-2b4e-4078-9764-9d219eebbb15"",
-                    ""path"": ""<MidiDevice>/control091"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Column4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""c5712b37-2592-4c3c-835d-0c5623e03447"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Column4"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""b000b14a-d932-4a65-8c46-edae1d37ee8c"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""19a56c27-b254-4efb-ade4-14822d226a9f"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Column4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""937708bc-b950-463f-b227-f345a8507a7f"",
-                    ""path"": ""<MidiDevice>/control000"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""F1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c507a588-bd49-4999-b5bb-cd5f732b36ae"",
-                    ""path"": ""<Keyboard>/z"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""F1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cd757a89-e7fe-4f3b-a08b-9f6aa03d8d32"",
-                    ""path"": ""<MidiDevice>/control001"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""F2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""abecae6e-2e5b-47a3-ad2f-82cc28acc11e"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""F2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a47ea944-947f-4aef-9439-d3532167e018"",
-                    ""path"": ""<MidiDevice>/control002"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""F3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c56059b7-d642-43a2-b5f3-bae5d0ee2858"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""F3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""aaba947c-d9d8-4691-a62c-bd16378b8f8a"",
-                    ""path"": ""<Keyboard>/v"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""F4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""efc6708e-e64d-4a46-95d5-89e16113ade1"",
-                    ""path"": ""<MidiDevice>/control003"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""F4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cd1aa9a0-e58c-4219-b724-0a9a1560aa8f"",
-                    ""path"": ""<MidiDevice>/note094"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Play"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""20195e2c-b2dc-4a0f-9b49-4c49a0a847f5"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Play"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6cf5d48c-c666-4ce0-94b4-45140035a807"",
-                    ""path"": ""<MidiDevice>/note093"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Stop"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d6f10c2a-fb64-47c9-943a-3080e56cbe97"",
-                    ""path"": ""<Keyboard>/backspace"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Stop"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""MainMenu"",
-            ""id"": ""ffc1acd2-dce7-40eb-93be-19a708a232d2"",
+            ""name"": ""SimonGame"",
+            ""id"": ""beb6c19b-262b-48d8-a818-3cf67693a7ba"",
             ""actions"": [
                 {
-                    ""name"": ""PlayGame"",
+                    ""name"": ""KeyC"",
                     ""type"": ""Button"",
-                    ""id"": ""f63e48a9-86cf-4814-a70a-1a6efda49881"",
+                    ""id"": ""07c001bf-1e95-457c-ac3d-d851902095ac"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Credits"",
+                    ""name"": ""KeyD"",
                     ""type"": ""Button"",
-                    ""id"": ""6c3d26a1-40dd-4c61-82d0-f1ba289a0953"",
+                    ""id"": ""65cbcd79-29e8-4e9f-9897-d86043d650f8"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""QuitGame"",
+                    ""name"": ""KeyE"",
                     ""type"": ""Button"",
-                    ""id"": ""c8c798b8-227f-49b6-aa51-3b46a291152a"",
+                    ""id"": ""56e822ac-a641-46ac-9e68-6913800c347b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyF"",
+                    ""type"": ""Button"",
+                    ""id"": ""03c859fe-1707-40fe-8b4a-25b4601a058b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyG"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e2a7d0c-8fd7-4197-8bc1-3bd43e77561a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyA"",
+                    ""type"": ""Button"",
+                    ""id"": ""f02c4cde-9fa8-4869-b5b0-54ce16b239eb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyB"",
+                    ""type"": ""Button"",
+                    ""id"": ""003ab427-5f23-4eba-8fac-2dc0c4be7c0c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyCS"",
+                    ""type"": ""Button"",
+                    ""id"": ""6cbbb070-b773-4f17-9537-36d23a25d3fa"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyDS"",
+                    ""type"": ""Button"",
+                    ""id"": ""dec473fb-911c-459f-af89-69b11c3f5268"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyFS"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f3abef9-cc92-4bad-a7b3-c72e9c56455d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyGS"",
+                    ""type"": ""Button"",
+                    ""id"": ""3148a39a-9825-4a84-acc0-643c09a22b56"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyAS"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae6a9803-4913-4538-aa3a-803acd64ac2b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1626,67 +1329,529 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""f1e0a4de-d198-43ea-b46d-b65f82b0cf4d"",
-                    ""path"": ""<MidiDevice>/note094"",
+                    ""id"": ""310682f9-e65c-467a-9984-d59828fca7f3"",
+                    ""path"": ""<MidiDevice>/note024"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayGame"",
+                    ""action"": ""KeyC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c81c1087-8194-4e32-84f6-d6a8ab9c50c0"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""id"": ""55ca795c-5828-4220-a3a6-d8f753b3fdcc"",
+                    ""path"": ""<MidiDevice>/note036"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayGame"",
+                    ""action"": ""KeyC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""121af440-2f07-4cf5-9d6e-ddab20618c00"",
-                    ""path"": ""<MidiDevice>/note095"",
+                    ""id"": ""2ff58cdc-ca88-489b-b36c-f29690a1f8ca"",
+                    ""path"": ""<MidiDevice>/note048"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Credits"",
+                    ""action"": ""KeyC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""11050057-97af-42a0-bdf4-5163136bb590"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""id"": ""00151d5e-94de-4068-9ad6-917b685b9c4a"",
+                    ""path"": ""<MidiDevice>/note060"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Credits"",
+                    ""action"": ""KeyC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""84c2aa6a-64af-45f6-a3e8-85f69bd17faa"",
-                    ""path"": ""<MidiDevice>/note093"",
+                    ""id"": ""fcce1dc2-30cf-42df-9762-6f7f25bb435e"",
+                    ""path"": ""<MidiDevice>/note026"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""QuitGame"",
+                    ""action"": ""KeyD"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bbdae239-722e-483a-94dc-74b1d5fd505c"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""eee05a42-35d6-404d-ad79-b83d11994574"",
+                    ""path"": ""<MidiDevice>/note038"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""QuitGame"",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71663a42-4b51-4c75-a123-44de66e01023"",
+                    ""path"": ""<MidiDevice>/note050"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13227a3a-79b3-4c9f-b9d3-c7e049b02a19"",
+                    ""path"": ""<MidiDevice>/note062"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96fe1e68-2396-4b37-9e23-2db943b9d844"",
+                    ""path"": ""<MidiDevice>/note028"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf207664-3928-40d7-95b7-0f95f5162802"",
+                    ""path"": ""<MidiDevice>/note040"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8f6975b5-335a-41fe-8463-91db7f0ae4c4"",
+                    ""path"": ""<MidiDevice>/note052"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84038dbb-8c39-4b6d-8bcb-dfe5d8a37ff1"",
+                    ""path"": ""<MidiDevice>/note064"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7701520-f777-4bfb-9356-a6dbb5c93890"",
+                    ""path"": ""<MidiDevice>/note029"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""053cb8a8-b290-4705-b459-8c7f856ded58"",
+                    ""path"": ""<MidiDevice>/note041"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""539e7ce2-5f36-4d1e-a522-f6b2dc531b17"",
+                    ""path"": ""<MidiDevice>/note053"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c1753e3-2df0-4006-bae6-ad71dcadd506"",
+                    ""path"": ""<MidiDevice>/note065"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d614ff2-41f7-40fd-9969-148ef6a4482a"",
+                    ""path"": ""<MidiDevice>/note031"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d27d9ac6-a870-439f-b5a1-f97ec01d4865"",
+                    ""path"": ""<MidiDevice>/note043"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a432665-7887-4271-8a61-92da7efcd34c"",
+                    ""path"": ""<MidiDevice>/note055"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2f8cbf0c-6033-4f29-be70-7cda260667a1"",
+                    ""path"": ""<MidiDevice>/note067"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""430482e2-0534-4c73-8b9e-a5da239afef3"",
+                    ""path"": ""<MidiDevice>/note033"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87bd9d61-7e0b-4a1a-88a8-855e7d34133a"",
+                    ""path"": ""<MidiDevice>/note045"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da119618-0b61-4ff1-b8ff-25c052780ff1"",
+                    ""path"": ""<MidiDevice>/note057"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f971342-51fa-4ecf-9cc3-74ed1e6b81fa"",
+                    ""path"": ""<MidiDevice>/note069"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8336db92-310b-4cf0-a84f-c29cb2f15079"",
+                    ""path"": ""<MidiDevice>/note035"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""67a10167-479b-46c4-b89f-469bfe36f2a2"",
+                    ""path"": ""<MidiDevice>/note047"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a985bca4-41e1-4fcb-9088-e5b0d610f886"",
+                    ""path"": ""<MidiDevice>/note059"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""530d2706-6624-4228-b332-1ba2ed365473"",
+                    ""path"": ""<MidiDevice>/note071"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f5b48ab-adf5-4cc5-82b7-e118ff1882e1"",
+                    ""path"": ""<MidiDevice>/note025"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5dc144f-6700-4f38-a7cb-8c8b336f8978"",
+                    ""path"": ""<MidiDevice>/note037"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9cdfa53f-7e10-45d0-aac1-aa5e606b10b2"",
+                    ""path"": ""<MidiDevice>/note049"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e451695e-8553-4d05-b2da-d40f9fa7f7ff"",
+                    ""path"": ""<MidiDevice>/note061"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""428d8a7e-c612-4acc-8f55-cab1c7cba10a"",
+                    ""path"": ""<MidiDevice>/note027"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd61b161-3362-4bf7-98b4-ad232129debe"",
+                    ""path"": ""<MidiDevice>/note039"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31ff30f1-8e67-4296-aa66-d080885bd2bd"",
+                    ""path"": ""<MidiDevice>/note051"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d95d2b54-29d9-4bcc-a595-1330c1117fdb"",
+                    ""path"": ""<MidiDevice>/note063"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9cc3eb5a-f372-43f4-9105-cd5150813d06"",
+                    ""path"": ""<MidiDevice>/note030"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""acc2356c-17e2-43a3-a9eb-8729062b31f0"",
+                    ""path"": ""<MidiDevice>/note042"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""02df25bf-6190-4825-a50e-933e77b7b57b"",
+                    ""path"": ""<MidiDevice>/note054"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d46744c8-e205-48cc-a6d5-22d21343f140"",
+                    ""path"": ""<MidiDevice>/note066"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""390b06c3-334c-4758-a7f9-f9bfa532225b"",
+                    ""path"": ""<MidiDevice>/note032"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a208793a-95ef-44c7-a983-953cddccb0ba"",
+                    ""path"": ""<MidiDevice>/note044"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""288ce390-ef7b-43ec-a235-11a60e7ae68d"",
+                    ""path"": ""<MidiDevice>/note056"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e76ff12e-3670-4d06-8bfc-9634428732d0"",
+                    ""path"": ""<MidiDevice>/note068"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0ad0141-8749-4c0c-ad86-f3ddb335697f"",
+                    ""path"": ""<MidiDevice>/note034"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""680d45b8-44ba-4619-9fd0-7645f8b8e09f"",
+                    ""path"": ""<MidiDevice>/note046"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58f22ccf-8ef2-4bd8-a5ec-5127e17641c4"",
+                    ""path"": ""<MidiDevice>/note058"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62182392-d3c8-4b74-9c55-598c1e31a2fa"",
+                    ""path"": ""<MidiDevice>/note070"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1786,24 +1951,24 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_ChooseHarp_ChooseSecondHarp = m_ChooseHarp.FindAction("ChooseSecondHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseThirdHarp = m_ChooseHarp.FindAction("ChooseThirdHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseFourthHarp = m_ChooseHarp.FindAction("ChooseFourthHarp", throwIfNotFound: true);
-        m_ChooseHarp_PlaySong = m_ChooseHarp.FindAction("PlaySong", throwIfNotFound: true);
         // GearsPuzzle
         m_GearsPuzzle = asset.FindActionMap("GearsPuzzle", throwIfNotFound: true);
-        m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column1", throwIfNotFound: true);
-        m_GearsPuzzle_Column2 = m_GearsPuzzle.FindAction("Column2", throwIfNotFound: true);
-        m_GearsPuzzle_Column3 = m_GearsPuzzle.FindAction("Column3", throwIfNotFound: true);
-        m_GearsPuzzle_Column4 = m_GearsPuzzle.FindAction("Column4", throwIfNotFound: true);
-        m_GearsPuzzle_F1 = m_GearsPuzzle.FindAction("F1", throwIfNotFound: true);
-        m_GearsPuzzle_F2 = m_GearsPuzzle.FindAction("F2", throwIfNotFound: true);
-        m_GearsPuzzle_F3 = m_GearsPuzzle.FindAction("F3", throwIfNotFound: true);
-        m_GearsPuzzle_F4 = m_GearsPuzzle.FindAction("F4", throwIfNotFound: true);
-        m_GearsPuzzle_Play = m_GearsPuzzle.FindAction("Play", throwIfNotFound: true);
-        m_GearsPuzzle_Stop = m_GearsPuzzle.FindAction("Stop", throwIfNotFound: true);
-        // MainMenu
-        m_MainMenu = asset.FindActionMap("MainMenu", throwIfNotFound: true);
-        m_MainMenu_PlayGame = m_MainMenu.FindAction("PlayGame", throwIfNotFound: true);
-        m_MainMenu_Credits = m_MainMenu.FindAction("Credits", throwIfNotFound: true);
-        m_MainMenu_QuitGame = m_MainMenu.FindAction("QuitGame", throwIfNotFound: true);
+        m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column 1", throwIfNotFound: true);
+        m_GearsPuzzle_Newaction = m_GearsPuzzle.FindAction("New action", throwIfNotFound: true);
+        // SimonGame
+        m_SimonGame = asset.FindActionMap("SimonGame", throwIfNotFound: true);
+        m_SimonGame_KeyC = m_SimonGame.FindAction("KeyC", throwIfNotFound: true);
+        m_SimonGame_KeyD = m_SimonGame.FindAction("KeyD", throwIfNotFound: true);
+        m_SimonGame_KeyE = m_SimonGame.FindAction("KeyE", throwIfNotFound: true);
+        m_SimonGame_KeyF = m_SimonGame.FindAction("KeyF", throwIfNotFound: true);
+        m_SimonGame_KeyG = m_SimonGame.FindAction("KeyG", throwIfNotFound: true);
+        m_SimonGame_KeyA = m_SimonGame.FindAction("KeyA", throwIfNotFound: true);
+        m_SimonGame_KeyB = m_SimonGame.FindAction("KeyB", throwIfNotFound: true);
+        m_SimonGame_KeyCS = m_SimonGame.FindAction("KeyCS", throwIfNotFound: true);
+        m_SimonGame_KeyDS = m_SimonGame.FindAction("KeyDS", throwIfNotFound: true);
+        m_SimonGame_KeyFS = m_SimonGame.FindAction("KeyFS", throwIfNotFound: true);
+        m_SimonGame_KeyGS = m_SimonGame.FindAction("KeyGS", throwIfNotFound: true);
+        m_SimonGame_KeyAS = m_SimonGame.FindAction("KeyAS", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1812,7 +1977,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem_Actions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_ChooseHarp.enabled, "This will cause a leak and performance issues, InputSystem_Actions.ChooseHarp.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_GearsPuzzle.enabled, "This will cause a leak and performance issues, InputSystem_Actions.GearsPuzzle.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_MainMenu.enabled, "This will cause a leak and performance issues, InputSystem_Actions.MainMenu.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_SimonGame.enabled, "This will cause a leak and performance issues, InputSystem_Actions.SimonGame.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -2114,7 +2279,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_ChooseHarp_ChooseSecondHarp;
     private readonly InputAction m_ChooseHarp_ChooseThirdHarp;
     private readonly InputAction m_ChooseHarp_ChooseFourthHarp;
-    private readonly InputAction m_ChooseHarp_PlaySong;
     public struct ChooseHarpActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -2123,7 +2287,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @ChooseSecondHarp => m_Wrapper.m_ChooseHarp_ChooseSecondHarp;
         public InputAction @ChooseThirdHarp => m_Wrapper.m_ChooseHarp_ChooseThirdHarp;
         public InputAction @ChooseFourthHarp => m_Wrapper.m_ChooseHarp_ChooseFourthHarp;
-        public InputAction @PlaySong => m_Wrapper.m_ChooseHarp_PlaySong;
         public InputActionMap Get() { return m_Wrapper.m_ChooseHarp; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2145,9 +2308,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChooseFourthHarp.started += instance.OnChooseFourthHarp;
             @ChooseFourthHarp.performed += instance.OnChooseFourthHarp;
             @ChooseFourthHarp.canceled += instance.OnChooseFourthHarp;
-            @PlaySong.started += instance.OnPlaySong;
-            @PlaySong.performed += instance.OnPlaySong;
-            @PlaySong.canceled += instance.OnPlaySong;
         }
 
         private void UnregisterCallbacks(IChooseHarpActions instance)
@@ -2164,9 +2324,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChooseFourthHarp.started -= instance.OnChooseFourthHarp;
             @ChooseFourthHarp.performed -= instance.OnChooseFourthHarp;
             @ChooseFourthHarp.canceled -= instance.OnChooseFourthHarp;
-            @PlaySong.started -= instance.OnPlaySong;
-            @PlaySong.performed -= instance.OnPlaySong;
-            @PlaySong.canceled -= instance.OnPlaySong;
         }
 
         public void RemoveCallbacks(IChooseHarpActions instance)
@@ -2189,29 +2346,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GearsPuzzle;
     private List<IGearsPuzzleActions> m_GearsPuzzleActionsCallbackInterfaces = new List<IGearsPuzzleActions>();
     private readonly InputAction m_GearsPuzzle_Column1;
-    private readonly InputAction m_GearsPuzzle_Column2;
-    private readonly InputAction m_GearsPuzzle_Column3;
-    private readonly InputAction m_GearsPuzzle_Column4;
-    private readonly InputAction m_GearsPuzzle_F1;
-    private readonly InputAction m_GearsPuzzle_F2;
-    private readonly InputAction m_GearsPuzzle_F3;
-    private readonly InputAction m_GearsPuzzle_F4;
-    private readonly InputAction m_GearsPuzzle_Play;
-    private readonly InputAction m_GearsPuzzle_Stop;
+    private readonly InputAction m_GearsPuzzle_Newaction;
     public struct GearsPuzzleActions
     {
         private @InputSystem_Actions m_Wrapper;
         public GearsPuzzleActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Column1 => m_Wrapper.m_GearsPuzzle_Column1;
-        public InputAction @Column2 => m_Wrapper.m_GearsPuzzle_Column2;
-        public InputAction @Column3 => m_Wrapper.m_GearsPuzzle_Column3;
-        public InputAction @Column4 => m_Wrapper.m_GearsPuzzle_Column4;
-        public InputAction @F1 => m_Wrapper.m_GearsPuzzle_F1;
-        public InputAction @F2 => m_Wrapper.m_GearsPuzzle_F2;
-        public InputAction @F3 => m_Wrapper.m_GearsPuzzle_F3;
-        public InputAction @F4 => m_Wrapper.m_GearsPuzzle_F4;
-        public InputAction @Play => m_Wrapper.m_GearsPuzzle_Play;
-        public InputAction @Stop => m_Wrapper.m_GearsPuzzle_Stop;
+        public InputAction @Newaction => m_Wrapper.m_GearsPuzzle_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_GearsPuzzle; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2224,33 +2365,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Column1.started += instance.OnColumn1;
             @Column1.performed += instance.OnColumn1;
             @Column1.canceled += instance.OnColumn1;
-            @Column2.started += instance.OnColumn2;
-            @Column2.performed += instance.OnColumn2;
-            @Column2.canceled += instance.OnColumn2;
-            @Column3.started += instance.OnColumn3;
-            @Column3.performed += instance.OnColumn3;
-            @Column3.canceled += instance.OnColumn3;
-            @Column4.started += instance.OnColumn4;
-            @Column4.performed += instance.OnColumn4;
-            @Column4.canceled += instance.OnColumn4;
-            @F1.started += instance.OnF1;
-            @F1.performed += instance.OnF1;
-            @F1.canceled += instance.OnF1;
-            @F2.started += instance.OnF2;
-            @F2.performed += instance.OnF2;
-            @F2.canceled += instance.OnF2;
-            @F3.started += instance.OnF3;
-            @F3.performed += instance.OnF3;
-            @F3.canceled += instance.OnF3;
-            @F4.started += instance.OnF4;
-            @F4.performed += instance.OnF4;
-            @F4.canceled += instance.OnF4;
-            @Play.started += instance.OnPlay;
-            @Play.performed += instance.OnPlay;
-            @Play.canceled += instance.OnPlay;
-            @Stop.started += instance.OnStop;
-            @Stop.performed += instance.OnStop;
-            @Stop.canceled += instance.OnStop;
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
         }
 
         private void UnregisterCallbacks(IGearsPuzzleActions instance)
@@ -2258,33 +2375,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Column1.started -= instance.OnColumn1;
             @Column1.performed -= instance.OnColumn1;
             @Column1.canceled -= instance.OnColumn1;
-            @Column2.started -= instance.OnColumn2;
-            @Column2.performed -= instance.OnColumn2;
-            @Column2.canceled -= instance.OnColumn2;
-            @Column3.started -= instance.OnColumn3;
-            @Column3.performed -= instance.OnColumn3;
-            @Column3.canceled -= instance.OnColumn3;
-            @Column4.started -= instance.OnColumn4;
-            @Column4.performed -= instance.OnColumn4;
-            @Column4.canceled -= instance.OnColumn4;
-            @F1.started -= instance.OnF1;
-            @F1.performed -= instance.OnF1;
-            @F1.canceled -= instance.OnF1;
-            @F2.started -= instance.OnF2;
-            @F2.performed -= instance.OnF2;
-            @F2.canceled -= instance.OnF2;
-            @F3.started -= instance.OnF3;
-            @F3.performed -= instance.OnF3;
-            @F3.canceled -= instance.OnF3;
-            @F4.started -= instance.OnF4;
-            @F4.performed -= instance.OnF4;
-            @F4.canceled -= instance.OnF4;
-            @Play.started -= instance.OnPlay;
-            @Play.performed -= instance.OnPlay;
-            @Play.canceled -= instance.OnPlay;
-            @Stop.started -= instance.OnStop;
-            @Stop.performed -= instance.OnStop;
-            @Stop.canceled -= instance.OnStop;
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
         }
 
         public void RemoveCallbacks(IGearsPuzzleActions instance)
@@ -2303,67 +2396,139 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     }
     public GearsPuzzleActions @GearsPuzzle => new GearsPuzzleActions(this);
 
-    // MainMenu
-    private readonly InputActionMap m_MainMenu;
-    private List<IMainMenuActions> m_MainMenuActionsCallbackInterfaces = new List<IMainMenuActions>();
-    private readonly InputAction m_MainMenu_PlayGame;
-    private readonly InputAction m_MainMenu_Credits;
-    private readonly InputAction m_MainMenu_QuitGame;
-    public struct MainMenuActions
+    // SimonGame
+    private readonly InputActionMap m_SimonGame;
+    private List<ISimonGameActions> m_SimonGameActionsCallbackInterfaces = new List<ISimonGameActions>();
+    private readonly InputAction m_SimonGame_KeyC;
+    private readonly InputAction m_SimonGame_KeyD;
+    private readonly InputAction m_SimonGame_KeyE;
+    private readonly InputAction m_SimonGame_KeyF;
+    private readonly InputAction m_SimonGame_KeyG;
+    private readonly InputAction m_SimonGame_KeyA;
+    private readonly InputAction m_SimonGame_KeyB;
+    private readonly InputAction m_SimonGame_KeyCS;
+    private readonly InputAction m_SimonGame_KeyDS;
+    private readonly InputAction m_SimonGame_KeyFS;
+    private readonly InputAction m_SimonGame_KeyGS;
+    private readonly InputAction m_SimonGame_KeyAS;
+    public struct SimonGameActions
     {
         private @InputSystem_Actions m_Wrapper;
-        public MainMenuActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @PlayGame => m_Wrapper.m_MainMenu_PlayGame;
-        public InputAction @Credits => m_Wrapper.m_MainMenu_Credits;
-        public InputAction @QuitGame => m_Wrapper.m_MainMenu_QuitGame;
-        public InputActionMap Get() { return m_Wrapper.m_MainMenu; }
+        public SimonGameActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @KeyC => m_Wrapper.m_SimonGame_KeyC;
+        public InputAction @KeyD => m_Wrapper.m_SimonGame_KeyD;
+        public InputAction @KeyE => m_Wrapper.m_SimonGame_KeyE;
+        public InputAction @KeyF => m_Wrapper.m_SimonGame_KeyF;
+        public InputAction @KeyG => m_Wrapper.m_SimonGame_KeyG;
+        public InputAction @KeyA => m_Wrapper.m_SimonGame_KeyA;
+        public InputAction @KeyB => m_Wrapper.m_SimonGame_KeyB;
+        public InputAction @KeyCS => m_Wrapper.m_SimonGame_KeyCS;
+        public InputAction @KeyDS => m_Wrapper.m_SimonGame_KeyDS;
+        public InputAction @KeyFS => m_Wrapper.m_SimonGame_KeyFS;
+        public InputAction @KeyGS => m_Wrapper.m_SimonGame_KeyGS;
+        public InputAction @KeyAS => m_Wrapper.m_SimonGame_KeyAS;
+        public InputActionMap Get() { return m_Wrapper.m_SimonGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MainMenuActions set) { return set.Get(); }
-        public void AddCallbacks(IMainMenuActions instance)
+        public static implicit operator InputActionMap(SimonGameActions set) { return set.Get(); }
+        public void AddCallbacks(ISimonGameActions instance)
         {
-            if (instance == null || m_Wrapper.m_MainMenuActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_MainMenuActionsCallbackInterfaces.Add(instance);
-            @PlayGame.started += instance.OnPlayGame;
-            @PlayGame.performed += instance.OnPlayGame;
-            @PlayGame.canceled += instance.OnPlayGame;
-            @Credits.started += instance.OnCredits;
-            @Credits.performed += instance.OnCredits;
-            @Credits.canceled += instance.OnCredits;
-            @QuitGame.started += instance.OnQuitGame;
-            @QuitGame.performed += instance.OnQuitGame;
-            @QuitGame.canceled += instance.OnQuitGame;
+            if (instance == null || m_Wrapper.m_SimonGameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SimonGameActionsCallbackInterfaces.Add(instance);
+            @KeyC.started += instance.OnKeyC;
+            @KeyC.performed += instance.OnKeyC;
+            @KeyC.canceled += instance.OnKeyC;
+            @KeyD.started += instance.OnKeyD;
+            @KeyD.performed += instance.OnKeyD;
+            @KeyD.canceled += instance.OnKeyD;
+            @KeyE.started += instance.OnKeyE;
+            @KeyE.performed += instance.OnKeyE;
+            @KeyE.canceled += instance.OnKeyE;
+            @KeyF.started += instance.OnKeyF;
+            @KeyF.performed += instance.OnKeyF;
+            @KeyF.canceled += instance.OnKeyF;
+            @KeyG.started += instance.OnKeyG;
+            @KeyG.performed += instance.OnKeyG;
+            @KeyG.canceled += instance.OnKeyG;
+            @KeyA.started += instance.OnKeyA;
+            @KeyA.performed += instance.OnKeyA;
+            @KeyA.canceled += instance.OnKeyA;
+            @KeyB.started += instance.OnKeyB;
+            @KeyB.performed += instance.OnKeyB;
+            @KeyB.canceled += instance.OnKeyB;
+            @KeyCS.started += instance.OnKeyCS;
+            @KeyCS.performed += instance.OnKeyCS;
+            @KeyCS.canceled += instance.OnKeyCS;
+            @KeyDS.started += instance.OnKeyDS;
+            @KeyDS.performed += instance.OnKeyDS;
+            @KeyDS.canceled += instance.OnKeyDS;
+            @KeyFS.started += instance.OnKeyFS;
+            @KeyFS.performed += instance.OnKeyFS;
+            @KeyFS.canceled += instance.OnKeyFS;
+            @KeyGS.started += instance.OnKeyGS;
+            @KeyGS.performed += instance.OnKeyGS;
+            @KeyGS.canceled += instance.OnKeyGS;
+            @KeyAS.started += instance.OnKeyAS;
+            @KeyAS.performed += instance.OnKeyAS;
+            @KeyAS.canceled += instance.OnKeyAS;
         }
 
-        private void UnregisterCallbacks(IMainMenuActions instance)
+        private void UnregisterCallbacks(ISimonGameActions instance)
         {
-            @PlayGame.started -= instance.OnPlayGame;
-            @PlayGame.performed -= instance.OnPlayGame;
-            @PlayGame.canceled -= instance.OnPlayGame;
-            @Credits.started -= instance.OnCredits;
-            @Credits.performed -= instance.OnCredits;
-            @Credits.canceled -= instance.OnCredits;
-            @QuitGame.started -= instance.OnQuitGame;
-            @QuitGame.performed -= instance.OnQuitGame;
-            @QuitGame.canceled -= instance.OnQuitGame;
+            @KeyC.started -= instance.OnKeyC;
+            @KeyC.performed -= instance.OnKeyC;
+            @KeyC.canceled -= instance.OnKeyC;
+            @KeyD.started -= instance.OnKeyD;
+            @KeyD.performed -= instance.OnKeyD;
+            @KeyD.canceled -= instance.OnKeyD;
+            @KeyE.started -= instance.OnKeyE;
+            @KeyE.performed -= instance.OnKeyE;
+            @KeyE.canceled -= instance.OnKeyE;
+            @KeyF.started -= instance.OnKeyF;
+            @KeyF.performed -= instance.OnKeyF;
+            @KeyF.canceled -= instance.OnKeyF;
+            @KeyG.started -= instance.OnKeyG;
+            @KeyG.performed -= instance.OnKeyG;
+            @KeyG.canceled -= instance.OnKeyG;
+            @KeyA.started -= instance.OnKeyA;
+            @KeyA.performed -= instance.OnKeyA;
+            @KeyA.canceled -= instance.OnKeyA;
+            @KeyB.started -= instance.OnKeyB;
+            @KeyB.performed -= instance.OnKeyB;
+            @KeyB.canceled -= instance.OnKeyB;
+            @KeyCS.started -= instance.OnKeyCS;
+            @KeyCS.performed -= instance.OnKeyCS;
+            @KeyCS.canceled -= instance.OnKeyCS;
+            @KeyDS.started -= instance.OnKeyDS;
+            @KeyDS.performed -= instance.OnKeyDS;
+            @KeyDS.canceled -= instance.OnKeyDS;
+            @KeyFS.started -= instance.OnKeyFS;
+            @KeyFS.performed -= instance.OnKeyFS;
+            @KeyFS.canceled -= instance.OnKeyFS;
+            @KeyGS.started -= instance.OnKeyGS;
+            @KeyGS.performed -= instance.OnKeyGS;
+            @KeyGS.canceled -= instance.OnKeyGS;
+            @KeyAS.started -= instance.OnKeyAS;
+            @KeyAS.performed -= instance.OnKeyAS;
+            @KeyAS.canceled -= instance.OnKeyAS;
         }
 
-        public void RemoveCallbacks(IMainMenuActions instance)
+        public void RemoveCallbacks(ISimonGameActions instance)
         {
-            if (m_Wrapper.m_MainMenuActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_SimonGameActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IMainMenuActions instance)
+        public void SetCallbacks(ISimonGameActions instance)
         {
-            foreach (var item in m_Wrapper.m_MainMenuActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_SimonGameActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_MainMenuActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_SimonGameActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public MainMenuActions @MainMenu => new MainMenuActions(this);
+    public SimonGameActions @SimonGame => new SimonGameActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -2441,25 +2606,25 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnChooseSecondHarp(InputAction.CallbackContext context);
         void OnChooseThirdHarp(InputAction.CallbackContext context);
         void OnChooseFourthHarp(InputAction.CallbackContext context);
-        void OnPlaySong(InputAction.CallbackContext context);
     }
     public interface IGearsPuzzleActions
     {
         void OnColumn1(InputAction.CallbackContext context);
-        void OnColumn2(InputAction.CallbackContext context);
-        void OnColumn3(InputAction.CallbackContext context);
-        void OnColumn4(InputAction.CallbackContext context);
-        void OnF1(InputAction.CallbackContext context);
-        void OnF2(InputAction.CallbackContext context);
-        void OnF3(InputAction.CallbackContext context);
-        void OnF4(InputAction.CallbackContext context);
-        void OnPlay(InputAction.CallbackContext context);
-        void OnStop(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
-    public interface IMainMenuActions
+    public interface ISimonGameActions
     {
-        void OnPlayGame(InputAction.CallbackContext context);
-        void OnCredits(InputAction.CallbackContext context);
-        void OnQuitGame(InputAction.CallbackContext context);
+        void OnKeyC(InputAction.CallbackContext context);
+        void OnKeyD(InputAction.CallbackContext context);
+        void OnKeyE(InputAction.CallbackContext context);
+        void OnKeyF(InputAction.CallbackContext context);
+        void OnKeyG(InputAction.CallbackContext context);
+        void OnKeyA(InputAction.CallbackContext context);
+        void OnKeyB(InputAction.CallbackContext context);
+        void OnKeyCS(InputAction.CallbackContext context);
+        void OnKeyDS(InputAction.CallbackContext context);
+        void OnKeyFS(InputAction.CallbackContext context);
+        void OnKeyGS(InputAction.CallbackContext context);
+        void OnKeyAS(InputAction.CallbackContext context);
     }
 }
