@@ -24,7 +24,7 @@ public class GearsGameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        playKey = inputControls.GearsPuzzle.playKey;
+        //playKey = inputControls.GearsPuzzle.playKey;
 
         //enable the command (input system.map.command)
         slider1 = inputControls.GearsPuzzle.Column1;
