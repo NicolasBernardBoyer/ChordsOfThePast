@@ -1590,6 +1590,107 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""MainMenu"",
+            ""id"": ""ffc1acd2-dce7-40eb-93be-19a708a232d2"",
+            ""actions"": [
+                {
+                    ""name"": ""PlayGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""f63e48a9-86cf-4814-a70a-1a6efda49881"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Credits"",
+                    ""type"": ""Button"",
+                    ""id"": ""6c3d26a1-40dd-4c61-82d0-f1ba289a0953"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""QuitGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""c8c798b8-227f-49b6-aa51-3b46a291152a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f1e0a4de-d198-43ea-b46d-b65f82b0cf4d"",
+                    ""path"": ""<MidiDevice>/note094"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c81c1087-8194-4e32-84f6-d6a8ab9c50c0"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""121af440-2f07-4cf5-9d6e-ddab20618c00"",
+                    ""path"": ""<MidiDevice>/note095"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Credits"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11050057-97af-42a0-bdf4-5163136bb590"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Credits"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84c2aa6a-64af-45f6-a3e8-85f69bd17faa"",
+                    ""path"": ""<MidiDevice>/note093"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""QuitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bbdae239-722e-483a-94dc-74b1d5fd505c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""QuitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1698,6 +1799,11 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_GearsPuzzle_F4 = m_GearsPuzzle.FindAction("F4", throwIfNotFound: true);
         m_GearsPuzzle_Play = m_GearsPuzzle.FindAction("Play", throwIfNotFound: true);
         m_GearsPuzzle_Stop = m_GearsPuzzle.FindAction("Stop", throwIfNotFound: true);
+        // MainMenu
+        m_MainMenu = asset.FindActionMap("MainMenu", throwIfNotFound: true);
+        m_MainMenu_PlayGame = m_MainMenu.FindAction("PlayGame", throwIfNotFound: true);
+        m_MainMenu_Credits = m_MainMenu.FindAction("Credits", throwIfNotFound: true);
+        m_MainMenu_QuitGame = m_MainMenu.FindAction("QuitGame", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1706,6 +1812,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem_Actions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_ChooseHarp.enabled, "This will cause a leak and performance issues, InputSystem_Actions.ChooseHarp.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_GearsPuzzle.enabled, "This will cause a leak and performance issues, InputSystem_Actions.GearsPuzzle.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_MainMenu.enabled, "This will cause a leak and performance issues, InputSystem_Actions.MainMenu.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -2195,6 +2302,68 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         }
     }
     public GearsPuzzleActions @GearsPuzzle => new GearsPuzzleActions(this);
+
+    // MainMenu
+    private readonly InputActionMap m_MainMenu;
+    private List<IMainMenuActions> m_MainMenuActionsCallbackInterfaces = new List<IMainMenuActions>();
+    private readonly InputAction m_MainMenu_PlayGame;
+    private readonly InputAction m_MainMenu_Credits;
+    private readonly InputAction m_MainMenu_QuitGame;
+    public struct MainMenuActions
+    {
+        private @InputSystem_Actions m_Wrapper;
+        public MainMenuActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PlayGame => m_Wrapper.m_MainMenu_PlayGame;
+        public InputAction @Credits => m_Wrapper.m_MainMenu_Credits;
+        public InputAction @QuitGame => m_Wrapper.m_MainMenu_QuitGame;
+        public InputActionMap Get() { return m_Wrapper.m_MainMenu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MainMenuActions set) { return set.Get(); }
+        public void AddCallbacks(IMainMenuActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MainMenuActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MainMenuActionsCallbackInterfaces.Add(instance);
+            @PlayGame.started += instance.OnPlayGame;
+            @PlayGame.performed += instance.OnPlayGame;
+            @PlayGame.canceled += instance.OnPlayGame;
+            @Credits.started += instance.OnCredits;
+            @Credits.performed += instance.OnCredits;
+            @Credits.canceled += instance.OnCredits;
+            @QuitGame.started += instance.OnQuitGame;
+            @QuitGame.performed += instance.OnQuitGame;
+            @QuitGame.canceled += instance.OnQuitGame;
+        }
+
+        private void UnregisterCallbacks(IMainMenuActions instance)
+        {
+            @PlayGame.started -= instance.OnPlayGame;
+            @PlayGame.performed -= instance.OnPlayGame;
+            @PlayGame.canceled -= instance.OnPlayGame;
+            @Credits.started -= instance.OnCredits;
+            @Credits.performed -= instance.OnCredits;
+            @Credits.canceled -= instance.OnCredits;
+            @QuitGame.started -= instance.OnQuitGame;
+            @QuitGame.performed -= instance.OnQuitGame;
+            @QuitGame.canceled -= instance.OnQuitGame;
+        }
+
+        public void RemoveCallbacks(IMainMenuActions instance)
+        {
+            if (m_Wrapper.m_MainMenuActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMainMenuActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MainMenuActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MainMenuActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MainMenuActions @MainMenu => new MainMenuActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -2286,5 +2455,11 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnF4(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
         void OnStop(InputAction.CallbackContext context);
+    }
+    public interface IMainMenuActions
+    {
+        void OnPlayGame(InputAction.CallbackContext context);
+        void OnCredits(InputAction.CallbackContext context);
+        void OnQuitGame(InputAction.CallbackContext context);
     }
 }

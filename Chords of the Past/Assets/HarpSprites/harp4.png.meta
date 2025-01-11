@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e3d840327a842b04bacdad6660c8a560
+guid: b5e91dcfab9abbd4ab5ebe6543894283
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5080794004753141221
-    second: harp1__0
+      213: 352824233218488064
+    second: harp4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: harp1__0
+      name: harp4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1080
-        height: 1080
+        x: 387
+        y: 127
+        width: 388
+        height: 847
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5edce366a3b928640800000000000000
-      internalID: 5080794004753141221
+      spriteID: 007332155cb75e400800000000000000
+      internalID: 352824233218488064
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      harp1__0: 5080794004753141221
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

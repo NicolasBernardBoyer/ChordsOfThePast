@@ -55,26 +55,43 @@ public class ChooseHarpLevelManager : MonoBehaviour
     [SerializeField] GameObject thirdHarp;
     [SerializeField] GameObject fourthHarp; //VS is god-tier
 
+    [SerializeField] Vector3 firstHarpPosition;
+    [SerializeField] Vector3 secondHarpPosition;
+    [SerializeField] Vector3 thirdHarpPosition;
+    [SerializeField] Vector3 fourthHarpPosition;
+
     public void FadeOut(GameObject chosenHarp)
     {
         chosenHarp.SetActive(false);
+    }
+
+    public void BeVisible(GameObject chosenHarp)
+    {
+        chosenHarp.SetActive(true);
     }
 
 
     public void SelectFirstHarp(InputAction.CallbackContext context)
     {
         Debug.Log("Harp 1");
-        firstHarp.transform.position = new Vector3(0, 0, 0);
+        firstHarp.transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
         FadeOut(secondHarp);
         FadeOut(thirdHarp);
         FadeOut(fourthHarp);
+        if Input.GetButton(secondHarpAction)
+            {
+            BeVisible(secondHarp);
+                BeVisible(thirdHarp);
+                BeVisible(fourthHarp);
 
+            }
+        
     }
 
     public void SelectSecondHarp(InputAction.CallbackContext context)
     {
         Debug.Log("Harp 2");
-        secondHarp.transform.position = new Vector3(0, 0, 0);
+        secondHarp.transform.position = new Vector3(0, 0.5f, 0);
         FadeOut(firstHarp);
         FadeOut(thirdHarp);
         FadeOut(fourthHarp);
@@ -84,7 +101,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
     public void SelectThirdHarp(InputAction.CallbackContext context)
     {
         Debug.Log("Harp 3");
-        thirdHarp.transform.position = new Vector3(0, 0, 0);
+        thirdHarp.transform.position = new Vector3(0, 0.5f, 0);
         FadeOut(firstHarp);
         FadeOut(secondHarp);
         FadeOut(fourthHarp);
@@ -94,7 +111,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
     public void SelectFourthHarp(InputAction.CallbackContext context)
     {
         Debug.Log("Harp 4");
-        fourthHarp.transform.position = new Vector3(0, 0, 0);
+        fourthHarp.transform.position = new Vector3(0, 0.5f, 0);
         FadeOut(firstHarp);
         FadeOut(secondHarp);
         FadeOut(thirdHarp);
