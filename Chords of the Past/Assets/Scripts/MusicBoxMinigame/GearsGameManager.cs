@@ -6,16 +6,11 @@
     {
         public InputSystem_Actions inputControls;
         public GameObject Gear;
-        private float F1Xpos = -3f;
-        private float F2Xpos = -1f;
-        private float F3Xpos = 1f;
-        private float F4Xpos = 3f;
         public float intensity = 5f;
-
-        private bool moveToF1 = false;
-        private bool F2pressed = false;
-        private bool F3pressed = false;
-        private bool moveToF4 = false;
+        public float sliderIntensity = 5f;
+        public float keyboardIntensity = 2.5f;
+        public float cursorMax = 3.0f;
+        public float cursorMin = -3.0f;
 
         private Vector3 cursor = new Vector3(-3.0f, -3.0f, 0);
 
@@ -28,11 +23,16 @@
 
         private void Start()
         {
-            Gear = Instantiate(Gear, new Vector3(-3.0f, -3.0f, 0), Quaternion.identity);
+            Gear = Instantiate(Gear, cursor, Quaternion.identity);
         }
         private void Update()
         {
             Gear.transform.position = Vector3.MoveTowards(Gear.transform.position, cursor, 1.0f);
+        }
+
+        public void PlaceGear()
+        {
+            Gear = Instantiate(Gear, cursor, Quaternion.identity);
         }
 
         private void Awake()
@@ -54,18 +54,29 @@
             stopKey.performed += StopKey;
 
             //enable the command (input system.map.command)
-            slider = inputControls.GearsPuzzle.Column1;
+            slider = inputControls.GearsPuzzle.Slider;
             slider.Enable();
             //register to the event
-            slider.performed += Slider1;
-        }
+            slider.performed += Slider;
+
+            rightKey = inputControls.GearsPuzzle.Right;
+            rightKey.Enable();
+            //register to the event
+            rightKey.performed += RightKey;
+
+            leftKey = inputControls.GearsPuzzle.Left;
+            leftKey.Enable();
+            //register to the event
+            leftKey.performed += LeftKey;
+    }
 
         private void OnDisable()
         {
             playKey.Disable();
             stopKey.Disable();
             slider.Disable();
-
+            leftKey.Disable();
+            rightKey.Disable();
         }
 
         //the event I used to register it 
@@ -77,15 +88,35 @@
         public void StopKey(InputAction.CallbackContext context)
         {
             Debug.Log("Pressed the stop key");
+            PlaceGear();
         }
 
-        public void Slider(InputAction.CallbackContext context)
+        public void RightKey(InputAction.CallbackContext context)
         {
+            Debug.Log("Pressed the right key");
+            if (cursor.x >= cursorMax) cursor.x = cursorMin;
+            else cursor.x += 2;
+        }
+
+        public void LeftKey(InputAction.CallbackContext context)
+        {
+            Debug.Log("Pressed the left key");
+            if (cursor.x <= cursorMin) cursor.x = cursorMax;
+            else cursor.x -= 2;
+        }
+
+
+    public void Slider(InputAction.CallbackContext context)
+        {   
             Debug.Log(context.ReadValue<float>());
-            if (Gear.transform.position.x == F1Xpos)
+            if (context.control.device is Keyboard)
             {
-                Gear.transform.position = new Vector3(Gear.transform.position.x, -3 + context.ReadValue<float>() * intensity, Gear.transform.position.z);
+                intensity = keyboardIntensity;
+            } else
+            {
+                intensity = sliderIntensity;
             }
+            cursor = new Vector3(cursor.x, -3 + context.ReadValue<float>() * intensity, cursor.z);
             //Debug.Log("Slider1 being used");
         }
     }

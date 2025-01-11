@@ -63,7 +63,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction = inputControls.ChooseHarp.ChooseSecondHarp;
         thirdHarpAction = inputControls.ChooseHarp.ChooseThirdHarp;
         fourthHarpAction = inputControls.ChooseHarp.ChooseFourthHarp;
-        playSongAction = inputControls.ChooseHarp.PlaySong;
+        //playSongAction = inputControls.ChooseHarp.PlaySong;
 
         //enable all input maps to make them work
         firstHarpAction.Enable();

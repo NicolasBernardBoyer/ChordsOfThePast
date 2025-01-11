@@ -19,9 +19,9 @@ public class MainMenu : MonoBehaviour
     private void OnEnable()
     {
         //enables the command (input system map)
-        playGame = inputControls.MainMenu.PlayGame;
-        goToCredits = inputControls.MainMenu.Credits;
-        quitGame = inputControls.MainMenu.QuitGame;
+        //playGame = inputControls.MainMenu.PlayGame;
+        //goToCredits = inputControls.MainMenu.Credits;
+        //quitGame = inputControls.MainMenu.QuitGame;
 
         //enable all input maps to make them work
         playGame.Enable();
