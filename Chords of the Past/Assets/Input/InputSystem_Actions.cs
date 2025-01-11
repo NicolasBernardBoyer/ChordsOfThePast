@@ -1166,6 +1166,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""5c059234-aea2-4424-b8d3-6387947113ca"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1177,6 +1186,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Column 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9de7dc1-9fa9-468b-af6d-7672301dfd3a"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Column 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7709417f-0016-4430-8a56-8564a5ad9dea"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1279,6 +1310,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         // GearsPuzzle
         m_GearsPuzzle = asset.FindActionMap("GearsPuzzle", throwIfNotFound: true);
         m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column 1", throwIfNotFound: true);
+        m_GearsPuzzle_Newaction = m_GearsPuzzle.FindAction("New action", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1655,11 +1687,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GearsPuzzle;
     private List<IGearsPuzzleActions> m_GearsPuzzleActionsCallbackInterfaces = new List<IGearsPuzzleActions>();
     private readonly InputAction m_GearsPuzzle_Column1;
+    private readonly InputAction m_GearsPuzzle_Newaction;
     public struct GearsPuzzleActions
     {
         private @InputSystem_Actions m_Wrapper;
         public GearsPuzzleActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Column1 => m_Wrapper.m_GearsPuzzle_Column1;
+        public InputAction @Newaction => m_Wrapper.m_GearsPuzzle_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_GearsPuzzle; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1672,6 +1706,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Column1.started += instance.OnColumn1;
             @Column1.performed += instance.OnColumn1;
             @Column1.canceled += instance.OnColumn1;
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
         }
 
         private void UnregisterCallbacks(IGearsPuzzleActions instance)
@@ -1679,6 +1716,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Column1.started -= instance.OnColumn1;
             @Column1.performed -= instance.OnColumn1;
             @Column1.canceled -= instance.OnColumn1;
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
         }
 
         public void RemoveCallbacks(IGearsPuzzleActions instance)
@@ -1777,5 +1817,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     public interface IGearsPuzzleActions
     {
         void OnColumn1(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }
