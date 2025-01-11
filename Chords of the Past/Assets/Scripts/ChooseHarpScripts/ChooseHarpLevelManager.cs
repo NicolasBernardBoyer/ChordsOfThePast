@@ -78,14 +78,13 @@ public class ChooseHarpLevelManager : MonoBehaviour
         FadeOut(secondHarp);
         FadeOut(thirdHarp);
         FadeOut(fourthHarp);
-        if Input.GetButton(secondHarpAction)
+        //if Input.
             {
             BeVisible(secondHarp);
-                BeVisible(thirdHarp);
-                BeVisible(fourthHarp);
-
+            BeVisible(thirdHarp);
+            BeVisible(fourthHarp);
             }
-        
+     
     }
 
     public void SelectSecondHarp(InputAction.CallbackContext context)
