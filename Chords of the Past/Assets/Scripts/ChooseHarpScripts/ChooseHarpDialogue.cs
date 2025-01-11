@@ -6,6 +6,8 @@ using System.Collections;
 
 public class ChooseHarpDialogue : MonoBehaviour
 {
+    public ChooseHarpLevelManager harpLevelManager;
+
     [SerializeField] public TextMeshProUGUI dialogueText;
 
     public string[] dialogueLines;
@@ -36,7 +38,7 @@ public class ChooseHarpDialogue : MonoBehaviour
     {
         if (index < dialogueLines.Length - 1) //if the index is out of the line
         {
-            index = Random.Range(1, 3);
+            index++;
             dialogueText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
