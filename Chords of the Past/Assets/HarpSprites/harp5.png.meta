@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      harp5_0: -238303076960143360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
