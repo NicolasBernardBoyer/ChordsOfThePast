@@ -1131,6 +1131,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "GearsPuzzle",
+            "id": "ff07dd6a-0150-420e-b331-216dd6ae0c0a",
+            "actions": [
+                {
+                    "name": "Column 1",
+                    "type": "Value",
+                    "id": "e8274ae3-ceb1-4ab8-baf2-b4c305e1bf01",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c5d269d9-0202-44d8-9279-af27fac04bcf",
+                    "path": "<MidiDevice>/control007",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Column 1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

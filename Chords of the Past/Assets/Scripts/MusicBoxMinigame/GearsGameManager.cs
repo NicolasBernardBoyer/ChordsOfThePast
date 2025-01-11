@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class ItemGrid : MonoBehaviour
+public class GearsGameManager : MonoBehaviour
 {
+    public Input inputControls;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -1153,6 +1153,34 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""GearsPuzzle"",
+            ""id"": ""ff07dd6a-0150-420e-b331-216dd6ae0c0a"",
+            ""actions"": [
+                {
+                    ""name"": ""Column 1"",
+                    ""type"": ""Value"",
+                    ""id"": ""e8274ae3-ceb1-4ab8-baf2-b4c305e1bf01"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""c5d269d9-0202-44d8-9279-af27fac04bcf"",
+                    ""path"": ""<MidiDevice>/control007"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Column 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1248,6 +1276,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_ChooseHarp_ChooseSecondHarp = m_ChooseHarp.FindAction("ChooseSecondHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseThirdHarp = m_ChooseHarp.FindAction("ChooseThirdHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseFourthHarp = m_ChooseHarp.FindAction("ChooseFourthHarp", throwIfNotFound: true);
+        // GearsPuzzle
+        m_GearsPuzzle = asset.FindActionMap("GearsPuzzle", throwIfNotFound: true);
+        m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column 1", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1255,6 +1286,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem_Actions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_ChooseHarp.enabled, "This will cause a leak and performance issues, InputSystem_Actions.ChooseHarp.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_GearsPuzzle.enabled, "This will cause a leak and performance issues, InputSystem_Actions.GearsPuzzle.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -1618,6 +1650,52 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         }
     }
     public ChooseHarpActions @ChooseHarp => new ChooseHarpActions(this);
+
+    // GearsPuzzle
+    private readonly InputActionMap m_GearsPuzzle;
+    private List<IGearsPuzzleActions> m_GearsPuzzleActionsCallbackInterfaces = new List<IGearsPuzzleActions>();
+    private readonly InputAction m_GearsPuzzle_Column1;
+    public struct GearsPuzzleActions
+    {
+        private @InputSystem_Actions m_Wrapper;
+        public GearsPuzzleActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Column1 => m_Wrapper.m_GearsPuzzle_Column1;
+        public InputActionMap Get() { return m_Wrapper.m_GearsPuzzle; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GearsPuzzleActions set) { return set.Get(); }
+        public void AddCallbacks(IGearsPuzzleActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GearsPuzzleActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GearsPuzzleActionsCallbackInterfaces.Add(instance);
+            @Column1.started += instance.OnColumn1;
+            @Column1.performed += instance.OnColumn1;
+            @Column1.canceled += instance.OnColumn1;
+        }
+
+        private void UnregisterCallbacks(IGearsPuzzleActions instance)
+        {
+            @Column1.started -= instance.OnColumn1;
+            @Column1.performed -= instance.OnColumn1;
+            @Column1.canceled -= instance.OnColumn1;
+        }
+
+        public void RemoveCallbacks(IGearsPuzzleActions instance)
+        {
+            if (m_Wrapper.m_GearsPuzzleActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IGearsPuzzleActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GearsPuzzleActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GearsPuzzleActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public GearsPuzzleActions @GearsPuzzle => new GearsPuzzleActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1695,5 +1773,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnChooseSecondHarp(InputAction.CallbackContext context);
         void OnChooseThirdHarp(InputAction.CallbackContext context);
         void OnChooseFourthHarp(InputAction.CallbackContext context);
+    }
+    public interface IGearsPuzzleActions
+    {
+        void OnColumn1(InputAction.CallbackContext context);
     }
 }
