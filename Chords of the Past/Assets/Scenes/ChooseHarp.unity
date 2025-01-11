@@ -235,6 +235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eca94482a528f74cb64ce2f95ae416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstHarp: {fileID: 1667375663}
+  secondHarp: {fileID: 1457962105}
+  thirdHarp: {fileID: 679586915}
+  fourthHarp: {fileID: 6040298}
 --- !u!4 &42487765
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 475661086}
-  totalTimeAmount: 0
+  totalSecondsLeft: 120
 --- !u!1 &1457962105
 GameObject:
   m_ObjectHideFlags: 0

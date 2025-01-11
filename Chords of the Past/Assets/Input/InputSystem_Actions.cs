@@ -1028,35 +1028,44 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""ChooseFirstHarp"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""994e835a-3073-431b-98de-ba7207d03250"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""ChooseSecondHarp"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""eacaa702-a696-49cc-9e54-38ab3afb44fc"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""ChooseThirdHarp"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""6a878c98-8357-408b-ac6c-f2a4c96ab0bf"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""ChooseFourthHarp"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""4982cf4a-5bb8-4f6b-8930-0d18409f46ce"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PlaySong"",
+                    ""type"": ""Button"",
+                    ""id"": ""564ffdf2-6526-48bf-b269-72e7b1cec74e"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1067,7 +1076,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ab34d5d5-9aa2-43ff-8af9-552bb7cd90fc"",
-                    ""path"": ""<MidiDevice>/note048"",
+                    ""path"": ""<MidiDevice>/control000"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1089,7 +1098,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7361107f-4dd3-41bc-9e60-704dd5f77995"",
-                    ""path"": ""<MidiDevice>/note049"",
+                    ""path"": ""<MidiDevice>/control001"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1111,7 +1120,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3c063d2b-6c81-40ac-8137-fa69c655da9a"",
-                    ""path"": ""<MidiDevice>/note050"",
+                    ""path"": ""<MidiDevice>/control002"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1133,7 +1142,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""499aad59-93d4-4c3e-87f4-5ee55018fc55"",
-                    ""path"": ""<MidiDevice>/note051"",
+                    ""path"": ""<MidiDevice>/control003"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1149,6 +1158,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ChooseFourthHarp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""543645bb-1cfe-4e5b-860b-aa7f37bb855b"",
+                    ""path"": ""<MidiDevice>/note094"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlaySong"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0567cc03-2797-44cb-a2ef-dbc91303e68e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlaySong"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1307,6 +1338,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_ChooseHarp_ChooseSecondHarp = m_ChooseHarp.FindAction("ChooseSecondHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseThirdHarp = m_ChooseHarp.FindAction("ChooseThirdHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseFourthHarp = m_ChooseHarp.FindAction("ChooseFourthHarp", throwIfNotFound: true);
+        m_ChooseHarp_PlaySong = m_ChooseHarp.FindAction("PlaySong", throwIfNotFound: true);
         // GearsPuzzle
         m_GearsPuzzle = asset.FindActionMap("GearsPuzzle", throwIfNotFound: true);
         m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column 1", throwIfNotFound: true);
@@ -1620,6 +1652,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_ChooseHarp_ChooseSecondHarp;
     private readonly InputAction m_ChooseHarp_ChooseThirdHarp;
     private readonly InputAction m_ChooseHarp_ChooseFourthHarp;
+    private readonly InputAction m_ChooseHarp_PlaySong;
     public struct ChooseHarpActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1628,6 +1661,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @ChooseSecondHarp => m_Wrapper.m_ChooseHarp_ChooseSecondHarp;
         public InputAction @ChooseThirdHarp => m_Wrapper.m_ChooseHarp_ChooseThirdHarp;
         public InputAction @ChooseFourthHarp => m_Wrapper.m_ChooseHarp_ChooseFourthHarp;
+        public InputAction @PlaySong => m_Wrapper.m_ChooseHarp_PlaySong;
         public InputActionMap Get() { return m_Wrapper.m_ChooseHarp; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1649,6 +1683,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChooseFourthHarp.started += instance.OnChooseFourthHarp;
             @ChooseFourthHarp.performed += instance.OnChooseFourthHarp;
             @ChooseFourthHarp.canceled += instance.OnChooseFourthHarp;
+            @PlaySong.started += instance.OnPlaySong;
+            @PlaySong.performed += instance.OnPlaySong;
+            @PlaySong.canceled += instance.OnPlaySong;
         }
 
         private void UnregisterCallbacks(IChooseHarpActions instance)
@@ -1665,6 +1702,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChooseFourthHarp.started -= instance.OnChooseFourthHarp;
             @ChooseFourthHarp.performed -= instance.OnChooseFourthHarp;
             @ChooseFourthHarp.canceled -= instance.OnChooseFourthHarp;
+            @PlaySong.started -= instance.OnPlaySong;
+            @PlaySong.performed -= instance.OnPlaySong;
+            @PlaySong.canceled -= instance.OnPlaySong;
         }
 
         public void RemoveCallbacks(IChooseHarpActions instance)
@@ -1813,6 +1853,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnChooseSecondHarp(InputAction.CallbackContext context);
         void OnChooseThirdHarp(InputAction.CallbackContext context);
         void OnChooseFourthHarp(InputAction.CallbackContext context);
+        void OnPlaySong(InputAction.CallbackContext context);
     }
     public interface IGearsPuzzleActions
     {
