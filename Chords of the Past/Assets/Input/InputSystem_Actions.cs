@@ -1190,7 +1190,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""id"": ""ff07dd6a-0150-420e-b331-216dd6ae0c0a"",
             ""actions"": [
                 {
-                    ""name"": ""Column 1"",
+                    ""name"": ""Column1"",
                     ""type"": ""Value"",
                     ""id"": ""e8274ae3-ceb1-4ab8-baf2-b4c305e1bf01"",
                     ""expectedControlType"": """",
@@ -1199,13 +1199,31 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
+                    ""name"": ""Column2"",
+                    ""type"": ""Value"",
                     ""id"": ""5c059234-aea2-4424-b8d3-6387947113ca"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Column3"",
+                    ""type"": ""Value"",
+                    ""id"": ""dc35aaae-ccba-46bd-b9e5-796ef4ae1639"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Column4"",
+                    ""type"": ""Value"",
+                    ""id"": ""01470abf-cc55-4ced-a35a-f57fc4be9b43"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -1215,30 +1233,41 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""path"": ""<MidiDevice>/control007"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Column 1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c9de7dc1-9fa9-468b-af6d-7672301dfd3a"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Column 1"",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Column1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""7709417f-0016-4430-8a56-8564a5ad9dea"",
+                    ""path"": ""<MidiDevice>/control074"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Column2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c6325db-e1e6-44ef-881f-42a274f72490"",
+                    ""path"": ""<MidiDevice>/control071"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Column3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a42702b-2b4e-4078-9764-9d219eebbb15"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""Column4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1341,8 +1370,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_ChooseHarp_PlaySong = m_ChooseHarp.FindAction("PlaySong", throwIfNotFound: true);
         // GearsPuzzle
         m_GearsPuzzle = asset.FindActionMap("GearsPuzzle", throwIfNotFound: true);
-        m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column 1", throwIfNotFound: true);
-        m_GearsPuzzle_Newaction = m_GearsPuzzle.FindAction("New action", throwIfNotFound: true);
+        m_GearsPuzzle_Column1 = m_GearsPuzzle.FindAction("Column1", throwIfNotFound: true);
+        m_GearsPuzzle_Column2 = m_GearsPuzzle.FindAction("Column2", throwIfNotFound: true);
+        m_GearsPuzzle_Column3 = m_GearsPuzzle.FindAction("Column3", throwIfNotFound: true);
+        m_GearsPuzzle_Column4 = m_GearsPuzzle.FindAction("Column4", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1727,13 +1758,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GearsPuzzle;
     private List<IGearsPuzzleActions> m_GearsPuzzleActionsCallbackInterfaces = new List<IGearsPuzzleActions>();
     private readonly InputAction m_GearsPuzzle_Column1;
-    private readonly InputAction m_GearsPuzzle_Newaction;
+    private readonly InputAction m_GearsPuzzle_Column2;
+    private readonly InputAction m_GearsPuzzle_Column3;
+    private readonly InputAction m_GearsPuzzle_Column4;
     public struct GearsPuzzleActions
     {
         private @InputSystem_Actions m_Wrapper;
         public GearsPuzzleActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Column1 => m_Wrapper.m_GearsPuzzle_Column1;
-        public InputAction @Newaction => m_Wrapper.m_GearsPuzzle_Newaction;
+        public InputAction @Column2 => m_Wrapper.m_GearsPuzzle_Column2;
+        public InputAction @Column3 => m_Wrapper.m_GearsPuzzle_Column3;
+        public InputAction @Column4 => m_Wrapper.m_GearsPuzzle_Column4;
         public InputActionMap Get() { return m_Wrapper.m_GearsPuzzle; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1746,9 +1781,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Column1.started += instance.OnColumn1;
             @Column1.performed += instance.OnColumn1;
             @Column1.canceled += instance.OnColumn1;
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
+            @Column2.started += instance.OnColumn2;
+            @Column2.performed += instance.OnColumn2;
+            @Column2.canceled += instance.OnColumn2;
+            @Column3.started += instance.OnColumn3;
+            @Column3.performed += instance.OnColumn3;
+            @Column3.canceled += instance.OnColumn3;
+            @Column4.started += instance.OnColumn4;
+            @Column4.performed += instance.OnColumn4;
+            @Column4.canceled += instance.OnColumn4;
         }
 
         private void UnregisterCallbacks(IGearsPuzzleActions instance)
@@ -1756,9 +1797,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Column1.started -= instance.OnColumn1;
             @Column1.performed -= instance.OnColumn1;
             @Column1.canceled -= instance.OnColumn1;
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
+            @Column2.started -= instance.OnColumn2;
+            @Column2.performed -= instance.OnColumn2;
+            @Column2.canceled -= instance.OnColumn2;
+            @Column3.started -= instance.OnColumn3;
+            @Column3.performed -= instance.OnColumn3;
+            @Column3.canceled -= instance.OnColumn3;
+            @Column4.started -= instance.OnColumn4;
+            @Column4.performed -= instance.OnColumn4;
+            @Column4.canceled -= instance.OnColumn4;
         }
 
         public void RemoveCallbacks(IGearsPuzzleActions instance)
@@ -1858,6 +1905,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     public interface IGearsPuzzleActions
     {
         void OnColumn1(InputAction.CallbackContext context);
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnColumn2(InputAction.CallbackContext context);
+        void OnColumn3(InputAction.CallbackContext context);
+        void OnColumn4(InputAction.CallbackContext context);
     }
 }
