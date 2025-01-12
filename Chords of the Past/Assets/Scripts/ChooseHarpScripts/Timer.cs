@@ -7,9 +7,9 @@ public class ChooseHarpTimer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText; //so this variable is a TextMeshPro text :3
     //connect a Text in Unity to this SerializeField variable to make it work.
 
-    [SerializeField] float totalSecondsLeft = 120;
+    [SerializeField] float totalSecondsLeft = 0;
 
-
+    bool timerFailed = false;
     
 
     // Update is called once per frame
@@ -21,5 +21,28 @@ public class ChooseHarpTimer : MonoBehaviour
         int seconds = Mathf.FloorToInt(totalSecondsLeft % 60);
         timerText.text = string.Format("Timer: {0:00}:{1:00}", minutes, seconds); //{} is where the values of the variables are put
         //{0} means to show the first variable in the format of ":00" and {1} is to show the second variable's parameters
+
+        if (totalSecondsLeft >= 120)
+        {
+            timerFailed = true;
+        }
+
+    }
+
+    public float returnTimerScore(float secondsItTook)
+    {
+        int timerMultiplier = 0;
+        secondsItTook = totalSecondsLeft;
+        if (timerFailed)
+        {
+            secondsItTook *= timerMultiplier;
+        }
+        else
+        {
+            timerMultiplier = 1;
+            secondsItTook *= timerMultiplier;
+        }
+
+        return secondsItTook;
     }
 }

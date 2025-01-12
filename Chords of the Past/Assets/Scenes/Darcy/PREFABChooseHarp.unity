@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42487765}
-  - component: {fileID: 42487764}
+  - component: {fileID: 42487766}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -272,59 +272,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &42487764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42487763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eca94482a528f74cb64ce2f95ae416a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstHarp: {fileID: 0}
-  secondHarp: {fileID: 0}
-  thirdHarp: {fileID: 0}
-  fourthHarp: {fileID: 0}
-  firstHarpPosition: {x: 0, y: 0, z: 0}
-  secondHarpPosition: {x: 0, y: 0, z: 0}
-  thirdHarpPosition: {x: 0, y: 0, z: 0}
-  fourthHarpPosition: {x: 0, y: 0, z: 0}
-  endOfRoundText: {fileID: 10734515}
-  allHarpSprites:
-  - {fileID: 806552100261366753, guid: 18f69a9622651884d82cf2e6fdbf6782, type: 3}
-  - {fileID: 6927471007187052643, guid: 13749f7f8bf34234fa3a3207dfdcb705, type: 3}
-  - {fileID: -5337786718908670461, guid: 1d7db614d64268b4fb73b44a70e3a33c, type: 3}
-  - {fileID: 352824233218488064, guid: b5e91dcfab9abbd4ab5ebe6543894283, type: 3}
-  - {fileID: -238303076960143360, guid: d5ce9c70b6eb4534794c55048f816c0e, type: 3}
-  - {fileID: -2497474231269598130, guid: 51e61ff7ad7fe0448a2b99b6e3a45949, type: 3}
-  - {fileID: -4785593486698516427, guid: 7cfd83c1a48757a41a7238d5d4b9472f, type: 3}
-  - {fileID: -489697063302575998, guid: d1e5460c87691aa46b3d233413218ffd, type: 3}
-  - {fileID: -2256292198782980663, guid: b022708de67f8c64da05990f635e9e17, type: 3}
-  - {fileID: -2129382292278050262, guid: 22f7dd617ca531a4aae518d79887cee5, type: 3}
-  - {fileID: 8429224587512158562, guid: da687d0170dae8043aa595e3a815caf6, type: 3}
-  - {fileID: -483894932032126562, guid: d7f958a09c1c2f34f95e823df9906ad1, type: 3}
-  allHarpChords:
-  - {fileID: 8300000, guid: dba8fe8a80411814fb7ec837f026581c, type: 3}
-  - {fileID: 8300000, guid: 072c6abac4bbd0c4996d25f1d07e014b, type: 3}
-  - {fileID: 8300000, guid: 69f086e8746a88a4c8330acdf50fc7e0, type: 3}
-  - {fileID: 8300000, guid: f0c8eba56b64a324cbd516cc4ecb03df, type: 3}
-  - {fileID: 8300000, guid: e4e2f17cd95afe04689b1f0d68569d3f, type: 3}
-  - {fileID: 8300000, guid: 3864d2477af508747921de0ce933c6a8, type: 3}
-  - {fileID: 8300000, guid: 020fc4a3b129034468517a93c906cba6, type: 3}
-  - {fileID: 8300000, guid: e2e8e14af870ff942a995a05e5964f1d, type: 3}
-  - {fileID: 8300000, guid: 55e5d76d411fb0b40ab272c8e0e39389, type: 3}
-  - {fileID: 8300000, guid: 2f11284e9f6d58f4db86a3f7c2163608, type: 3}
-  - {fileID: 8300000, guid: a207ab4602a56054fb94729cedb13c86, type: 3}
-  - {fileID: 8300000, guid: ea63efffc7ffd7b4e812aad1050385f3, type: 3}
-  harpPrefab: {fileID: 7923418382984799758, guid: cdf14a733099bdc4a9d263c04f04d6a0, type: 3}
-  harpArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &42487765
 Transform:
   m_ObjectHideFlags: 0
@@ -340,6 +287,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42487766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42487763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1663816e8f243f090e3065d8a400a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstHarpPosition: {x: 0, y: 0, z: 0}
+  secondHarpPosition: {x: 0, y: 0, z: 0}
+  thirdHarpPosition: {x: 0, y: 0, z: 0}
+  fourthHarpPosition: {x: 0, y: 0, z: 0}
+  endOfRoundText: {fileID: 0}
+  allHarpSprites:
+  - {fileID: 806552100261366753, guid: 18f69a9622651884d82cf2e6fdbf6782, type: 3}
+  - {fileID: 6927471007187052643, guid: 13749f7f8bf34234fa3a3207dfdcb705, type: 3}
+  - {fileID: -5337786718908670461, guid: 1d7db614d64268b4fb73b44a70e3a33c, type: 3}
+  - {fileID: 352824233218488064, guid: b5e91dcfab9abbd4ab5ebe6543894283, type: 3}
+  - {fileID: -238303076960143360, guid: d5ce9c70b6eb4534794c55048f816c0e, type: 3}
+  - {fileID: -2497474231269598130, guid: 51e61ff7ad7fe0448a2b99b6e3a45949, type: 3}
+  - {fileID: -4785593486698516427, guid: 7cfd83c1a48757a41a7238d5d4b9472f, type: 3}
+  - {fileID: -489697063302575998, guid: d1e5460c87691aa46b3d233413218ffd, type: 3}
+  - {fileID: -2256292198782980663, guid: b022708de67f8c64da05990f635e9e17, type: 3}
+  - {fileID: -2129382292278050262, guid: 22f7dd617ca531a4aae518d79887cee5, type: 3}
+  - {fileID: 8429224587512158562, guid: da687d0170dae8043aa595e3a815caf6, type: 3}
+  - {fileID: -483894932032126562, guid: d7f958a09c1c2f34f95e823df9906ad1, type: 3}
+  allHarpChords:
+  - {fileID: 8300000, guid: 50b3c6ed8be8bf346a38691d451b1048, type: 3}
+  - {fileID: 8300000, guid: 211cbf7a9a988ed42bbdd743ffa5880c, type: 3}
+  - {fileID: 8300000, guid: dc2c0e006044d1d4db94d4dea7480f34, type: 3}
+  - {fileID: 8300000, guid: 2a7a70d5fdfcd494d9bdb0bfa05c1c80, type: 3}
+  - {fileID: 8300000, guid: c9c7b6440b7cbd14ebc896e780516561, type: 3}
+  - {fileID: 8300000, guid: 53a7ec4180e3db4439aecf4ef852b041, type: 3}
+  - {fileID: 8300000, guid: 5615347a07835214197eed271a5f84c9, type: 3}
+  - {fileID: 8300000, guid: 807568df04e7ec549a83dda9ec041a73, type: 3}
+  - {fileID: 8300000, guid: 78315ff207db12e46810788f7caa3e9e, type: 3}
+  - {fileID: 8300000, guid: 1a61db9c2e86c184c823184b80b834b8, type: 3}
+  - {fileID: 8300000, guid: b3e2b8ca83e343c408d0629d30e6bcc4, type: 3}
+  - {fileID: 8300000, guid: 9335f99aac4fdb44c8558ca0643a5ecb, type: 3}
+  harpPrefab: {fileID: 7923418382984799758, guid: cdf14a733099bdc4a9d263c04f04d6a0, type: 3}
+  harpArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentHarpSelection: {fileID: 0}
 --- !u!1 &276313438
 GameObject:
   m_ObjectHideFlags: 0
