@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 385dcb2ae78eb4b8780cf29ab6fad6ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5153508522233362735
+    second: 1 PLUCK_0
+  - first:
+      213: 6166194312704165098
+    second: 1 PLUCK_1
+  - first:
+      213: -7253813713348704394
+    second: 1 PLUCK_2
+  - first:
+      213: 8242484625597772329
+    second: 1 PLUCK_3
+  - first:
+      213: 6230987203483151950
+    second: 1 PLUCK_4
+  - first:
+      213: -3055459488016968998
+    second: 1 PLUCK_5
+  - first:
+      213: -7645666192037201389
+    second: 1 PLUCK_6
+  - first:
+      213: 2564296940762072456
+    second: 1 PLUCK_7
+  - first:
+      213: -1952138306972806737
+    second: 1 PLUCK_8
+  - first:
+      213: 1670411275615022952
+    second: 1 PLUCK_9
+  - first:
+      213: -1284375621712999915
+    second: 1 PLUCK_10
+  - first:
+      213: -7274434494526553900
+    second: 1 PLUCK_11
+  - first:
+      213: 344007073306328286
+    second: 1 PLUCK_12
+  - first:
+      213: -7119936115190246496
+    second: 1 PLUCK_13
+  - first:
+      213: 4032489372738456308
+    second: 1 PLUCK_14
+  - first:
+      213: 7634341293053747987
+    second: 1 PLUCK_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1 PLUCK_0
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 6131
+        width: 89
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0307e64c612894a6a824d7533931e5be
+      internalID: -518622777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_1
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 6131
+        width: 94
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62dea0fa16e7466694a78261c5f3f9b
+      internalID: 1674150166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_2
+      rect:
+        serializedVersion: 2
+        x: 4854
+        y: 6140
+        width: 103
+        height: 1209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0443a9ecef914aef89ca6d3bb61ce59
+      internalID: -785769918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_3
+      rect:
+        serializedVersion: 2
+        x: 6776
+        y: 6140
+        width: 103
+        height: 1209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fd52bd969f14e09b03714176db7fa9
+      internalID: -861775081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_4
+      rect:
+        serializedVersion: 2
+        x: 8698
+        y: 6149
+        width: 103
+        height: 1191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5b4d884b97c4ab9b3a03c5bcc5fe23
+      internalID: -1592161029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_5
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 4232
+        width: 103
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e00f824ee344ee2964face45128880
+      internalID: -1357468575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_6
+      rect:
+        serializedVersion: 2
+        x: 2932
+        y: 4222
+        width: 103
+        height: 1205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a43ba438c8944c1d90b22424d1f8e74
+      internalID: 1362385554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_7
+      rect:
+        serializedVersion: 2
+        x: 4854
+        y: 4222
+        width: 103
+        height: 1205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db22b9b3edccc42e8a2b43e592a574e0
+      internalID: -1398387138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_8
+      rect:
+        serializedVersion: 2
+        x: 6785
+        y: 4213
+        width: 89
+        height: 1214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d803352fde9e4eadbb1f3acf01d95a0
+      internalID: 1130396405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_9
+      rect:
+        serializedVersion: 2
+        x: 8707
+        y: 4213
+        width: 84
+        height: 1214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e581a56b15d64f08ac1062b499f98fe
+      internalID: 1854490954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_10
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 2291
+        width: 89
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738e84bbc8ffb44a2af6f649765016d0
+      internalID: 619290626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_11
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2291
+        width: 94
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059d0cb5ee8a14713ab45330eaf8b91c
+      internalID: 647967663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_12
+      rect:
+        serializedVersion: 2
+        x: 4868
+        y: 2291
+        width: 89
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d9e5565901d4fd2a08b87890e61f90
+      internalID: 1001865399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_13
+      rect:
+        serializedVersion: 2
+        x: 6786
+        y: 2291
+        width: 93
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d5a60724a86490d95b77fc845284e8
+      internalID: -145368528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_14
+      rect:
+        serializedVersion: 2
+        x: 8707
+        y: 2291
+        width: 93
+        height: 1223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ade8f9c695643908352fa5a26ed506
+      internalID: 491065860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1 PLUCK_15
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 373
+        width: 89
+        height: 1219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6ce3aebe8714bf7b86a6b980c82069
+      internalID: 502639971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7e4a5421cc8dd465597618313dfa8c76
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      1 PLUCK_0: -518622777
+      1 PLUCK_1: 1674150166
+      1 PLUCK_10: 619290626
+      1 PLUCK_11: 647967663
+      1 PLUCK_12: 1001865399
+      1 PLUCK_13: -145368528
+      1 PLUCK_14: 491065860
+      1 PLUCK_15: 502639971
+      1 PLUCK_2: -785769918
+      1 PLUCK_3: -861775081
+      1 PLUCK_4: -1592161029
+      1 PLUCK_5: -1357468575
+      1 PLUCK_6: 1362385554
+      1 PLUCK_7: -1398387138
+      1 PLUCK_8: 1130396405
+      1 PLUCK_9: 1854490954
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
