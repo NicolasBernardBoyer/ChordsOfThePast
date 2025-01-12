@@ -1785,17 +1785,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""84e7c8e0-84b0-4724-88d7-c29ed1be85b5"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PlaySong"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""03dc8ae4-0141-4fe4-ad10-392e4f9de0c4"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",

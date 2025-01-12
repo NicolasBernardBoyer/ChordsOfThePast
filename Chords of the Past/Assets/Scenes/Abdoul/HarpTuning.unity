@@ -283,7 +283,6 @@ GameObject:
   m_Component:
   - component: {fileID: 309654674}
   - component: {fileID: 309654676}
-  - component: {fileID: 309654675}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -306,23 +305,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1057293607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &309654675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309654673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bea91871fc53940ac9b2d5380682a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstCord: {fileID: 0}
-  secondCord: {fileID: 0}
-  thirdCord: {fileID: 0}
-  fourthCord: {fileID: 0}
-  sound1: {fileID: 0}
 --- !u!212 &309654676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -388,7 +370,6 @@ GameObject:
   m_Component:
   - component: {fileID: 562383521}
   - component: {fileID: 562383523}
-  - component: {fileID: 562383522}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -411,23 +392,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 787301858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &562383522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562383520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bea91871fc53940ac9b2d5380682a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstCord: {fileID: 0}
-  secondCord: {fileID: 0}
-  thirdCord: {fileID: 0}
-  fourthCord: {fileID: 0}
-  sound1: {fileID: 0}
 --- !u!212 &562383523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -757,7 +721,7 @@ MonoBehaviour:
   secondCord: {fileID: 1638623520}
   thirdCord: {fileID: 1949173164}
   fourthCord: {fileID: 787301855}
-  sound1: {fileID: 977361945}
+  audioSound: {fileID: 977361945}
 --- !u!82 &977361945
 AudioSource:
   m_ObjectHideFlags: 0
@@ -768,11 +732,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78671ecf81846364fa9b8bd65e23cabc, type: 3}
-  m_Resource: {fileID: 8300000, guid: 78671ecf81846364fa9b8bd65e23cabc, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 287b29f7005d87246ab33bfb5eaf2967, type: 3}
+  m_Resource: {fileID: 8300000, guid: 287b29f7005d87246ab33bfb5eaf2967, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: -1.15
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -953,7 +917,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1450536206}
   - component: {fileID: 1450536208}
-  - component: {fileID: 1450536207}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -976,23 +939,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1949173167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1450536207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450536205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bea91871fc53940ac9b2d5380682a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstCord: {fileID: 0}
-  secondCord: {fileID: 0}
-  thirdCord: {fileID: 0}
-  fourthCord: {fileID: 0}
-  sound1: {fileID: 0}
 --- !u!212 &1450536208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1146,7 +1092,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1686816131}
   - component: {fileID: 1686816133}
-  - component: {fileID: 1686816132}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -1169,23 +1114,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1638623523}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1686816132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686816130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bea91871fc53940ac9b2d5380682a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstCord: {fileID: 0}
-  secondCord: {fileID: 0}
-  thirdCord: {fileID: 0}
-  fourthCord: {fileID: 0}
-  sound1: {fileID: 0}
 --- !u!212 &1686816133
 SpriteRenderer:
   m_ObjectHideFlags: 0
