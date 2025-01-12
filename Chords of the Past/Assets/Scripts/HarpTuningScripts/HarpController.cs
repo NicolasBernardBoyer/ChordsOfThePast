@@ -31,12 +31,15 @@ public class HarpController : MonoBehaviour
     {
         inputControls = new InputSystem_Actions();
 
-        // Initialize random pitches for each cord
-        foreach (var sound in cordSounds)
+        // Initialize pitches based on initial rotations
+        for (int i = 0; i < cordSounds.Length; i++)
         {
-            if (sound != null)
+            if (cordSounds[i] != null)
             {
-                sound.pitch = Random.Range(0.5f, 2f);
+                // Calculate pitch based on initial rotation
+                float initialRotation = GetCordByIndex(i).transform.eulerAngles.z;
+                float initialPitch = Mathf.Lerp(0.5f, 2f, (initialRotation % 360) / 360f);
+                cordSounds[i].pitch = initialPitch;
             }
         }
 
@@ -46,6 +49,16 @@ public class HarpController : MonoBehaviour
             evaluateButton.onClick.AddListener(EvaluateAndProceed);
         }
     }
+
+    private GameObject GetCordByIndex(int index)
+    {
+        if (index == 0) return firstCord;
+        if (index == 1) return secondCord;
+        if (index == 2) return thirdCord;
+        if (index == 3) return fourthCord;
+        return null;
+    }
+
 
     private void OnEnable()
     {
@@ -211,6 +224,7 @@ public class HarpController : MonoBehaviour
             {
                 float pitchDifference = Mathf.Abs(sound.pitch - targetPitch);
                 float score = Mathf.Clamp(pitchDifference * 100, 0, 100); // Scaled difference
+
                 totalScore += score;
             }
         }
