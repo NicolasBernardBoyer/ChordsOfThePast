@@ -110,6 +110,7 @@ public class FirstSongScript : MonoBehaviour
 
     private IEnumerator LoopWithDelay()
     {
+        OnDisable(); 
         yield return new WaitForSeconds(2f);
         currentLevel += 1;
         currentNoteToBePlayed = 0; 
@@ -201,6 +202,7 @@ public class FirstSongScript : MonoBehaviour
             if (pianoNoteIndex != currentSong[currentNoteToBePlayed])
             {
                 //minus 10 score
+                Score.addScore(-10); 
                 //play a bang
                 foreach(GameObject key in keys)
                 {
@@ -214,6 +216,7 @@ public class FirstSongScript : MonoBehaviour
             else
             {
                 currentNoteToBePlayed++;
+                Score.addScore(1); 
                 if (currentNoteToBePlayed >= currentLevel)
                 {
                     nextLevelSimon();
@@ -223,5 +226,10 @@ public class FirstSongScript : MonoBehaviour
             
             keys[pianoNoteIndex].GetComponent<PianoNote>().PlayAudioSource();
         }
+    }
+    private IEnumerator PlaySound(PianoNote piano)
+    {
+        piano.PlayAudioSource();
+        yield return new WaitForSeconds(0.2f);
     }
 }
