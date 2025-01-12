@@ -15,97 +15,50 @@ public class GearsGameManager : MonoBehaviour
     private InputAction leftKey;
     private InputAction rightKey;
 
+    public GameObject Gear;
+    public GameObject SmallGear;
+    public GameObject MediumGear;
+    public GameObject LargeGear;
+    public float intensity = 5f;
+    public float sliderIntensity = 7f;
+    public float keyboardIntensity = 0.0001f;
+    public float cursorMax = 3.0f;
+    public float cursorMin = -3.0f;
+
+    private Vector3 cursor = new Vector3(-3.0f, -3.0f, 0);
 
     private void Awake()
     {
-<<<<<<< Updated upstream
+
         //initialize the input system
         inputControls = new InputSystem_Actions();
-=======
-<<<<<<< HEAD
-        public InputSystem_Actions inputControls;
-        public GameObject Gear;
-        public GameObject SmallGear;
-        public GameObject MediumGear;
-        public GameObject LargeGear;
-        public float intensity = 5f;
-        public float sliderIntensity = 7f;
-        public float keyboardIntensity = 0.0001f;
-        public float cursorMax = 3.0f;
-        public float cursorMin = -3.0f;
+    }
+        
 
-        private Vector3 cursor = new Vector3(-3.0f, -3.0f, 0);
-
-        //create a new input action for each different key
-        private InputAction playKey;
-        private InputAction stopKey;
-        private InputAction slider;
-        private InputAction leftKey;
-        private InputAction rightKey;
-
-        private void Start()
-        {
-            Gear = Instantiate(SmallGear, cursor, Quaternion.identity);
-        }
-        private void Update()
-        {
-            Gear.transform.position = Vector3.MoveTowards(Gear.transform.position, cursor, 1.0f);
+    private void Start()
+    {
+        Gear = Instantiate(SmallGear, cursor, Quaternion.identity);
+    }
+    private void Update()
+    {
+        Gear.transform.position = Vector3.MoveTowards(Gear.transform.position, cursor, 1.0f);
 
         if (Input.GetKey(KeyCode.W) && cursor.y < 4.0f)
-            {
-                cursor = new Vector3(cursor.x, cursor.y + 0.05f, cursor.z);
-            }
-        if (Input.GetKey(KeyCode.S) && cursor.y > -4.0f)
-            {
-                cursor = new Vector3(cursor.x, cursor.y - 0.05f, cursor.z);
-            }
+        {
+            cursor = new Vector3(cursor.x, cursor.y + 0.05f, cursor.z);
         }
+        if (Input.GetKey(KeyCode.S) && cursor.y > -4.0f)
+        {
+            cursor = new Vector3(cursor.x, cursor.y - 0.05f, cursor.z);
+        }
+    }
    
         
-        public void PlaceGear()
-        {
-            Gear = Instantiate(MediumGear, cursor, Quaternion.identity);
-        }
-
-        private void Awake()
-        {
-            //initialize the input system
-            inputControls = new InputSystem_Actions();
-        }
-
-        private void OnEnable()
-        {
-            playKey = inputControls.GearsPuzzle.Play;
-            playKey.Enable();
-            //register to the event
-            playKey.performed += PlayKey;
-
-            stopKey = inputControls.GearsPuzzle.Stop;
-            stopKey.Enable();
-            //register to the event
-            stopKey.performed += StopKey;
-
-            //enable the command (input system.map.command)
-            slider = inputControls.GearsPuzzle.Slider;
-            slider.Enable();
-            //register to the event
-            slider.performed += Slider;
-
-            rightKey = inputControls.GearsPuzzle.Right;
-            rightKey.Enable();
-            //register to the event
-            rightKey.performed += RightKey;
-
-            leftKey = inputControls.GearsPuzzle.Left;
-            leftKey.Enable();
-            //register to the event
-            leftKey.performed += LeftKey;
-=======
-        //initialize the input system
-        inputControls = new InputSystem_Actions();
->>>>>>> 3ebebbfa50573bb1b42b01f5b8bc0869d8f18728
->>>>>>> Stashed changes
+    public void PlaceGear()
+    {
+        Gear = Instantiate(MediumGear, cursor, Quaternion.identity);
     }
+
 
     private void OnEnable()
     {
@@ -117,26 +70,17 @@ public class GearsGameManager : MonoBehaviour
         //register to the event
         slider1.performed += Slider1;
 
-<<<<<<< Updated upstream
         slider2 = inputControls.GearsPuzzle.Column2;
         slider2.Enable();
         slider2.performed += Slider2;
-=======
-<<<<<<< HEAD
-            Debug.Log("Pressed the play key");
-        }
-        public void StopKey(InputAction.CallbackContext context)
-        {
-            Debug.Log("Pressed the stop key");
-            PlaceGear();
-            
-        }
-=======
+
+        Debug.Log("Pressed the play key");
+        
+        
         slider2 = inputControls.GearsPuzzle.Column2;
         slider2.Enable();
         slider2.performed += Slider2;
->>>>>>> 3ebebbfa50573bb1b42b01f5b8bc0869d8f18728
->>>>>>> Stashed changes
+
 
         slider3 = inputControls.GearsPuzzle.Column3;
         slider3.Enable();
@@ -146,7 +90,12 @@ public class GearsGameManager : MonoBehaviour
         slider4.Enable();
         slider4.performed += Slider4;
     }
+    public void StopKey(InputAction.CallbackContext context)
+    {
+        Debug.Log("Pressed the stop key");
+        PlaceGear();
 
+    }
     private void OnDisable()
     {
         slider1.Disable();
@@ -178,21 +127,12 @@ public class GearsGameManager : MonoBehaviour
         Debug.Log("Slider4 being used");
     }
 
-
-<<<<<<< Updated upstream
-
-}
-=======
-<<<<<<< HEAD
     public void Slider(InputAction.CallbackContext context)
-        {   
-            Debug.Log(context.ReadValue<float>());
-            cursor = new Vector3(cursor.x, -3 + context.ReadValue<float>() * intensity, cursor.z);
-            //Debug.Log("Slider1 being used");
-        }
+    {
+        Debug.Log(context.ReadValue<float>());
+        cursor = new Vector3(cursor.x, -3 + context.ReadValue<float>() * intensity, cursor.z);
+        //Debug.Log("Slider1 being used");
     }
-=======
 
 }
->>>>>>> 3ebebbfa50573bb1b42b01f5b8bc0869d8f18728
->>>>>>> Stashed changes
+
