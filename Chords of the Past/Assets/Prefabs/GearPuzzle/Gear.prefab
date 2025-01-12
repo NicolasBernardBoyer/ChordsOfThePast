@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 101123142758877146}
   - component: {fileID: 6083885959016384499}
-  - component: {fileID: 2301403465640045022}
-  - component: {fileID: -7778314033486419513}
+  - component: {fileID: -1747943479220028536}
+  - component: {fileID: 6345823073452127005}
+  - component: {fileID: 6670081104695985925}
   m_Layer: 0
   m_Name: Gear
-  m_TagString: Untagged
+  m_TagString: Gear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1168062216534239477}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -8173196693299195349, guid: 282e4dd5b28cacb45bd3dc781b50e853, type: 3}
   m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +90,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2301403465640045022
+--- !u!50 &-1747943479220028536
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168062216534239477}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &6345823073452127005
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,9 +151,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &-7778314033486419513
+  m_Offset: {x: 0.013762474, y: 0}
+  m_Radius: 0.6210666
+--- !u!114 &6670081104695985925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,4 +165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78523560bb1c74446bf3e7e5289b80e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0
+  type: 0
+  canPlace: 0
+  hovering: {fileID: 0}
+  spriteRenderer: {fileID: 6083885959016384499}
+  smallSprite: {fileID: -8173196693299195349, guid: 282e4dd5b28cacb45bd3dc781b50e853, type: 3}
+  mediumSprite: {fileID: 7631356595286212386, guid: c76350c2776b11540ab1df3b9cfe09d7, type: 3}
+  largeSprite: {fileID: 2580343225098560227, guid: c1f41ef4bd29f5941874902efc177b65, type: 3}
+  gameManager: {fileID: 293731340500290542, guid: 0b3a9656c96959e45854feb6c4d56538, type: 3}
