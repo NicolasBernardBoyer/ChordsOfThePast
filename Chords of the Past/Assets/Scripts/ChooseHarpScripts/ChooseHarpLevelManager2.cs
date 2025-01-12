@@ -43,6 +43,10 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
     public GameObject currentHarpSelection;
     private GameObject chosenHarp;
 
+    public ChooseHarpDialogue HarpDialogueBox;
+
+    [SerializeField] public TextMeshProUGUI roundCompleteText;
+
 
     //public Transform[] harpTransformArray = new Transform[4];
 
@@ -129,7 +133,7 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
 
         //find the chosen harp
         int harpIndex = -1;
-        Debug.Log(context.action.name); 
+        Debug.Log(context.action.name);
         if (context.action.name == "ChooseFirstHarp")
         {
             harpIndex = 0;
@@ -195,17 +199,24 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
             Debug.Log(Score.getHealthScore());
             //add score
 
-            StartCoroutine(TimeToNextRound());
-            setUpRound();
         }
         else
         {
             Score.addScore(1); //pity point
             Debug.Log("Failed the puzzle lol");
 
-            StartCoroutine(TimeToNextRound());
-            setUpRound();
         }
+
+
+        //delete all harp prefabs before going to the next round
+        for (int i = 0; i < 4; i++)
+        {
+            Destroy(harpArray[i]);
+        }
+
+        StartCoroutine(TimeToNextRound());
+        setUpRound();
+        Debug.Log(round_counter);
     }
 
     private IEnumerator PlayHarpSound()
@@ -220,9 +231,10 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
 
     private IEnumerator TimeToNextRound()
     {
-        isPlaying = true;
+
+        OnDisable();
         yield return new WaitForSeconds(3f);
-        isPlaying = false;
+        OnEnable();
     }
 
     private IEnumerator PlayCutScene()
@@ -237,7 +249,23 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
 
     public void setUpRound()
     {
+        if (round_counter == 1)
+            roundCompleteText.text = "Round 1 Complete!";
+        if (round_counter == 2)
+            roundCompleteText.text = "Round 2 Complete!";
+        if (round_counter == 3)
+            roundCompleteText.text = "Round 3 Complete!";
+
         round_counter += 1;
+
+        if (round_counter >= 4)
+        {
+            Debug.Log("Game Over");
+            SceneManager.LoadScene("MainMenu");
+            return;
+        }
+
+
         //endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
 
         for (int i = 0; i < 4; i++)
@@ -293,6 +321,8 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        roundCompleteText.text = "";
+        Debug.Log(round_counter);
         //endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
 
         for (int i = 0; i < 4; i++)
@@ -345,10 +375,6 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (round_counter >= 4)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
 
     }
 }
