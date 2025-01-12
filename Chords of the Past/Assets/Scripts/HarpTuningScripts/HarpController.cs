@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CordController : MonoBehaviour
+public class HarpController : MonoBehaviour
 {
     public InputSystem_Actions inputControls;
 
@@ -93,7 +93,7 @@ public class CordController : MonoBehaviour
         float rotationValue = context.ReadValue<float>();
         Debug.Log($"Rotation value: {rotationValue}");
 
-        float rotationSpeed = 100f; // Speed of rotation
+        float rotationSpeed = 400f; // Speed of rotation
         selectedCord.transform.Rotate(0, 0, rotationValue * rotationSpeed * Time.deltaTime);
     }
 

@@ -1592,6 +1592,222 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ]
         },
         {
+            ""name"": ""HarpTuning"",
+            ""id"": ""bfe768f6-cf1e-4656-ab09-1cb63f2c52c6"",
+            ""actions"": [
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7272b21-7030-4244-88a1-7077799a8a64"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChooseFirstCord"",
+                    ""type"": ""Button"",
+                    ""id"": ""5b81ce26-5b97-46a7-8eb3-ef6be1d9c42d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChooseSecondCord"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a4f3e39-970c-4619-90ef-f3e4d7af0bea"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChooseThirdCord"",
+                    ""type"": ""Button"",
+                    ""id"": ""273ef30e-e70b-4b52-9de9-01ca832c5cd5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChooseFourthCord"",
+                    ""type"": ""Button"",
+                    ""id"": ""6746b4d5-ddc7-4cc3-81f1-16f62c91c6c8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlaySong"",
+                    ""type"": ""Button"",
+                    ""id"": ""30e60c98-c99a-412a-a26a-d10d65f7ac7f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f310d246-1f6e-403f-81fb-e89bbef37bf6"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""e239e454-da98-47a4-8443-19b24157cc71"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c80f7f84-da28-4ac0-8f2a-4b22d29d0bd4"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""21f19f3d-7754-481f-bed0-b71672b616a8"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0b0253b-13b8-4d87-a430-82d2b6e1d429"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseFirstCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f64a491-a56c-4593-820f-ba3fa48adfc5"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseFirstCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0da68644-3d37-434e-a142-50e0ea87ac51"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseSecondCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8bb7d3fd-c955-4e7c-83b7-72acc003c3a6"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseSecondCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e0e5c43-41c2-4105-9f09-dba61164992b"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseThirdCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b9fa60d-00c5-4ae4-8736-a776a9edae96"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseThirdCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""763dd989-f198-4dee-835b-d29f9f1844e3"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseFourthCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c1cf7f8-f1d1-48c5-a137-9f6c6b110758"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChooseFourthCord"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84e7c8e0-84b0-4724-88d7-c29ed1be85b5"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlaySong"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""03dc8ae4-0141-4fe4-ad10-392e4f9de0c4"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlaySong"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""MainMenu"",
             ""id"": ""ffc1acd2-dce7-40eb-93be-19a708a232d2"",
             ""actions"": [
@@ -1799,6 +2015,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_GearsPuzzle_F4 = m_GearsPuzzle.FindAction("F4", throwIfNotFound: true);
         m_GearsPuzzle_Play = m_GearsPuzzle.FindAction("Play", throwIfNotFound: true);
         m_GearsPuzzle_Stop = m_GearsPuzzle.FindAction("Stop", throwIfNotFound: true);
+        // HarpTuning
+        m_HarpTuning = asset.FindActionMap("HarpTuning", throwIfNotFound: true);
+        m_HarpTuning_Rotate = m_HarpTuning.FindAction("Rotate", throwIfNotFound: true);
+        m_HarpTuning_ChooseFirstCord = m_HarpTuning.FindAction("ChooseFirstCord", throwIfNotFound: true);
+        m_HarpTuning_ChooseSecondCord = m_HarpTuning.FindAction("ChooseSecondCord", throwIfNotFound: true);
+        m_HarpTuning_ChooseThirdCord = m_HarpTuning.FindAction("ChooseThirdCord", throwIfNotFound: true);
+        m_HarpTuning_ChooseFourthCord = m_HarpTuning.FindAction("ChooseFourthCord", throwIfNotFound: true);
+        m_HarpTuning_PlaySong = m_HarpTuning.FindAction("PlaySong", throwIfNotFound: true);
         // MainMenu
         m_MainMenu = asset.FindActionMap("MainMenu", throwIfNotFound: true);
         m_MainMenu_PlayGame = m_MainMenu.FindAction("PlayGame", throwIfNotFound: true);
@@ -1812,6 +2036,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem_Actions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_ChooseHarp.enabled, "This will cause a leak and performance issues, InputSystem_Actions.ChooseHarp.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_GearsPuzzle.enabled, "This will cause a leak and performance issues, InputSystem_Actions.GearsPuzzle.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_HarpTuning.enabled, "This will cause a leak and performance issues, InputSystem_Actions.HarpTuning.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_MainMenu.enabled, "This will cause a leak and performance issues, InputSystem_Actions.MainMenu.Disable() has not been called.");
     }
 
@@ -2303,6 +2528,92 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     }
     public GearsPuzzleActions @GearsPuzzle => new GearsPuzzleActions(this);
 
+    // HarpTuning
+    private readonly InputActionMap m_HarpTuning;
+    private List<IHarpTuningActions> m_HarpTuningActionsCallbackInterfaces = new List<IHarpTuningActions>();
+    private readonly InputAction m_HarpTuning_Rotate;
+    private readonly InputAction m_HarpTuning_ChooseFirstCord;
+    private readonly InputAction m_HarpTuning_ChooseSecondCord;
+    private readonly InputAction m_HarpTuning_ChooseThirdCord;
+    private readonly InputAction m_HarpTuning_ChooseFourthCord;
+    private readonly InputAction m_HarpTuning_PlaySong;
+    public struct HarpTuningActions
+    {
+        private @InputSystem_Actions m_Wrapper;
+        public HarpTuningActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Rotate => m_Wrapper.m_HarpTuning_Rotate;
+        public InputAction @ChooseFirstCord => m_Wrapper.m_HarpTuning_ChooseFirstCord;
+        public InputAction @ChooseSecondCord => m_Wrapper.m_HarpTuning_ChooseSecondCord;
+        public InputAction @ChooseThirdCord => m_Wrapper.m_HarpTuning_ChooseThirdCord;
+        public InputAction @ChooseFourthCord => m_Wrapper.m_HarpTuning_ChooseFourthCord;
+        public InputAction @PlaySong => m_Wrapper.m_HarpTuning_PlaySong;
+        public InputActionMap Get() { return m_Wrapper.m_HarpTuning; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(HarpTuningActions set) { return set.Get(); }
+        public void AddCallbacks(IHarpTuningActions instance)
+        {
+            if (instance == null || m_Wrapper.m_HarpTuningActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_HarpTuningActionsCallbackInterfaces.Add(instance);
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
+            @ChooseFirstCord.started += instance.OnChooseFirstCord;
+            @ChooseFirstCord.performed += instance.OnChooseFirstCord;
+            @ChooseFirstCord.canceled += instance.OnChooseFirstCord;
+            @ChooseSecondCord.started += instance.OnChooseSecondCord;
+            @ChooseSecondCord.performed += instance.OnChooseSecondCord;
+            @ChooseSecondCord.canceled += instance.OnChooseSecondCord;
+            @ChooseThirdCord.started += instance.OnChooseThirdCord;
+            @ChooseThirdCord.performed += instance.OnChooseThirdCord;
+            @ChooseThirdCord.canceled += instance.OnChooseThirdCord;
+            @ChooseFourthCord.started += instance.OnChooseFourthCord;
+            @ChooseFourthCord.performed += instance.OnChooseFourthCord;
+            @ChooseFourthCord.canceled += instance.OnChooseFourthCord;
+            @PlaySong.started += instance.OnPlaySong;
+            @PlaySong.performed += instance.OnPlaySong;
+            @PlaySong.canceled += instance.OnPlaySong;
+        }
+
+        private void UnregisterCallbacks(IHarpTuningActions instance)
+        {
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
+            @ChooseFirstCord.started -= instance.OnChooseFirstCord;
+            @ChooseFirstCord.performed -= instance.OnChooseFirstCord;
+            @ChooseFirstCord.canceled -= instance.OnChooseFirstCord;
+            @ChooseSecondCord.started -= instance.OnChooseSecondCord;
+            @ChooseSecondCord.performed -= instance.OnChooseSecondCord;
+            @ChooseSecondCord.canceled -= instance.OnChooseSecondCord;
+            @ChooseThirdCord.started -= instance.OnChooseThirdCord;
+            @ChooseThirdCord.performed -= instance.OnChooseThirdCord;
+            @ChooseThirdCord.canceled -= instance.OnChooseThirdCord;
+            @ChooseFourthCord.started -= instance.OnChooseFourthCord;
+            @ChooseFourthCord.performed -= instance.OnChooseFourthCord;
+            @ChooseFourthCord.canceled -= instance.OnChooseFourthCord;
+            @PlaySong.started -= instance.OnPlaySong;
+            @PlaySong.performed -= instance.OnPlaySong;
+            @PlaySong.canceled -= instance.OnPlaySong;
+        }
+
+        public void RemoveCallbacks(IHarpTuningActions instance)
+        {
+            if (m_Wrapper.m_HarpTuningActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IHarpTuningActions instance)
+        {
+            foreach (var item in m_Wrapper.m_HarpTuningActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_HarpTuningActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public HarpTuningActions @HarpTuning => new HarpTuningActions(this);
+
     // MainMenu
     private readonly InputActionMap m_MainMenu;
     private List<IMainMenuActions> m_MainMenuActionsCallbackInterfaces = new List<IMainMenuActions>();
@@ -2455,6 +2766,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnF4(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
         void OnStop(InputAction.CallbackContext context);
+    }
+    public interface IHarpTuningActions
+    {
+        void OnRotate(InputAction.CallbackContext context);
+        void OnChooseFirstCord(InputAction.CallbackContext context);
+        void OnChooseSecondCord(InputAction.CallbackContext context);
+        void OnChooseThirdCord(InputAction.CallbackContext context);
+        void OnChooseFourthCord(InputAction.CallbackContext context);
+        void OnPlaySong(InputAction.CallbackContext context);
     }
     public interface IMainMenuActions
     {
