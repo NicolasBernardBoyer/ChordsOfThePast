@@ -6,8 +6,8 @@ using System.Collections;
 
 public class ChooseHarpDialogue : MonoBehaviour
 {
-    public ChooseHarpLevelManager harpLevelManager;
-
+    static ChooseHarpDialogue instance; //singleton :3
+    
     [SerializeField] public TextMeshProUGUI dialogueText;
 
     public string[] dialogueLines;
@@ -34,11 +34,11 @@ public class ChooseHarpDialogue : MonoBehaviour
         }
     }
 
-    void NextLine()
+    public void NextLine()
     {
         if (index < dialogueLines.Length - 1) //if the index is out of the line
         {
-            index++;
+            index = Random.Range(1, 3);
             dialogueText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
@@ -58,7 +58,7 @@ public class ChooseHarpDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+       /* if (Input.GetMouseButtonDown(0))
         {
             if (dialogueText.text == dialogueLines[index])
             {
@@ -70,7 +70,7 @@ public class ChooseHarpDialogue : MonoBehaviour
                 dialogueText.text = dialogueLines[index];
             }
 
-        }
+        } */
     }
 
 }

@@ -1,49 +1,53 @@
 using System;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class Score : MonoBehaviour //static means can be accessed by all other codes without making it a copy of it in the code. This is a singleton
 {
-    int healthScore = 100;
-    int wealthScore = 100;
-    int faithScore = 100;
-    Boolean goodEnding = false;
+    static int score = 100;
+    static Score instance; //singleton :3
 
 
     //getters for all scores
-    public int getHealthScore()
+    public static int getHealthScore()
     {
-        return healthScore;
+        return score;
     }
 
-    public int getWealthScore()
-    {
+    /* public int getWealthScore()
+     {
         return wealthScore;
-    }
+    } */
 
-    public int getFaithScore()
-    {
+    //public int getFaithScore()
+    /*{
         return faithScore;
-    }
+    }*/
 
     //setters for all scores
-    public void setHealthScore(int healthScore)
+    public static void setScore(int givenScore)
     {
-        this.healthScore = healthScore;
+        score = givenScore;
     }
 
-    public void setWealthScore(int wealthScore)
+    public static int addScore(int givenScore)
+    {
+        score += givenScore;
+        return score;
+    }
+
+    /*public void setWealthScore(int wealthScore)
     {
         this.wealthScore = wealthScore;
-    }
+    } */
 
-    public void setFaithScore(int faithScore)
+    /*public void setFaithScore(int faithScore)
     {
         this.faithScore = faithScore;
-    }
+    } */
 
-    public Boolean doWeGetGoodEnding(int healthScore, int wealthScore, int faithScore)
+    /*public static Boolean doWeGetGoodEnding(int healthScore, int wealthScore)
     {
-        if ((healthScore < 0) && (wealthScore < 0) && (faithScore < 0))
+        if ((healthScore < 0) && (wealthScore < 0))
         {
             goodEnding = true;
             Debug.Log("Good Ending!");
@@ -55,19 +59,28 @@ public class Score : MonoBehaviour
             return goodEnding;
             Debug.Log("Bad Ending!");
         }
-    }
+    } */
 
-    public int resultsSimon(int amountOfFails, int simonTimerTime)
+
+
+
+    /*public int resultsSimon(int amountOfFails, int simonTimerTime)
     {
-        this.healthScore = 100 / amountOfFails;
+        this.healthScore = 100;
         this.wealthScore = 100 / simonTimerTime;
         return healthScore;
     }
 
-    public int resultsChooseHarp(int chosenHarpMultiplier, int amountOfChecks, int chooseHarpTimerTime)
+    public int resultsChooseHarp(bool chosenHarpRight, int chooseHarpTimerTime)
     {
-        this.healthScore = 100 * chosenHarpMultiplier;
-        this.wealthScore = 100 / chooseHarpTimerTime;
+        if (chosenHarpRight)
+        {
+            healthScore += 100;
+        }
+        if (chooseHarpTimerTime >= 180)
+        {
+            healthScore -= 100;
+        }
         return healthScore;
     }
 
@@ -84,17 +97,17 @@ public class Score : MonoBehaviour
         this.wealthScore = 100 / musicBoxTimerTime;
         return healthScore;
     }
-
+    */
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    static void Start()
     {
-        doWeGetGoodEnding(healthScore, wealthScore, faithScore);
+    
     }
 
     // Update is called once per frame
-    void Update()
+    static void Update()
     {
         
-    }
+    } 
 }

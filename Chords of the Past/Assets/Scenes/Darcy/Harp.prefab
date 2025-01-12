@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4309886502851089376}
   - component: {fileID: 5232509932928346244}
+  - component: {fileID: -306411453505738955}
   - component: {fileID: -6280036218657568152}
   m_Layer: 0
   m_Name: Harp
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 806552100261366753, guid: 18f69a9622651884d82cf2e6fdbf6782, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,6 +89,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-306411453505738955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7923418382984799758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71502a390341c40dd9c3a5856811a2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isChosenHarp: 0
 --- !u!82 &-6280036218657568152
 AudioSource:
   m_ObjectHideFlags: 0

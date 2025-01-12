@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Darcy/MainMenu.unity
     guid: ea9dd9ae5a5b7584fa656d59390e0d42
   - enabled: 1
-    path: Assets/Scenes/Darcy/ChooseHarp.unity
+    path: Assets/Scenes/Darcy/BADChooseHarp.unity
     guid: 2db3e70bfd3860b40ba8b2951b732f07
+  - enabled: 1
+    path: Assets/Scenes/Wells/Cutscene 1 Intro.unity
+    guid: 80aa4eb6ced656a4fb9f1d2319cf0cf6
+  - enabled: 1
+    path: Assets/Scenes/Nick/GearBoxPuzzle.unity
+    guid: b32aae4a11e0b60449d8dbda62e7d3d8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

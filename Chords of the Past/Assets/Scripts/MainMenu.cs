@@ -16,39 +16,6 @@ public class MainMenu : MonoBehaviour
         inputControls = new InputSystem_Actions();
     }
 
-    private void OnEnable()
-    {
-        //enables the command (input system map)
-        //playGame = inputControls.MainMenu.PlayGame;
-        //goToCredits = inputControls.MainMenu.Credits;
-        //quitGame = inputControls.MainMenu.QuitGame;
-
-        //enable all input maps to make them work
-        playGame.Enable();
-        goToCredits.Enable();
-        quitGame.Enable();
-
-
-        playGame.performed += playGamePressed;
-        goToCredits.performed += letsGoToCredits;
-        quitGame.performed += GoodbyeGame;
-    }
-
-    //functions for all inputs
-    public void playGamePressed(InputAction.CallbackContext context)
-    {
-        StartGame();
-    }
-
-    public void letsGoToCredits(InputAction.CallbackContext context)
-    {
-        GoToCredits();
-    }
-
-    public void GoodbyeGame(InputAction.CallbackContext context)
-    {
-        QuitGame();
-    }
 
     public void StartGame()
     {
@@ -57,7 +24,6 @@ public class MainMenu : MonoBehaviour
 
     public void GoToCredits()
     {
-        SceneManager.LoadScene("Credits");
         Debug.Log("LMAO");
     }
 

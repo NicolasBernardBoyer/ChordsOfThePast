@@ -1,4 +1,5 @@
 using System;
+using Mono.Cecil;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem; //allows us to use MIDI keyboard :3
@@ -16,10 +17,10 @@ public class ChooseHarpLevelManager : MonoBehaviour
     private InputAction fourthHarpAction;
     private InputAction playSongAction;
 
-    [SerializeField] GameObject firstHarp;
-    [SerializeField] GameObject secondHarp;
-    [SerializeField] GameObject thirdHarp;
-    [SerializeField] GameObject fourthHarp; //VS is god-tier
+    GameObject firstHarp;
+    GameObject secondHarp;
+    GameObject thirdHarp;
+    GameObject fourthHarp; //VS is god-tier 
 
     [SerializeField] Vector3 firstHarpPosition;
     [SerializeField] Vector3 secondHarpPosition;
@@ -42,12 +43,15 @@ public class ChooseHarpLevelManager : MonoBehaviour
     public GameObject harpPrefab;
 
     public GameObject[] harpArray = new GameObject[4];
-    public Transform[] harpTransformArray = new Transform[4];
+    private GameObject chosenHarp;
+    //public Transform[] harpTransformArray = new Transform[4];
 
     int round_counter = 1;
 
+    public ChooseHarpDialogue HarpDialogueBox;
+
     private void Awake() //happens before Start()
-    { 
+    {
         //"wakes up" the input system
         inputControls = new InputSystem_Actions();
 
@@ -63,7 +67,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction = inputControls.ChooseHarp.ChooseSecondHarp;
         thirdHarpAction = inputControls.ChooseHarp.ChooseThirdHarp;
         fourthHarpAction = inputControls.ChooseHarp.ChooseFourthHarp;
-        //playSongAction = inputControls.ChooseHarp.PlaySong;
+        playSongAction = inputControls.ChooseHarp.PlaySong;
 
         //enable all input maps to make them work
         firstHarpAction.Enable();
@@ -85,13 +89,15 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction.Disable();
         thirdHarpAction.Disable();
         fourthHarpAction.Disable();
+        playSongAction.Disable();
     }
 
-   
+
 
     public void FadeOut(GameObject chosenHarp)
     {
         chosenHarp.SetActive(false);
+        Debug.Log("This works");
     }
 
     public void BeVisible(GameObject chosenHarp)
@@ -114,13 +120,13 @@ public class ChooseHarpLevelManager : MonoBehaviour
         {
             firstHarpSelected = true;
             Debug.Log("Harp 1");
-            firstHarp.transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
-            FadeOut(secondHarp);
-            FadeOut(thirdHarp);
-            FadeOut(fourthHarp);
+            harpArray[0].transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
+            FadeOut(harpArray[1]);
+            FadeOut(harpArray[2]);
+            FadeOut(harpArray[3]);
         }
-          
-     
+
+
     }
 
     public void SelectSecondHarp(InputAction.CallbackContext context)
@@ -188,46 +194,50 @@ public class ChooseHarpLevelManager : MonoBehaviour
             FadeOut(secondHarp);
             FadeOut(thirdHarp);
         }
-        
-
     }
 
     public void PlaySong(InputAction.CallbackContext context)
     {
         Debug.Log("Playing song...");
-        
+
     }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        
         endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
-        
-        for(int i = 0; i < 4; i++)
+
+        for (int i = 0; i < 4; i++)
         {
             harpArray[i] = Instantiate(harpPrefab);
-            harpArray[i].transform.position = harpTransformArray[i].position;
+            //harpArray[i].transform.position = harpTransformArray[i].position;
+            //random sprite
+            int randomSprite;
             do
             {
-                int randomSprite = UnityEngine.Random.Range(0, allHarpSprites.Length);
-                harpArray[i].GetComponent<SpriteRenderer>().sprite = allHarpSprites[randomSprite];
-                allHarpSprites[randomSprite] = null;
-            } while (GetComponent<SpriteRenderer>().sprite != null);
+                randomSprite = UnityEngine.Random.Range(0, allHarpSprites.Length);
+            } while (allHarpSprites[randomSprite] == null);
 
+            harpArray[i].GetComponent<SpriteRenderer>().sprite = allHarpSprites[randomSprite];
+            allHarpSprites[randomSprite] = null;
+
+            //randomChord
+            int randomChord;
             do
             {
-                int randomChord = UnityEngine.Random.Range(0, allHarpChords.Length);
-                harpArray[i].GetComponent<AudioSource>().resource = allHarpChords[randomChord];
-                allHarpChords[randomChord] = null;
-            } while (GetComponent<AudioSource>().resource != null);
+                randomChord = UnityEngine.Random.Range(0, allHarpChords.Length);
+            } while (allHarpChords[randomChord] == null);
+
+            harpArray[i].GetComponent<AudioSource>().resource = allHarpChords[randomChord];
+            allHarpChords[randomChord] = null;
 
 
         } //end of for loop
-        int chordToMessWith = UnityEngine.Random.Range(0, 4);
-        harpArray[chordToMessWith].GetComponent<AudioSource>().resource = chosenChord;
+
+        
+        //int chordToMessWith = UnityEngine.Random.Range(0, 4);
+        //harpArray[chordToMessWith].GetComponent<AudioSource>().resource = chosenChord;
 
         //harcode the starting position
         harpArray[0].transform.position = new Vector3(-5, 0.5f, 0);
@@ -235,18 +245,25 @@ public class ChooseHarpLevelManager : MonoBehaviour
         harpArray[2].transform.position = new Vector3(2, 0.5f, 0);
         harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
 
+        //harpArray[0] = firstHarp;
+        //harpArray[1] = secondHarp;
+        //harpArray[2] = thirdHarp;
+        //harpArray[3] = fourthHarp;
 
+        chosenHarp = harpArray[UnityEngine.Random.Range(0, 4)];
 
+        //chosenChord.Play();
 
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (round_counter >= 4)
+        if (round_counter >= 4)
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene("MainMenu");
         }
-        
+
     }
 }
