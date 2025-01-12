@@ -1,104 +1,252 @@
+using System;
+using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem; //allows us to use MIDI keyboard :3
+using UnityEngine.SceneManagement; //allows us to change scenes in Unity via code!
 
-public class CordController : MonoBehaviour
+public class ChooseHarpLevelManager : MonoBehaviour
 {
     public InputSystem_Actions inputControls;
 
-    private InputAction firstCordAction;
-    private InputAction secondCordAction;
-    private InputAction thirdCordAction;
-    private InputAction fourthCordAction;
+    //creates a different input action for each of the keys LMAO
+
+    private InputAction firstHarpAction;
+    private InputAction secondHarpAction;
+    private InputAction thirdHarpAction;
+    private InputAction fourthHarpAction;
     private InputAction playSongAction;
-    private InputAction rotationAction;
 
-    [SerializeField] private GameObject firstCord;
-    [SerializeField] private GameObject secondCord;
-    [SerializeField] private GameObject thirdCord;
-    [SerializeField] private GameObject fourthCord;
+    [SerializeField] GameObject firstHarp;
+    [SerializeField] GameObject secondHarp;
+    [SerializeField] GameObject thirdHarp;
+    [SerializeField] GameObject fourthHarp; //VS is god-tier
 
-    private GameObject selectedCord;
+    [SerializeField] Vector3 firstHarpPosition;
+    [SerializeField] Vector3 secondHarpPosition;
+    [SerializeField] Vector3 thirdHarpPosition;
+    [SerializeField] Vector3 fourthHarpPosition;
 
-    private void Awake()
+    [SerializeField] TextMeshProUGUI endOfRoundText;
+
+    bool firstHarpSelected = false;
+    bool secondHarpSelected = false;
+    bool thirdHarpSelected = false;
+    bool fourthHarpSelected = false;
+
+    public Sprite[] allHarpSprites;
+
+    public AudioClip[] allHarpChords;
+
+    AudioClip chosenChord;
+
+    public GameObject harpPrefab;
+
+    public GameObject[] harpArray = new GameObject[4];
+    public Transform[] harpTransformArray = new Transform[4];
+
+    int round_counter = 1;
+
+    private void Awake() //happens before Start()
     {
+        //"wakes up" the input system
         inputControls = new InputSystem_Actions();
+
+        int random = UnityEngine.Random.Range(0, allHarpSprites.Length);
+        chosenChord = allHarpChords[random];
+
     }
 
     private void OnEnable()
     {
-        // Get input actions
-        firstCordAction = inputControls.HarpTuning.ChooseFirstCord;
-        secondCordAction = inputControls.HarpTuning.ChooseSecondCord;
-        thirdCordAction = inputControls.HarpTuning.ChooseThirdCord;
-        fourthCordAction = inputControls.HarpTuning.ChooseFourthCord;
-        playSongAction = inputControls.HarpTuning.PlaySong;
-        rotationAction = inputControls.HarpTuning.Rotate;
+        //enables the command (input system map)
+        firstHarpAction = inputControls.ChooseHarp.ChooseFirstHarp;
+        secondHarpAction = inputControls.ChooseHarp.ChooseSecondHarp;
+        thirdHarpAction = inputControls.ChooseHarp.ChooseThirdHarp;
+        fourthHarpAction = inputControls.ChooseHarp.ChooseFourthHarp;
+        //playSongAction = inputControls.ChooseHarp.PlaySong;
 
-        // Enable actions
-        firstCordAction.Enable();
-        secondCordAction.Enable();
-        thirdCordAction.Enable();
-        fourthCordAction.Enable();
+        //enable all input maps to make them work
+        firstHarpAction.Enable();
+        secondHarpAction.Enable();
+        thirdHarpAction.Enable();
+        fourthHarpAction.Enable();
         playSongAction.Enable();
-        rotationAction.Enable();
 
-        // Bind input actions to methods
-        firstCordAction.performed += context => SelectCord(firstCord);
-        secondCordAction.performed += context => SelectCord(secondCord);
-        thirdCordAction.performed += context => SelectCord(thirdCord);
-        fourthCordAction.performed += context => SelectCord(fourthCord);
+        firstHarpAction.performed += SelectFirstHarp;
+        secondHarpAction.performed += SelectSecondHarp;
+        thirdHarpAction.performed += SelectThirdHarp;
+        fourthHarpAction.performed += SelectFourthHarp;
         playSongAction.performed += PlaySong;
-        rotationAction.performed += RotateCord;
     }
 
     private void OnDisable()
     {
-        firstCordAction.Disable();
-        secondCordAction.Disable();
-        thirdCordAction.Disable();
-        fourthCordAction.Disable();
-        rotationAction.Disable();
+        firstHarpAction.Disable();
+        secondHarpAction.Disable();
+        thirdHarpAction.Disable();
+        fourthHarpAction.Disable();
     }
 
-    private void SelectCord(GameObject cord)
+
+
+    public void FadeOut(GameObject chosenHarp)
     {
-        Debug.Log($"Selected: {cord.name}");
-        ResetCordBorders();
-        selectedCord = cord;
-
-        // Add border to selected cord
-        var border = selectedCord.transform.Find("Border");
-        if (border != null) border.gameObject.SetActive(true);
+        chosenHarp.SetActive(false);
     }
 
-    private void ResetCordBorders()
+    public void BeVisible(GameObject chosenHarp)
     {
-        // Reset all cord borders
-        ResetBorder(firstCord);
-        ResetBorder(secondCord);
-        ResetBorder(thirdCord);
-        ResetBorder(fourthCord);
+        chosenHarp.SetActive(true);
     }
 
-    private void ResetBorder(GameObject cord)
+
+    public void SelectFirstHarp(InputAction.CallbackContext context)
     {
-        var border = cord.transform.Find("Border");
-        if (border != null) border.gameObject.SetActive(false);
+        if (firstHarpSelected)
+        {
+            //round ends
+            Debug.Log("Round Ends");
+            FadeOut(firstHarp);
+            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
+        }
+
+        else
+        {
+            firstHarpSelected = true;
+            Debug.Log("Harp 1");
+            firstHarp.transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
+            FadeOut(secondHarp);
+            FadeOut(thirdHarp);
+            FadeOut(fourthHarp);
+        }
+
+
     }
 
-    private void RotateCord(InputAction.CallbackContext context)
+    public void SelectSecondHarp(InputAction.CallbackContext context)
     {
-        if (selectedCord == null) return;
+        if (secondHarpSelected)
+        {
+            //round ends
+            Debug.Log("Round Ends");
+            FadeOut(secondHarp);
+            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
+        }
 
-        float rotationValue = context.ReadValue<float>();
-        Debug.Log($"Rotation value: {rotationValue}");
+        else
+        {
+            secondHarpSelected = true;
+            Debug.Log("Harp 2");
+            secondHarp.transform.position = new Vector3(0, 0.5f, 0);
+            FadeOut(firstHarp);
+            FadeOut(thirdHarp);
+            FadeOut(fourthHarp);
+        }
 
-        float rotationSpeed = 100f; // Speed of rotation
-        selectedCord.transform.Rotate(0, 0, rotationValue * rotationSpeed * Time.deltaTime);
     }
 
-    private void PlaySong(InputAction.CallbackContext context)
+    public void SelectThirdHarp(InputAction.CallbackContext context)
+    {
+        if (thirdHarpSelected)
+        {
+            //round ends
+            Debug.Log("Round Ends");
+            FadeOut(thirdHarp);
+            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
+        }
+
+        else
+        {
+            thirdHarpSelected = true;
+            Debug.Log("Harp 3");
+            thirdHarp.transform.position = new Vector3(0, 0.5f, 0);
+            FadeOut(firstHarp);
+            FadeOut(secondHarp);
+            FadeOut(fourthHarp);
+        }
+
+    }
+
+    public void SelectFourthHarp(InputAction.CallbackContext context)
+    {
+
+        if (fourthHarpSelected)
+        {
+            //round ends
+            Debug.Log("Round Ends");
+            FadeOut(fourthHarp);
+            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
+
+        }
+
+        else
+        {
+            fourthHarpSelected = true;
+            Debug.Log("Harp 4");
+            fourthHarp.transform.position = new Vector3(0, 0.5f, 0);
+            FadeOut(firstHarp);
+            FadeOut(secondHarp);
+            FadeOut(thirdHarp);
+        }
+
+
+    }
+
+    public void PlaySong(InputAction.CallbackContext context)
     {
         Debug.Log("Playing song...");
+
+    }
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+
+
+        endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
+
+        for (int i = 0; i < 4; i++)
+        {
+            harpArray[i] = Instantiate(harpPrefab);
+            harpArray[i].transform.position = harpTransformArray[i].position;
+            do
+            {
+                int randomSprite = UnityEngine.Random.Range(0, allHarpSprites.Length);
+                harpArray[i].GetComponent<SpriteRenderer>().sprite = allHarpSprites[randomSprite];
+                allHarpSprites[randomSprite] = null;
+            } while (GetComponent<SpriteRenderer>().sprite != null);
+
+            do
+            {
+                int randomChord = UnityEngine.Random.Range(0, allHarpChords.Length);
+                harpArray[i].GetComponent<AudioSource>().resource = allHarpChords[randomChord];
+                allHarpChords[randomChord] = null;
+            } while (GetComponent<AudioSource>().resource != null);
+
+
+        } //end of for loop
+        int chordToMessWith = UnityEngine.Random.Range(0, 4);
+        harpArray[chordToMessWith].GetComponent<AudioSource>().resource = chosenChord;
+
+        //harcode the starting position
+        harpArray[0].transform.position = new Vector3(-5, 0.5f, 0);
+        harpArray[1].transform.position = new Vector3(-2, 0.5f, 0);
+        harpArray[2].transform.position = new Vector3(2, 0.5f, 0);
+        harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
+
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (round_counter >= 4)
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
     }
 }
