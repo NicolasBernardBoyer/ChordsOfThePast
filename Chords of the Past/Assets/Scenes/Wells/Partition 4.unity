@@ -844,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: adffa27f78e44b2488f220a9fe27aadb, type: 3}
+  m_Texture: {fileID: 2800000, guid: 525d6a2bbb431334d8bc9605e9f3b7cf, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1084,7 +1084,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1547077223}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 761826184}
+        m_TargetAssemblyTypeName: SceneReloader, Assembly-CSharp
+        m_MethodName: LoadCutscene3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1547077223
 MonoBehaviour:
   m_ObjectHideFlags: 0

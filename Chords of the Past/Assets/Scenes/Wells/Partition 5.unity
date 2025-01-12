@@ -844,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 36f9ba5a4532d464f96e6cc86abe924c, type: 3}
+  m_Texture: {fileID: 2800000, guid: 85620fc50af19fb469eee287f5f6a455, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1205,7 +1205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1690725239}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 761826183}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1690725239
 MonoBehaviour:
   m_ObjectHideFlags: 0

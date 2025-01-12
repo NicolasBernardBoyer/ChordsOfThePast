@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class FirstSongScript : MonoBehaviour
 {
@@ -103,6 +104,7 @@ public class FirstSongScript : MonoBehaviour
         if(currentLevel > currentSong.Count)
         {
             Debug.Log("won");
+            SceneManager.LoadScene("Cutscene 4");
         }
         StartCoroutine(LoopWithDelay());
         

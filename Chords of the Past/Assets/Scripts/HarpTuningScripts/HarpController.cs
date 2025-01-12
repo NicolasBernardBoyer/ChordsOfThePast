@@ -232,7 +232,7 @@ public class HarpController : MonoBehaviour
         Debug.Log($"Total Score (Lower is Better): {totalScore}");
 
         // Proceed to the next scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Partition 4");
     }
 
 }
