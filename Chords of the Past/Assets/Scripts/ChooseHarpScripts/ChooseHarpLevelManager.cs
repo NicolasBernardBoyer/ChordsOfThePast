@@ -42,7 +42,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
     public GameObject harpPrefab;
 
     public GameObject[] harpArray = new GameObject[4];
-    public Transform[] harpTransformArray = new Transform[4];
+    //public Transform[] harpTransformArray = new Transform[4];
 
     int round_counter = 1;
 
@@ -63,7 +63,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction = inputControls.ChooseHarp.ChooseSecondHarp;
         thirdHarpAction = inputControls.ChooseHarp.ChooseThirdHarp;
         fourthHarpAction = inputControls.ChooseHarp.ChooseFourthHarp;
-        //playSongAction = inputControls.ChooseHarp.PlaySong;
+        playSongAction = inputControls.ChooseHarp.PlaySong;
 
         //enable all input maps to make them work
         firstHarpAction.Enable();
@@ -85,6 +85,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction.Disable();
         thirdHarpAction.Disable();
         fourthHarpAction.Disable();
+        playSongAction.Disable();
     }
 
 
@@ -209,20 +210,20 @@ public class ChooseHarpLevelManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             harpArray[i] = Instantiate(harpPrefab);
-            harpArray[i].transform.position = harpTransformArray[i].position;
+            //harpArray[i].transform.position = harpTransformArray[i].position;
             do
             {
                 int randomSprite = UnityEngine.Random.Range(0, allHarpSprites.Length);
                 harpArray[i].GetComponent<SpriteRenderer>().sprite = allHarpSprites[randomSprite];
                 allHarpSprites[randomSprite] = null;
-            } while (GetComponent<SpriteRenderer>().sprite != null);
+            } while (harpArray[i].GetComponent<SpriteRenderer>().sprite != null);
 
             do
             {
                 int randomChord = UnityEngine.Random.Range(0, allHarpChords.Length);
                 harpArray[i].GetComponent<AudioSource>().resource = allHarpChords[randomChord];
                 allHarpChords[randomChord] = null;
-            } while (GetComponent<AudioSource>().resource != null);
+            } while (harpArray[i].GetComponent<AudioSource>().resource != null);
 
 
         } //end of for loop
@@ -235,9 +236,6 @@ public class ChooseHarpLevelManager : MonoBehaviour
         harpArray[2].transform.position = new Vector3(2, 0.5f, 0);
         harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
 
-
-
-
     }
 
     // Update is called once per frame
@@ -245,7 +243,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
     {
         if (round_counter >= 4)
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene("MainMenu");
         }
 
     }
