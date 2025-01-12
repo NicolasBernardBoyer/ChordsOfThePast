@@ -59,8 +59,9 @@ public class Score : MonoBehaviour
 
     public int resultsSimon(int amountOfFails, int simonTimerTime)
     {
-        this.healthScore = 100 / amountOfFails;
+        this.healthScore = 100;
         this.wealthScore = 100 / simonTimerTime;
+        this.faithScore = 100 / amountOfFails;
         return healthScore;
     }
 
@@ -68,6 +69,7 @@ public class Score : MonoBehaviour
     {
         this.healthScore = 100 * chosenHarpMultiplier;
         this.wealthScore = 100 / chooseHarpTimerTime;
+        this.faithScore= 100 / amountOfChecks;
         return healthScore;
     }
 
@@ -75,6 +77,7 @@ public class Score : MonoBehaviour
     {
         this.healthScore = 100 * tuningCompletion;
         this.wealthScore = 100 / tuningGuitarTimerTime;
+        this.faithScore = 100 / amountOfTries;
         return healthScore;
     }
 
@@ -82,6 +85,7 @@ public class Score : MonoBehaviour
     {
         this.healthScore = 100 * musicBoxCompletion;
         this.wealthScore = 100 / musicBoxTimerTime;
+        this.faithScore = 100;
         return healthScore;
     }
 
