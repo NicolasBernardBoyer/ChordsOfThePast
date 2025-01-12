@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe8f10b8436e3aa4a94a5b3e8d2bcfea
+guid: 3e978c3e379b69a4b93846688af01536
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1084870471915973256
-    second: keyboard_0
+      213: -4670139124888056932
+    second: gesd_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: keyboard_0
+      name: gesd_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4032
-        height: 1271
+        width: 2285
+        height: 1447
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88aacd142fb3e0f00800000000000000
-      internalID: 1084870471915973256
+      spriteID: c9bc4699535503fb0800000000000000
+      internalID: -4670139124888056932
       vertices: []
       indices: 
       edges: []
