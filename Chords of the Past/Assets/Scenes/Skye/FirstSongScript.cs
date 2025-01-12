@@ -25,6 +25,7 @@ public class FirstSongScript : MonoBehaviour
 
     //have an array for each keynote
     public GameObject[] keys;
+    public GameObject[] strings;
 
     //make song shorter???
     private List<int> greenLeaves = new List<int> { 2, 7, 10, 9, 5, 7, 2, 5, 7, 7 };
@@ -109,7 +110,7 @@ public class FirstSongScript : MonoBehaviour
 
     private IEnumerator LoopWithDelay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         currentLevel += 1;
         currentNoteToBePlayed = 0; 
         OnDisable();
@@ -193,6 +194,8 @@ public class FirstSongScript : MonoBehaviour
             }
         if (pianoNoteIndex != -1)
         {
+            strings[pianoNoteIndex].GetComponent<Animator>().SetTrigger("PlayOnce");
+
             Debug.Log($"Key to play: {currentSong[currentNoteToBePlayed]}");
             Debug.Log($"Key pressed: {pianoNoteIndex}");
             if (pianoNoteIndex != currentSong[currentNoteToBePlayed])
