@@ -20,7 +20,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
     GameObject firstHarp;
     GameObject secondHarp;
     GameObject thirdHarp;
-    GameObject fourthHarp; //VS is god-tier
+    GameObject fourthHarp; //VS is god-tier 
 
     [SerializeField] Vector3 firstHarpPosition;
     [SerializeField] Vector3 secondHarpPosition;
@@ -47,6 +47,8 @@ public class ChooseHarpLevelManager : MonoBehaviour
     //public Transform[] harpTransformArray = new Transform[4];
 
     int round_counter = 1;
+
+    public ChooseHarpDialogue HarpDialogueBox;
 
     private void Awake() //happens before Start()
     {
@@ -251,6 +253,8 @@ public class ChooseHarpLevelManager : MonoBehaviour
         chosenHarp = harpArray[UnityEngine.Random.Range(0, 4)];
 
         //chosenChord.Play();
+
+        
     }
 
     // Update is called once per frame
