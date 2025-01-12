@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using Mono.Cecil;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem; //allows us to use MIDI keyboard :3
 using UnityEngine.SceneManagement; //allows us to change scenes in Unity via code!
 
-public class ChooseHarpLevelManager : MonoBehaviour
+public class ChooseHarpLevelManager2 : MonoBehaviour
 {
     public InputSystem_Actions inputControls;
 
@@ -15,12 +16,11 @@ public class ChooseHarpLevelManager : MonoBehaviour
     private InputAction secondHarpAction;
     private InputAction thirdHarpAction;
     private InputAction fourthHarpAction;
-    private InputAction playSongAction;
 
-    GameObject firstHarp;
-    GameObject secondHarp;
-    GameObject thirdHarp;
-    GameObject fourthHarp; //VS is god-tier
+    private InputAction firstHarpSelect;
+    private InputAction secondHarpSelect;
+    private InputAction thirdHarpSelect;
+    private InputAction fourthHarpSelect;
 
     [SerializeField] Vector3 firstHarpPosition;
     [SerializeField] Vector3 secondHarpPosition;
@@ -28,11 +28,6 @@ public class ChooseHarpLevelManager : MonoBehaviour
     [SerializeField] Vector3 fourthHarpPosition;
 
     [SerializeField] TextMeshProUGUI endOfRoundText;
-
-    bool firstHarpSelected = false;
-    bool secondHarpSelected = false;
-    bool thirdHarpSelected = false;
-    bool fourthHarpSelected = false;
 
     public Sprite[] allHarpSprites;
 
@@ -43,10 +38,13 @@ public class ChooseHarpLevelManager : MonoBehaviour
     public GameObject harpPrefab;
 
     public GameObject[] harpArray = new GameObject[4];
-    private GameObject chosenHarp;
+    public GameObject currentHarpSelection;
+    //private GameObject chosenHarp;
     //public Transform[] harpTransformArray = new Transform[4];
 
     int round_counter = 1;
+
+    bool isPlaying; 
 
     private void Awake() //happens before Start()
     {
@@ -55,7 +53,6 @@ public class ChooseHarpLevelManager : MonoBehaviour
 
         int random = UnityEngine.Random.Range(0, allHarpSprites.Length);
         chosenChord = allHarpChords[random];
-
     }
 
     private void OnEnable()
@@ -65,20 +62,35 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction = inputControls.ChooseHarp.ChooseSecondHarp;
         thirdHarpAction = inputControls.ChooseHarp.ChooseThirdHarp;
         fourthHarpAction = inputControls.ChooseHarp.ChooseFourthHarp;
-        playSongAction = inputControls.ChooseHarp.PlaySong;
+
+        firstHarpSelect = inputControls.ChooseHarp.SelectCord1;
+        secondHarpSelect = inputControls.ChooseHarp.SelectCord2;
+        thirdHarpSelect = inputControls.ChooseHarp.SelectCord3;
+        fourthHarpSelect = inputControls.ChooseHarp.SelectCord4;
+
+
 
         //enable all input maps to make them work
         firstHarpAction.Enable();
         secondHarpAction.Enable();
         thirdHarpAction.Enable();
         fourthHarpAction.Enable();
-        playSongAction.Enable();
 
-        firstHarpAction.performed += SelectFirstHarp;
-        secondHarpAction.performed += SelectSecondHarp;
-        thirdHarpAction.performed += SelectThirdHarp;
-        fourthHarpAction.performed += SelectFourthHarp;
-        playSongAction.performed += PlaySong;
+        firstHarpSelect.Enable();
+        secondHarpSelect.Enable();
+        thirdHarpSelect.Enable();
+        fourthHarpSelect.Enable();
+
+        firstHarpAction.performed += ChooseHarp;
+        secondHarpAction.performed += ChooseHarp;
+        thirdHarpAction.performed += ChooseHarp;
+        fourthHarpAction.performed += ChooseHarp;
+
+        firstHarpSelect.performed += SelectHarp;
+        secondHarpSelect.performed += SelectHarp;
+        thirdHarpSelect.performed += SelectHarp;
+        fourthHarpSelect.performed += SelectHarp;
+
     }
 
     private void OnDisable()
@@ -87,7 +99,6 @@ public class ChooseHarpLevelManager : MonoBehaviour
         secondHarpAction.Disable();
         thirdHarpAction.Disable();
         fourthHarpAction.Disable();
-        playSongAction.Disable();
     }
 
 
@@ -102,101 +113,88 @@ public class ChooseHarpLevelManager : MonoBehaviour
         chosenHarp.SetActive(true);
     }
 
-
-    public void SelectFirstHarp(InputAction.CallbackContext context)
+    public void ChooseHarp(InputAction.CallbackContext context)
     {
-        if (firstHarpSelected)
+        if (isPlaying)
         {
-            //round ends
-            Debug.Log("Round Ends");
-            FadeOut(firstHarp);
-            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
+            return;
         }
 
-        else
+        //find the chosen harp
+        int harpIndex = -1;
+        Debug.Log(context.action.name); 
+        if (context.action.name == "ChooseFirstHarp")
         {
-            firstHarpSelected = true;
-            Debug.Log("Harp 1");
-            harpArray[0].transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
-            FadeOut(harpArray[1]);
-            FadeOut(harpArray[2]);
-            FadeOut(harpArray[3]);
+            harpIndex = 0;
+        }
+        else if (context.action.name == "ChooseSecondHarp")
+        {
+            harpIndex = 1;
+        }
+        else if (context.action.name == "ChooseThirdHarp")
+        {
+            harpIndex = 2;
+        }
+        else if (context.action.name == "ChooseFourthHarp")
+        {
+            harpIndex = 3;
         }
 
+        //select the new harp
+        currentHarpSelection.GetComponent<Harp>().SetIsSelected(false);
+        currentHarpSelection = harpArray[harpIndex];
+        currentHarpSelection.GetComponent<Harp>().SetIsSelected(true);
 
+        //play the sound
+        StartCoroutine(PlayHarpSound());
     }
-
-    public void SelectSecondHarp(InputAction.CallbackContext context)
+    public void SelectHarp(InputAction.CallbackContext context)
     {
-        if (secondHarpSelected)
+        //find which harp was selected
+        int harpIndex = -1;
+        if (context.action.name == "SelectCord1")
         {
-            //round ends
-            Debug.Log("Round Ends");
-            FadeOut(secondHarp);
-            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
+            harpIndex = 0;
+        }
+        else if (context.action.name == "SelectCord2")
+        {
+            harpIndex = 1;
+        }
+        else if (context.action.name == "SelectCord3")
+        {
+            harpIndex = 2;
+        }
+        else if (context.action.name == "SelectCord4")
+        {
+            harpIndex = 3;
         }
 
-        else
+        //fade out all harps that are not the one selected
+        for (int i = 0; i < 4; i++)
         {
-            secondHarpSelected = true;
-            Debug.Log("Harp 2");
-            secondHarp.transform.position = new Vector3(0, 0.5f, 0);
-            FadeOut(firstHarp);
-            FadeOut(thirdHarp);
-            FadeOut(fourthHarp);
+            if (i != harpIndex)
+            {
+                harpArray[i].GetComponent<Harp>().StartFadeOut();
+            }
         }
 
-    }
+        //you would move the harp to the middle here, if I was you I would write the IEnumerator in the Harp script
 
-    public void SelectThirdHarp(InputAction.CallbackContext context)
-    {
-        if (thirdHarpSelected)
+        //you would have the check if they clicked the right harp here with
+        if (harpArray[harpIndex].GetComponent<Harp>().isChosenHarp)
         {
-            //round ends
-            Debug.Log("Round Ends");
-            FadeOut(thirdHarp);
-            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
-        }
 
-        else
-        {
-            thirdHarpSelected = true;
-            Debug.Log("Harp 3");
-            thirdHarp.transform.position = new Vector3(0, 0.5f, 0);
-            FadeOut(firstHarp);
-            FadeOut(secondHarp);
-            FadeOut(fourthHarp);
-        }
-
-    }
-
-    public void SelectFourthHarp(InputAction.CallbackContext context)
-    {
-
-        if (fourthHarpSelected)
-        {
-            //round ends
-            Debug.Log("Round Ends");
-            FadeOut(fourthHarp);
-            endOfRoundText.CrossFadeAlpha(1, 0.01f, false);
-
-        }
-
-        else
-        {
-            fourthHarpSelected = true;
-            Debug.Log("Harp 4");
-            fourthHarp.transform.position = new Vector3(0, 0.5f, 0);
-            FadeOut(firstHarp);
-            FadeOut(secondHarp);
-            FadeOut(thirdHarp);
         }
     }
 
-    public void PlaySong(InputAction.CallbackContext context)
+    private IEnumerator PlayHarpSound()
     {
-        Debug.Log("Playing song...");
-
+        //make sure you cant input single taps until the music is done
+        isPlaying = true;
+        AudioSource audioSource = currentHarpSelection.GetComponent<AudioSource>();
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        isPlaying = false;
     }
 
 
@@ -242,14 +240,11 @@ public class ChooseHarpLevelManager : MonoBehaviour
         harpArray[2].transform.position = new Vector3(2, 0.5f, 0);
         harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
 
-        //harpArray[0] = firstHarp;
-        //harpArray[1] = secondHarp;
-        //harpArray[2] = thirdHarp;
-        //harpArray[3] = fourthHarp;
+        //find the right harp
+        harpArray[UnityEngine.Random.Range(0, 4)].GetComponent<Harp>().isChosenHarp = true;
+        //to avoid edge cases
+        currentHarpSelection = harpArray[0];
 
-        chosenHarp = harpArray[UnityEngine.Random.Range(0, 4)];
-
-        //chosenChord.Play();
     }
 
     // Update is called once per frame

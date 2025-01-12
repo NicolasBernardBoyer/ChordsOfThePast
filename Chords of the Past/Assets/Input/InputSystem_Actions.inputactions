@@ -45,7 +45,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1006,7 +1006,7 @@
             "actions": [
                 {
                     "name": "ChooseFirstHarp",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "994e835a-3073-431b-98de-ba7207d03250",
                     "expectedControlType": "",
                     "processors": "",
@@ -1014,8 +1014,17 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "SelectCord1",
+                    "type": "Button",
+                    "id": "b646a749-8afe-4382-bb46-a02906fa77ba",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "ChooseSecondHarp",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "eacaa702-a696-49cc-9e54-38ab3afb44fc",
                     "expectedControlType": "",
                     "processors": "",
@@ -1023,8 +1032,17 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "SelectCord2",
+                    "type": "Button",
+                    "id": "4aa541b0-6684-456d-8156-759ccf3f4615",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "ChooseThirdHarp",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "6a878c98-8357-408b-ac6c-f2a4c96ab0bf",
                     "expectedControlType": "",
                     "processors": "",
@@ -1032,12 +1050,30 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "SelectCord3",
+                    "type": "Button",
+                    "id": "98cdbe15-189a-450b-8c7d-9d1efbf2febc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "ChooseFourthHarp",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "4982cf4a-5bb8-4f6b-8930-0d18409f46ce",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SelectCord4",
+                    "type": "Button",
+                    "id": "1e3867df-f8ea-4cb9-96f3-db4950809ef9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap",
                     "initialStateCheck": true
                 },
                 {
@@ -1054,7 +1090,7 @@
                 {
                     "name": "",
                     "id": "ab34d5d5-9aa2-43ff-8af9-552bb7cd90fc",
-                    "path": "<MidiDevice>/control000",
+                    "path": "<MidiDevice>/note024",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1075,8 +1111,30 @@
                 },
                 {
                     "name": "",
+                    "id": "c4228a3f-4fee-402d-908f-a7d6978ba592",
+                    "path": "<MidiDevice>/note024",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7297a6ee-ba71-4c2b-8315-65db3a7f46dd",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7361107f-4dd3-41bc-9e60-704dd5f77995",
-                    "path": "<MidiDevice>/control001",
+                    "path": "<MidiDevice>/note025",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1097,8 +1155,30 @@
                 },
                 {
                     "name": "",
+                    "id": "e5bc8968-4fd4-42a6-bd30-f9b71b2a42d3",
+                    "path": "<MidiDevice>/note025",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "761b4e35-2b1a-44ca-b4a6-3b530f22812d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3c063d2b-6c81-40ac-8137-fa69c655da9a",
-                    "path": "<MidiDevice>/control002",
+                    "path": "<MidiDevice>/note026",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1119,8 +1199,30 @@
                 },
                 {
                     "name": "",
+                    "id": "be23f8ec-d796-49af-92e1-bc208b9371f3",
+                    "path": "<MidiDevice>/note026",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8838a372-5c53-4c09-a5fe-bbfe3843872c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "499aad59-93d4-4c3e-87f4-5ee55018fc55",
-                    "path": "<MidiDevice>/control003",
+                    "path": "<MidiDevice>/note027",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1136,6 +1238,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ChooseFourthHarp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae1b31c4-00d3-4b53-87ce-381855bdf625",
+                    "path": "<MidiDevice>/note027",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d62ec6ee-9e7c-4471-96d5-66dd6a1ae137",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectCord4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

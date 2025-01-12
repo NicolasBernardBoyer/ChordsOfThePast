@@ -67,7 +67,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": ""Crouch"",
                     ""type"": ""Button"",
                     ""id"": ""27c5f898-bc57-4ee1-8800-db469aca5fe3"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -1028,7 +1028,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""ChooseFirstHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""994e835a-3073-431b-98de-ba7207d03250"",
                     ""expectedControlType"": """",
                     ""processors"": """",
@@ -1036,8 +1036,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""SelectCord1"",
+                    ""type"": ""Button"",
+                    ""id"": ""b646a749-8afe-4382-bb46-a02906fa77ba"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""MultiTap"",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""ChooseSecondHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""eacaa702-a696-49cc-9e54-38ab3afb44fc"",
                     ""expectedControlType"": """",
                     ""processors"": """",
@@ -1045,8 +1054,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""SelectCord2"",
+                    ""type"": ""Button"",
+                    ""id"": ""4aa541b0-6684-456d-8156-759ccf3f4615"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""MultiTap"",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""ChooseThirdHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""6a878c98-8357-408b-ac6c-f2a4c96ab0bf"",
                     ""expectedControlType"": """",
                     ""processors"": """",
@@ -1054,12 +1072,30 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""SelectCord3"",
+                    ""type"": ""Button"",
+                    ""id"": ""98cdbe15-189a-450b-8c7d-9d1efbf2febc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""MultiTap"",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""ChooseFourthHarp"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""4982cf4a-5bb8-4f6b-8930-0d18409f46ce"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SelectCord4"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e3867df-f8ea-4cb9-96f3-db4950809ef9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""MultiTap"",
                     ""initialStateCheck"": true
                 },
                 {
@@ -1076,7 +1112,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ab34d5d5-9aa2-43ff-8af9-552bb7cd90fc"",
-                    ""path"": ""<MidiDevice>/control000"",
+                    ""path"": ""<MidiDevice>/note024"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1097,8 +1133,30 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c4228a3f-4fee-402d-908f-a7d6978ba592"",
+                    ""path"": ""<MidiDevice>/note024"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7297a6ee-ba71-4c2b-8315-65db3a7f46dd"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""7361107f-4dd3-41bc-9e60-704dd5f77995"",
-                    ""path"": ""<MidiDevice>/control001"",
+                    ""path"": ""<MidiDevice>/note025"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1119,8 +1177,30 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""e5bc8968-4fd4-42a6-bd30-f9b71b2a42d3"",
+                    ""path"": ""<MidiDevice>/note025"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""761b4e35-2b1a-44ca-b4a6-3b530f22812d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""3c063d2b-6c81-40ac-8137-fa69c655da9a"",
-                    ""path"": ""<MidiDevice>/control002"",
+                    ""path"": ""<MidiDevice>/note026"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1141,8 +1221,30 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""be23f8ec-d796-49af-92e1-bc208b9371f3"",
+                    ""path"": ""<MidiDevice>/note026"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8838a372-5c53-4c09-a5fe-bbfe3843872c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""499aad59-93d4-4c3e-87f4-5ee55018fc55"",
-                    ""path"": ""<MidiDevice>/control003"",
+                    ""path"": ""<MidiDevice>/note027"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1158,6 +1260,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ChooseFourthHarp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae1b31c4-00d3-4b53-87ce-381855bdf625"",
+                    ""path"": ""<MidiDevice>/note027"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d62ec6ee-9e7c-4471-96d5-66dd6a1ae137"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectCord4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -2652,9 +2776,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         // ChooseHarp
         m_ChooseHarp = asset.FindActionMap("ChooseHarp", throwIfNotFound: true);
         m_ChooseHarp_ChooseFirstHarp = m_ChooseHarp.FindAction("ChooseFirstHarp", throwIfNotFound: true);
+        m_ChooseHarp_SelectCord1 = m_ChooseHarp.FindAction("SelectCord1", throwIfNotFound: true);
         m_ChooseHarp_ChooseSecondHarp = m_ChooseHarp.FindAction("ChooseSecondHarp", throwIfNotFound: true);
+        m_ChooseHarp_SelectCord2 = m_ChooseHarp.FindAction("SelectCord2", throwIfNotFound: true);
         m_ChooseHarp_ChooseThirdHarp = m_ChooseHarp.FindAction("ChooseThirdHarp", throwIfNotFound: true);
+        m_ChooseHarp_SelectCord3 = m_ChooseHarp.FindAction("SelectCord3", throwIfNotFound: true);
         m_ChooseHarp_ChooseFourthHarp = m_ChooseHarp.FindAction("ChooseFourthHarp", throwIfNotFound: true);
+        m_ChooseHarp_SelectCord4 = m_ChooseHarp.FindAction("SelectCord4", throwIfNotFound: true);
         m_ChooseHarp_PlaySong = m_ChooseHarp.FindAction("PlaySong", throwIfNotFound: true);
         // GearsPuzzle
         m_GearsPuzzle = asset.FindActionMap("GearsPuzzle", throwIfNotFound: true);
@@ -3005,18 +3133,26 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_ChooseHarp;
     private List<IChooseHarpActions> m_ChooseHarpActionsCallbackInterfaces = new List<IChooseHarpActions>();
     private readonly InputAction m_ChooseHarp_ChooseFirstHarp;
+    private readonly InputAction m_ChooseHarp_SelectCord1;
     private readonly InputAction m_ChooseHarp_ChooseSecondHarp;
+    private readonly InputAction m_ChooseHarp_SelectCord2;
     private readonly InputAction m_ChooseHarp_ChooseThirdHarp;
+    private readonly InputAction m_ChooseHarp_SelectCord3;
     private readonly InputAction m_ChooseHarp_ChooseFourthHarp;
+    private readonly InputAction m_ChooseHarp_SelectCord4;
     private readonly InputAction m_ChooseHarp_PlaySong;
     public struct ChooseHarpActions
     {
         private @InputSystem_Actions m_Wrapper;
         public ChooseHarpActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
         public InputAction @ChooseFirstHarp => m_Wrapper.m_ChooseHarp_ChooseFirstHarp;
+        public InputAction @SelectCord1 => m_Wrapper.m_ChooseHarp_SelectCord1;
         public InputAction @ChooseSecondHarp => m_Wrapper.m_ChooseHarp_ChooseSecondHarp;
+        public InputAction @SelectCord2 => m_Wrapper.m_ChooseHarp_SelectCord2;
         public InputAction @ChooseThirdHarp => m_Wrapper.m_ChooseHarp_ChooseThirdHarp;
+        public InputAction @SelectCord3 => m_Wrapper.m_ChooseHarp_SelectCord3;
         public InputAction @ChooseFourthHarp => m_Wrapper.m_ChooseHarp_ChooseFourthHarp;
+        public InputAction @SelectCord4 => m_Wrapper.m_ChooseHarp_SelectCord4;
         public InputAction @PlaySong => m_Wrapper.m_ChooseHarp_PlaySong;
         public InputActionMap Get() { return m_Wrapper.m_ChooseHarp; }
         public void Enable() { Get().Enable(); }
@@ -3030,15 +3166,27 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChooseFirstHarp.started += instance.OnChooseFirstHarp;
             @ChooseFirstHarp.performed += instance.OnChooseFirstHarp;
             @ChooseFirstHarp.canceled += instance.OnChooseFirstHarp;
+            @SelectCord1.started += instance.OnSelectCord1;
+            @SelectCord1.performed += instance.OnSelectCord1;
+            @SelectCord1.canceled += instance.OnSelectCord1;
             @ChooseSecondHarp.started += instance.OnChooseSecondHarp;
             @ChooseSecondHarp.performed += instance.OnChooseSecondHarp;
             @ChooseSecondHarp.canceled += instance.OnChooseSecondHarp;
+            @SelectCord2.started += instance.OnSelectCord2;
+            @SelectCord2.performed += instance.OnSelectCord2;
+            @SelectCord2.canceled += instance.OnSelectCord2;
             @ChooseThirdHarp.started += instance.OnChooseThirdHarp;
             @ChooseThirdHarp.performed += instance.OnChooseThirdHarp;
             @ChooseThirdHarp.canceled += instance.OnChooseThirdHarp;
+            @SelectCord3.started += instance.OnSelectCord3;
+            @SelectCord3.performed += instance.OnSelectCord3;
+            @SelectCord3.canceled += instance.OnSelectCord3;
             @ChooseFourthHarp.started += instance.OnChooseFourthHarp;
             @ChooseFourthHarp.performed += instance.OnChooseFourthHarp;
             @ChooseFourthHarp.canceled += instance.OnChooseFourthHarp;
+            @SelectCord4.started += instance.OnSelectCord4;
+            @SelectCord4.performed += instance.OnSelectCord4;
+            @SelectCord4.canceled += instance.OnSelectCord4;
             @PlaySong.started += instance.OnPlaySong;
             @PlaySong.performed += instance.OnPlaySong;
             @PlaySong.canceled += instance.OnPlaySong;
@@ -3049,15 +3197,27 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ChooseFirstHarp.started -= instance.OnChooseFirstHarp;
             @ChooseFirstHarp.performed -= instance.OnChooseFirstHarp;
             @ChooseFirstHarp.canceled -= instance.OnChooseFirstHarp;
+            @SelectCord1.started -= instance.OnSelectCord1;
+            @SelectCord1.performed -= instance.OnSelectCord1;
+            @SelectCord1.canceled -= instance.OnSelectCord1;
             @ChooseSecondHarp.started -= instance.OnChooseSecondHarp;
             @ChooseSecondHarp.performed -= instance.OnChooseSecondHarp;
             @ChooseSecondHarp.canceled -= instance.OnChooseSecondHarp;
+            @SelectCord2.started -= instance.OnSelectCord2;
+            @SelectCord2.performed -= instance.OnSelectCord2;
+            @SelectCord2.canceled -= instance.OnSelectCord2;
             @ChooseThirdHarp.started -= instance.OnChooseThirdHarp;
             @ChooseThirdHarp.performed -= instance.OnChooseThirdHarp;
             @ChooseThirdHarp.canceled -= instance.OnChooseThirdHarp;
+            @SelectCord3.started -= instance.OnSelectCord3;
+            @SelectCord3.performed -= instance.OnSelectCord3;
+            @SelectCord3.canceled -= instance.OnSelectCord3;
             @ChooseFourthHarp.started -= instance.OnChooseFourthHarp;
             @ChooseFourthHarp.performed -= instance.OnChooseFourthHarp;
             @ChooseFourthHarp.canceled -= instance.OnChooseFourthHarp;
+            @SelectCord4.started -= instance.OnSelectCord4;
+            @SelectCord4.performed -= instance.OnSelectCord4;
+            @SelectCord4.canceled -= instance.OnSelectCord4;
             @PlaySong.started -= instance.OnPlaySong;
             @PlaySong.performed -= instance.OnPlaySong;
             @PlaySong.canceled -= instance.OnPlaySong;
@@ -3560,9 +3720,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     public interface IChooseHarpActions
     {
         void OnChooseFirstHarp(InputAction.CallbackContext context);
+        void OnSelectCord1(InputAction.CallbackContext context);
         void OnChooseSecondHarp(InputAction.CallbackContext context);
+        void OnSelectCord2(InputAction.CallbackContext context);
         void OnChooseThirdHarp(InputAction.CallbackContext context);
+        void OnSelectCord3(InputAction.CallbackContext context);
         void OnChooseFourthHarp(InputAction.CallbackContext context);
+        void OnSelectCord4(InputAction.CallbackContext context);
         void OnPlaySong(InputAction.CallbackContext context);
     }
     public interface IGearsPuzzleActions
