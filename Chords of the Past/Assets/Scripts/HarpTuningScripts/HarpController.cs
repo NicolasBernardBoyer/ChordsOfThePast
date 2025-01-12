@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class HarpController : MonoBehaviour
@@ -16,6 +17,8 @@ public class HarpController : MonoBehaviour
     [SerializeField] private GameObject secondCord;
     [SerializeField] private GameObject thirdCord;
     [SerializeField] private GameObject fourthCord;
+
+    [SerializeField] private AudioSource sound1;
 
     private GameObject selectedCord;
 
@@ -95,10 +98,35 @@ public class HarpController : MonoBehaviour
 
         float rotationSpeed = 400f; // Speed of rotation
         selectedCord.transform.Rotate(0, 0, rotationValue * rotationSpeed * Time.deltaTime);
+
+        // Adjust sound volumes based on rotation
+        AdjustPitch(0.5f);
+    }
+
+
+    // Modify pitch based on a value
+    void AdjustPitch(float value)
+    {
+        sound1.pitch = Mathf.Clamp(value, -3f, 3f);
+    }
+
+
+    private void AdjustSoundVolumes(float rotationValue)
+    {
+        // Map rotation value to desired volume ratios (50%, 100%, 50%)
+        float normalizedValue = Mathf.Clamp01((rotationValue + 1f) / 2f); // Map rotation (-1 to 1) to (0 to 1)
+
+        sound1.volume = Mathf.Lerp(0.5f, 1f, normalizedValue); // Adjust volume of sound1
+
+        Debug.Log($"Volumes - Sound1: {sound1.volume}");
     }
 
     private void PlaySong(InputAction.CallbackContext context)
     {
+        if (!sound1.isPlaying)
+        {
+            sound1.Play();
+        }
         Debug.Log("Playing song...");
     }
 }
