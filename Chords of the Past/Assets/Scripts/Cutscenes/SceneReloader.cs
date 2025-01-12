@@ -13,9 +13,60 @@ public class SceneReloader : MonoBehaviour
     {
         SceneManager.LoadScene("Cutscene 1 Intro");
     }
+
+    public void LoadCutscene2()
+    {
+        SceneManager.LoadScene("Cutscene 2");
+    }
+    public void LoadCutscene3()
+    {
+        SceneManager.LoadScene("Cutscene 3");
+    }
+
+    public void LoadCutscene4()
+    {
+        SceneManager.LoadScene("Cutscene 4");
+    }
+    public void LoadCutscene5()
+    {
+        SceneManager.LoadScene("Cutscene 5");
+    }
+    public void LoadPartition1()
+    {
+        SceneManager.LoadScene("Partition 1");
+    }
+    public void LoadPartition2()
+    {
+        SceneManager.LoadScene("Partition 2");
+    }
+
+    public void LoadPartition3()
+    {
+        SceneManager.LoadScene("Partition 3");
+    }
+
+    public void LoadPartition4()
+    {
+        SceneManager.LoadScene("Partition 4");
+    }
+
+    public void LoadPartition5()
+    {
+        SceneManager.LoadScene("Partition 5");
+    }
+
     public void LoadGearboxPuzzle()
     {
         SceneManager.LoadScene("GearBoxPuzzle");
+    }
+
+    public void LoadChooseHarp()
+    {
+        SceneManager.LoadScene("ChooseHarp");
+    }
+    public void LoadFirstSong()
+    {
+        SceneManager.LoadScene("FirstSong");
     }
 }
 
