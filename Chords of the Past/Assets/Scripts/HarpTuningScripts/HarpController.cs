@@ -228,7 +228,7 @@ public class HarpController : MonoBehaviour
                 totalScore += score;
             }
         }
-
+        Score.addScore((int)totalScore);
         Debug.Log($"Total Score (Lower is Better): {totalScore}");
 
         // Proceed to the next scene
