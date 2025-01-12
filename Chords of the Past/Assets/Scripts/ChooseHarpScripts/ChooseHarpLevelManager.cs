@@ -216,14 +216,14 @@ public class ChooseHarpLevelManager : MonoBehaviour
                 int randomSprite = UnityEngine.Random.Range(0, allHarpSprites.Length);
                 harpArray[i].GetComponent<SpriteRenderer>().sprite = allHarpSprites[randomSprite];
                 allHarpSprites[randomSprite] = null;
-            } while (harpArray[i].GetComponent<SpriteRenderer>().sprite != null);
+            } while (harpArray[i].GetComponent<SpriteRenderer>().sprite == null);
 
             do
             {
                 int randomChord = UnityEngine.Random.Range(0, allHarpChords.Length);
                 harpArray[i].GetComponent<AudioSource>().resource = allHarpChords[randomChord];
                 allHarpChords[randomChord] = null;
-            } while (harpArray[i].GetComponent<AudioSource>().resource != null);
+            } while (harpArray[i].GetComponent<AudioSource>().resource == null);
 
 
         } //end of for loop
