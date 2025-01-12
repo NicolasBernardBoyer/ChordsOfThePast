@@ -94,7 +94,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": ""Next"",
                     ""type"": ""Button"",
                     ""id"": ""b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -1907,6 +1907,650 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""SimonGame"",
+            ""id"": ""64a1f715-8ff7-46c1-ab4c-bed382ef00ca"",
+            ""actions"": [
+                {
+                    ""name"": ""KeyC"",
+                    ""type"": ""Button"",
+                    ""id"": ""09442153-c8b1-458d-8f95-b198617288b4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyD"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe253d3a-78e0-4983-92bc-db324712c83b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyE"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1fedeba-10be-462e-bf2a-7f9e51cf4483"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyF"",
+                    ""type"": ""Button"",
+                    ""id"": ""f4ff6ed7-60ba-4bb8-8fa2-8676df12399c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyG"",
+                    ""type"": ""Button"",
+                    ""id"": ""4950c893-94fb-4de7-88e4-220671bc220a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyA"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a749e48-9bbd-4755-af21-4d970afecc16"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyB"",
+                    ""type"": ""Button"",
+                    ""id"": ""ce513def-e41d-48e5-bd13-8e347d99e3f4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyCS"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7a7ab85-2321-40df-90c8-6002b92b7221"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyDS"",
+                    ""type"": ""Button"",
+                    ""id"": ""26ace447-fbde-41b3-82f1-78783b4ae5ca"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyFS"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8a3ed54-a7ed-4060-b4a1-3e2e0e8c9af6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyGS"",
+                    ""type"": ""Button"",
+                    ""id"": ""2c5e242c-15ec-469c-92ed-d99df9b61027"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyAS"",
+                    ""type"": ""Button"",
+                    ""id"": ""a280e73f-930a-42bb-9235-8c2090687743"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""197a37bf-da23-44c8-806b-7ce44301c70b"",
+                    ""path"": ""<MidiDevice>/note024"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f00bf0b-5667-49bf-a915-ffa7074f90a5"",
+                    ""path"": ""<MidiDevice>/note036"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""926bf1b1-0397-4904-b3d8-67da62f53a8b"",
+                    ""path"": ""<MidiDevice>/note048"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e449caca-4640-481a-9a78-7e305e95d110"",
+                    ""path"": ""<MidiDevice>/note060"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3cf63136-6071-4893-ac8e-fbef054f81aa"",
+                    ""path"": ""<MidiDevice>/note026"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7b07ef4-44ca-4ebc-9c1c-2d769f727811"",
+                    ""path"": ""<MidiDevice>/note038"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2625ca5e-ee1e-413f-bf30-4eedb1d4bb54"",
+                    ""path"": ""<MidiDevice>/note050"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""764c569d-2745-4e4a-b53a-583123fb1f9b"",
+                    ""path"": ""<MidiDevice>/note062"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""30df2dc2-4fef-4e2a-9979-6747ddf2a67d"",
+                    ""path"": ""<MidiDevice>/note028"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9897c2e-8ed8-4af0-8bbc-007978be761b"",
+                    ""path"": ""<MidiDevice>/note040"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8e78241-5921-4d1f-915a-a548f07f5691"",
+                    ""path"": ""<MidiDevice>/note052"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92ad0eff-e110-4fa4-adb6-561c47989324"",
+                    ""path"": ""<MidiDevice>/note064"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""963cb835-4f98-4739-8ee1-c1017418a731"",
+                    ""path"": ""<MidiDevice>/note029"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e1e7c97-8166-419a-b563-e0f237ff27ed"",
+                    ""path"": ""<MidiDevice>/note041"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""885dbd20-9615-4110-b649-b6ccc11ce593"",
+                    ""path"": ""<MidiDevice>/note053"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""10f928ba-1a01-4303-bb5e-fa2cf2d30ee2"",
+                    ""path"": ""<MidiDevice>/note065"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""32f32e2c-a96b-4805-8e60-019bdb662906"",
+                    ""path"": ""<MidiDevice>/note031"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4996df6-308f-4310-907b-3527670243c0"",
+                    ""path"": ""<MidiDevice>/note043"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8997a54a-4102-4031-a25d-785b37aad475"",
+                    ""path"": ""<MidiDevice>/note055"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ee6b5a56-b254-4e6c-99d7-b14f75fae8fe"",
+                    ""path"": ""<MidiDevice>/note067"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyG"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64209a2f-033a-4904-ac63-854780d6c160"",
+                    ""path"": ""<MidiDevice>/note033"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e4889433-424d-467a-8014-7d48771e7cf7"",
+                    ""path"": ""<MidiDevice>/note045"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61f786e5-8e2b-43d6-ae46-a74054839f1d"",
+                    ""path"": ""<MidiDevice>/note057"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12168b8d-1740-4ece-bc54-0ff22ac82596"",
+                    ""path"": ""<MidiDevice>/note069"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21e486be-3959-4bf8-a22b-862dc8905f6d"",
+                    ""path"": ""<MidiDevice>/note035"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e1828615-81f8-43c7-b942-36528996b413"",
+                    ""path"": ""<MidiDevice>/note047"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9d832cc-53e3-4e89-8a4b-f1c9a6339b04"",
+                    ""path"": ""<MidiDevice>/note059"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b40d4b84-0a9e-481d-958a-117c899714c7"",
+                    ""path"": ""<MidiDevice>/note071"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""667190cc-f604-4b94-90a3-d8b6c3c11ad5"",
+                    ""path"": ""<MidiDevice>/note025"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0e406479-7cf4-4d70-9444-239071a09a9f"",
+                    ""path"": ""<MidiDevice>/note037"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4153e3d4-3a0d-4e1d-987b-60a951831a60"",
+                    ""path"": ""<MidiDevice>/note049"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0cfd24c-23c9-43bb-9175-34dc7328823e"",
+                    ""path"": ""<MidiDevice>/note061"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyCS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db103a46-fc6b-4fd8-8ed5-50123e5fab20"",
+                    ""path"": ""<MidiDevice>/note027"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a6cc7511-8f92-4fbc-b205-9f57024793c7"",
+                    ""path"": ""<MidiDevice>/note039"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""839e498e-aa25-43b1-b778-88ea73d531af"",
+                    ""path"": ""<MidiDevice>/note051"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""392e1e89-a459-4b35-989a-1267a3421779"",
+                    ""path"": ""<MidiDevice>/note063"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyDS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""244a7381-cc22-47b4-9af1-64414e0cf551"",
+                    ""path"": ""<MidiDevice>/note030"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e6c0235-402b-4db8-823c-2928f7513f42"",
+                    ""path"": ""<MidiDevice>/note042"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""abca6a8e-1e63-44e3-9189-429d53524fa6"",
+                    ""path"": ""<MidiDevice>/note054"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0474f811-f335-491f-a437-14da28679f03"",
+                    ""path"": ""<MidiDevice>/note066"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyFS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b724d822-6af5-47a8-927e-576a7ac878ef"",
+                    ""path"": ""<MidiDevice>/note032"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f90fb662-71a0-4cf9-91e7-f6d78343f189"",
+                    ""path"": ""<MidiDevice>/note044"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""76371aa6-5f85-4d13-8fad-5e6e2d9023d3"",
+                    ""path"": ""<MidiDevice>/note056"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42b85047-9356-4782-9491-c576912c54c9"",
+                    ""path"": ""<MidiDevice>/note068"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyGS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6e6cc0c-6352-4a2d-8ed9-b629e36771ef"",
+                    ""path"": ""<MidiDevice>/note034"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92a5028b-b344-49d5-b1ce-60bcaa058ce6"",
+                    ""path"": ""<MidiDevice>/note046"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afcb140d-6aa8-451c-829f-376438f5f52d"",
+                    ""path"": ""<MidiDevice>/note058"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51c6f818-593c-4c8e-aaf4-86884bc27f58"",
+                    ""path"": ""<MidiDevice>/note070"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyAS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -2028,6 +2672,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_MainMenu_PlayGame = m_MainMenu.FindAction("PlayGame", throwIfNotFound: true);
         m_MainMenu_Credits = m_MainMenu.FindAction("Credits", throwIfNotFound: true);
         m_MainMenu_QuitGame = m_MainMenu.FindAction("QuitGame", throwIfNotFound: true);
+        // SimonGame
+        m_SimonGame = asset.FindActionMap("SimonGame", throwIfNotFound: true);
+        m_SimonGame_KeyC = m_SimonGame.FindAction("KeyC", throwIfNotFound: true);
+        m_SimonGame_KeyD = m_SimonGame.FindAction("KeyD", throwIfNotFound: true);
+        m_SimonGame_KeyE = m_SimonGame.FindAction("KeyE", throwIfNotFound: true);
+        m_SimonGame_KeyF = m_SimonGame.FindAction("KeyF", throwIfNotFound: true);
+        m_SimonGame_KeyG = m_SimonGame.FindAction("KeyG", throwIfNotFound: true);
+        m_SimonGame_KeyA = m_SimonGame.FindAction("KeyA", throwIfNotFound: true);
+        m_SimonGame_KeyB = m_SimonGame.FindAction("KeyB", throwIfNotFound: true);
+        m_SimonGame_KeyCS = m_SimonGame.FindAction("KeyCS", throwIfNotFound: true);
+        m_SimonGame_KeyDS = m_SimonGame.FindAction("KeyDS", throwIfNotFound: true);
+        m_SimonGame_KeyFS = m_SimonGame.FindAction("KeyFS", throwIfNotFound: true);
+        m_SimonGame_KeyGS = m_SimonGame.FindAction("KeyGS", throwIfNotFound: true);
+        m_SimonGame_KeyAS = m_SimonGame.FindAction("KeyAS", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -2038,6 +2696,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_GearsPuzzle.enabled, "This will cause a leak and performance issues, InputSystem_Actions.GearsPuzzle.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_HarpTuning.enabled, "This will cause a leak and performance issues, InputSystem_Actions.HarpTuning.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_MainMenu.enabled, "This will cause a leak and performance issues, InputSystem_Actions.MainMenu.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_SimonGame.enabled, "This will cause a leak and performance issues, InputSystem_Actions.SimonGame.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -2675,6 +3334,140 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         }
     }
     public MainMenuActions @MainMenu => new MainMenuActions(this);
+
+    // SimonGame
+    private readonly InputActionMap m_SimonGame;
+    private List<ISimonGameActions> m_SimonGameActionsCallbackInterfaces = new List<ISimonGameActions>();
+    private readonly InputAction m_SimonGame_KeyC;
+    private readonly InputAction m_SimonGame_KeyD;
+    private readonly InputAction m_SimonGame_KeyE;
+    private readonly InputAction m_SimonGame_KeyF;
+    private readonly InputAction m_SimonGame_KeyG;
+    private readonly InputAction m_SimonGame_KeyA;
+    private readonly InputAction m_SimonGame_KeyB;
+    private readonly InputAction m_SimonGame_KeyCS;
+    private readonly InputAction m_SimonGame_KeyDS;
+    private readonly InputAction m_SimonGame_KeyFS;
+    private readonly InputAction m_SimonGame_KeyGS;
+    private readonly InputAction m_SimonGame_KeyAS;
+    public struct SimonGameActions
+    {
+        private @InputSystem_Actions m_Wrapper;
+        public SimonGameActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @KeyC => m_Wrapper.m_SimonGame_KeyC;
+        public InputAction @KeyD => m_Wrapper.m_SimonGame_KeyD;
+        public InputAction @KeyE => m_Wrapper.m_SimonGame_KeyE;
+        public InputAction @KeyF => m_Wrapper.m_SimonGame_KeyF;
+        public InputAction @KeyG => m_Wrapper.m_SimonGame_KeyG;
+        public InputAction @KeyA => m_Wrapper.m_SimonGame_KeyA;
+        public InputAction @KeyB => m_Wrapper.m_SimonGame_KeyB;
+        public InputAction @KeyCS => m_Wrapper.m_SimonGame_KeyCS;
+        public InputAction @KeyDS => m_Wrapper.m_SimonGame_KeyDS;
+        public InputAction @KeyFS => m_Wrapper.m_SimonGame_KeyFS;
+        public InputAction @KeyGS => m_Wrapper.m_SimonGame_KeyGS;
+        public InputAction @KeyAS => m_Wrapper.m_SimonGame_KeyAS;
+        public InputActionMap Get() { return m_Wrapper.m_SimonGame; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SimonGameActions set) { return set.Get(); }
+        public void AddCallbacks(ISimonGameActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SimonGameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SimonGameActionsCallbackInterfaces.Add(instance);
+            @KeyC.started += instance.OnKeyC;
+            @KeyC.performed += instance.OnKeyC;
+            @KeyC.canceled += instance.OnKeyC;
+            @KeyD.started += instance.OnKeyD;
+            @KeyD.performed += instance.OnKeyD;
+            @KeyD.canceled += instance.OnKeyD;
+            @KeyE.started += instance.OnKeyE;
+            @KeyE.performed += instance.OnKeyE;
+            @KeyE.canceled += instance.OnKeyE;
+            @KeyF.started += instance.OnKeyF;
+            @KeyF.performed += instance.OnKeyF;
+            @KeyF.canceled += instance.OnKeyF;
+            @KeyG.started += instance.OnKeyG;
+            @KeyG.performed += instance.OnKeyG;
+            @KeyG.canceled += instance.OnKeyG;
+            @KeyA.started += instance.OnKeyA;
+            @KeyA.performed += instance.OnKeyA;
+            @KeyA.canceled += instance.OnKeyA;
+            @KeyB.started += instance.OnKeyB;
+            @KeyB.performed += instance.OnKeyB;
+            @KeyB.canceled += instance.OnKeyB;
+            @KeyCS.started += instance.OnKeyCS;
+            @KeyCS.performed += instance.OnKeyCS;
+            @KeyCS.canceled += instance.OnKeyCS;
+            @KeyDS.started += instance.OnKeyDS;
+            @KeyDS.performed += instance.OnKeyDS;
+            @KeyDS.canceled += instance.OnKeyDS;
+            @KeyFS.started += instance.OnKeyFS;
+            @KeyFS.performed += instance.OnKeyFS;
+            @KeyFS.canceled += instance.OnKeyFS;
+            @KeyGS.started += instance.OnKeyGS;
+            @KeyGS.performed += instance.OnKeyGS;
+            @KeyGS.canceled += instance.OnKeyGS;
+            @KeyAS.started += instance.OnKeyAS;
+            @KeyAS.performed += instance.OnKeyAS;
+            @KeyAS.canceled += instance.OnKeyAS;
+        }
+
+        private void UnregisterCallbacks(ISimonGameActions instance)
+        {
+            @KeyC.started -= instance.OnKeyC;
+            @KeyC.performed -= instance.OnKeyC;
+            @KeyC.canceled -= instance.OnKeyC;
+            @KeyD.started -= instance.OnKeyD;
+            @KeyD.performed -= instance.OnKeyD;
+            @KeyD.canceled -= instance.OnKeyD;
+            @KeyE.started -= instance.OnKeyE;
+            @KeyE.performed -= instance.OnKeyE;
+            @KeyE.canceled -= instance.OnKeyE;
+            @KeyF.started -= instance.OnKeyF;
+            @KeyF.performed -= instance.OnKeyF;
+            @KeyF.canceled -= instance.OnKeyF;
+            @KeyG.started -= instance.OnKeyG;
+            @KeyG.performed -= instance.OnKeyG;
+            @KeyG.canceled -= instance.OnKeyG;
+            @KeyA.started -= instance.OnKeyA;
+            @KeyA.performed -= instance.OnKeyA;
+            @KeyA.canceled -= instance.OnKeyA;
+            @KeyB.started -= instance.OnKeyB;
+            @KeyB.performed -= instance.OnKeyB;
+            @KeyB.canceled -= instance.OnKeyB;
+            @KeyCS.started -= instance.OnKeyCS;
+            @KeyCS.performed -= instance.OnKeyCS;
+            @KeyCS.canceled -= instance.OnKeyCS;
+            @KeyDS.started -= instance.OnKeyDS;
+            @KeyDS.performed -= instance.OnKeyDS;
+            @KeyDS.canceled -= instance.OnKeyDS;
+            @KeyFS.started -= instance.OnKeyFS;
+            @KeyFS.performed -= instance.OnKeyFS;
+            @KeyFS.canceled -= instance.OnKeyFS;
+            @KeyGS.started -= instance.OnKeyGS;
+            @KeyGS.performed -= instance.OnKeyGS;
+            @KeyGS.canceled -= instance.OnKeyGS;
+            @KeyAS.started -= instance.OnKeyAS;
+            @KeyAS.performed -= instance.OnKeyAS;
+            @KeyAS.canceled -= instance.OnKeyAS;
+        }
+
+        public void RemoveCallbacks(ISimonGameActions instance)
+        {
+            if (m_Wrapper.m_SimonGameActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISimonGameActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SimonGameActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SimonGameActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SimonGameActions @SimonGame => new SimonGameActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -2781,5 +3574,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnPlayGame(InputAction.CallbackContext context);
         void OnCredits(InputAction.CallbackContext context);
         void OnQuitGame(InputAction.CallbackContext context);
+    }
+    public interface ISimonGameActions
+    {
+        void OnKeyC(InputAction.CallbackContext context);
+        void OnKeyD(InputAction.CallbackContext context);
+        void OnKeyE(InputAction.CallbackContext context);
+        void OnKeyF(InputAction.CallbackContext context);
+        void OnKeyG(InputAction.CallbackContext context);
+        void OnKeyA(InputAction.CallbackContext context);
+        void OnKeyB(InputAction.CallbackContext context);
+        void OnKeyCS(InputAction.CallbackContext context);
+        void OnKeyDS(InputAction.CallbackContext context);
+        void OnKeyFS(InputAction.CallbackContext context);
+        void OnKeyGS(InputAction.CallbackContext context);
+        void OnKeyAS(InputAction.CallbackContext context);
     }
 }
