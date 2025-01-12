@@ -26,6 +26,7 @@ public class FirstSongScript : MonoBehaviour
     //have an array for each keynote
     public GameObject[] keys;
 
+    //make song shorter???
     private List<int> greenLeaves = new List<int> { 2, 7, 10, 9, 5, 7, 2, 5, 7, 7 };
     private List<int> rickRoll = new List<int> { 2, 2, 4, 2, 9, 9, 7, 2, 2, 4, 2, 7, 7, 5};
     private List<int> comptine = new List<int> {5, 4, 5, 9, 10, 9, 4, 5, 4, 5, 7, 5};
@@ -34,11 +35,14 @@ public class FirstSongScript : MonoBehaviour
 
     public List<int> currentSong = new List<int>();
 
-    private int currentLevel = 0; 
+    private int currentLevel = 0;
+    private int currentNoteToBePlayed = 0; 
 
 
     private void Awake()
     {
+        
+        
         //initialize the input system
         inputControls = new InputSystem_Actions();
 
@@ -57,20 +61,20 @@ public class FirstSongScript : MonoBehaviour
             inputControls.SimonGame.KeyA,//9
             inputControls.SimonGame.KeyAS,//10
             inputControls.SimonGame.KeyB,//11
+            inputControls.SimonGame.Next
             
         };
     }
 
     private void Start()
     {
-        OnDisable();
-
         allSongs.Add(greenLeaves);
         allSongs.Add(rickRoll);
         allSongs.Add(comptine);
 
         //randomize the song
         currentSong = allSongs[Random.Range(0, allSongs.Count)];
+        nextLevelSimon();
     }
 
     private void OnEnable()
@@ -105,6 +109,9 @@ public class FirstSongScript : MonoBehaviour
 
     private IEnumerator LoopWithDelay()
     {
+        yield return new WaitForSeconds(0.5f);
+        currentLevel += 1;
+        currentNoteToBePlayed = 0; 
         OnDisable();
         for (int i = 0; i < Mathf.Min(currentLevel, currentSong.Count); i++)
         {
@@ -112,7 +119,7 @@ public class FirstSongScript : MonoBehaviour
             int index = currentSong[i];
 
             keys[index].GetComponent<SpriteRenderer>().color = Color.blue;
-            //keys[index].GetComponent<PianoNote>().PlayAudioSource(); 
+            keys[index].GetComponent<PianoNote>().PlayAudioSource(); 
             yield return new WaitForSeconds(0.5f);
             if (index == 1 || index == 3 || index == 6 || index == 8 || index == 10)
             {
@@ -122,7 +129,7 @@ public class FirstSongScript : MonoBehaviour
             {
                 keys[index].GetComponent<SpriteRenderer>().color = Color.white;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
         OnEnable(); 
 
@@ -132,68 +139,86 @@ public class FirstSongScript : MonoBehaviour
     //the event I used to register it 
     public void PlayKey(InputAction.CallbackContext context)
     {
-        // Log which key was pressed
-        Debug.Log($"Key pressed: {context.action.name}");
-        int pianoNoteIndex = -1;
+            // Log which key was pressed
+            int pianoNoteIndex = -1;
 
-        //play the right key 
-        if (context.action.name == "KeyC")
+            //play the right key 
+            if (context.action.name == "KeyC")
+            {
+                pianoNoteIndex = 0;
+            }
+            else if (context.action.name == "KeyCS")
+            {
+                pianoNoteIndex = 1;
+            }
+            else if (context.action.name == "KeyD")
+            {
+                pianoNoteIndex = 2;
+            }
+            else if (context.action.name == "KeyDS")
+            {
+                pianoNoteIndex = 3;
+            }
+            else if (context.action.name == "KeyE")
+            {
+                pianoNoteIndex = 4;
+            }
+            else if (context.action.name == "KeyF")
+            {
+                pianoNoteIndex = 5;
+            }
+            else if (context.action.name == "KeyFS")
+            {
+                pianoNoteIndex = 6;
+            }
+            else if (context.action.name == "KeyG")
+            {
+                pianoNoteIndex = 7;
+            }
+            else if (context.action.name == "KeyGS")
+            {
+                pianoNoteIndex = 8;
+            }
+            else if (context.action.name == "KeyA")
+            {
+                pianoNoteIndex = 9;
+            }
+            else if (context.action.name == "KeyAS")
+            {
+                pianoNoteIndex = 10;
+            }
+            else if (context.action.name == "KeyB")
+            {
+                pianoNoteIndex = 11;
+            }
+        if (pianoNoteIndex != -1)
         {
-            pianoNoteIndex = 0;
-        }
-        else if (context.action.name == "KeyCS")
-        {
-            pianoNoteIndex = 1;
-        }
-        else if (context.action.name == "KeyD")
-        {
-            pianoNoteIndex = 2;
-        }
-        else if (context.action.name == "KeyDS")
-        {
-            pianoNoteIndex = 3;
-        }
-        else if (context.action.name == "KeyE")
-        {
-            pianoNoteIndex = 4;
-        }
-        else if (context.action.name == "KeyF")
-        {
-            pianoNoteIndex = 5;
-        }
-        else if (context.action.name == "KeyFS")
-        {
-            pianoNoteIndex = 6;
-        }
-        else if (context.action.name == "KeyG")
-        {
-            pianoNoteIndex = 7;
-        }
-        else if (context.action.name == "KeyGS")
-        {
-            pianoNoteIndex = 8;
-        }
-        else if (context.action.name == "KeyA")
-        {
-            pianoNoteIndex = 9;
-        }
-        else if (context.action.name == "KeyAS")
-        {
-            pianoNoteIndex = 10;
-        }
-        else if (context.action.name == "KeyB")
-        {
-            pianoNoteIndex = 11;
-        }
-        else
-        {
-            currentLevel += 1;
-            nextLevelSimon();
-        }
-        if(pianoNoteIndex != -1)
-        {
+            Debug.Log($"Key to play: {currentSong[currentNoteToBePlayed]}");
+            Debug.Log($"Key pressed: {pianoNoteIndex}");
+            if (pianoNoteIndex != currentSong[currentNoteToBePlayed])
+            {
+                //minus 10 score
+                //play a bang
+                foreach(GameObject key in keys)
+                {
+                    key.GetComponent<PianoNote>().PlayAudioSource(); 
+                }
+
+                //we can have an ienumator for the animation of failing
+                //go to next level
+                nextLevelSimon();
+            }
+            else
+            {
+                currentNoteToBePlayed++;
+                if (currentNoteToBePlayed >= currentLevel)
+                {
+                    nextLevelSimon();
+                }
+            }
+
+            
             keys[pianoNoteIndex].GetComponent<PianoNote>().PlayAudioSource();
-
         }
     }
 }
