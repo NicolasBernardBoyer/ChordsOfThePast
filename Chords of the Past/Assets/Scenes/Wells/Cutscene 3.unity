@@ -463,7 +463,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 761826184}
         m_TargetAssemblyTypeName: SceneReloader, Assembly-CSharp
-        m_MethodName: LoadFirstSong
+        m_MethodName: LoadGearboxPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
