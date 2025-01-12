@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Darcy/MainMenu.unity
     guid: ea9dd9ae5a5b7584fa656d59390e0d42
   - enabled: 1
-    path: Assets/Scenes/ChooseHarp.unity
+    path: Assets/Scenes/Darcy/ChooseHarp.unity
     guid: 2db3e70bfd3860b40ba8b2951b732f07
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
