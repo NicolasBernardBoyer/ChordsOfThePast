@@ -1289,10 +1289,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
                     ""action"": ""Column1"",
+<<<<<<< Updated upstream
+=======
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
+<<<<<<< HEAD
+=======
                     ""name"": ""1D Axis"",
                     ""id"": ""80e44749-c59d-40a2-8e3e-f3bdabc10542"",
                     ""path"": ""1DAxis"",
@@ -1326,7 +1330,80 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+>>>>>>> 3ebebbfa50573bb1b42b01f5b8bc0869d8f18728
                     ""name"": """",
+                    ""id"": ""7709417f-0016-4430-8a56-8564a5ad9dea"",
+                    ""path"": ""<MidiDevice>/control074"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Column2"",
+>>>>>>> Stashed changes
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+<<<<<<< Updated upstream
+                    ""id"": ""80e44749-c59d-40a2-8e3e-f3bdabc10542"",
+=======
+                    ""id"": ""b733057b-28f5-49ef-a754-5a3c13f54fa4"",
+>>>>>>> Stashed changes
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+<<<<<<< Updated upstream
+                    ""action"": ""Column1"",
+=======
+                    ""action"": ""Column2"",
+>>>>>>> Stashed changes
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+<<<<<<< Updated upstream
+                    ""id"": ""6e60227c-29fc-4844-b030-bc685e4cd295"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Column1"",
+=======
+                    ""id"": ""3e3199fc-9199-4b0a-803c-155615c1ea1b"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Column2"",
+>>>>>>> Stashed changes
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+<<<<<<< Updated upstream
+                    ""id"": ""a318e6ce-638f-48f5-81be-6d4053ce147f"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Column1"",
+=======
+                    ""id"": ""dd4cd21b-a0b9-480b-a58f-af8bf92f3776"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Column2"",
+>>>>>>> Stashed changes
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+<<<<<<< Updated upstream
                     ""id"": ""7709417f-0016-4430-8a56-8564a5ad9dea"",
                     ""path"": ""<MidiDevice>/control074"",
                     ""interactions"": """",
@@ -1371,6 +1448,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+=======
+>>>>>>> Stashed changes
                     ""id"": ""6c6325db-e1e6-44ef-881f-42a274f72490"",
                     ""path"": ""<MidiDevice>/control071"",
                     ""interactions"": """",
