@@ -1,16 +1,15 @@
     using System;
     using UnityEngine;
     using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-    public class GearsGameManager : MonoBehaviour
+public class GearsGameManager : MonoBehaviour
     {
-        public InputSystem_Actions inputControls;
+        public InputSystem_Actions_Nick inputControls;
         public GameObject Gear;
         public float intensity = 5f;
-        public float sliderIntensity = 5f;
-        public float keyboardIntensity = 2.5f;
-        public float cursorMax = 3.0f;
-        public float cursorMin = -3.0f;
+        public float cursorMax = 5.0f;
+        public float cursorMin = -5.0f;
 
         private Vector3 cursor = new Vector3(-3.0f, -3.0f, 0);
 
@@ -20,6 +19,7 @@
         private InputAction slider;
         private InputAction leftKey;
         private InputAction rightKey;
+        private InputAction resetKey;
 
         private void Start()
         {
@@ -28,17 +28,50 @@
         private void Update()
         {
             Gear.transform.position = Vector3.MoveTowards(Gear.transform.position, cursor, 1.0f);
+
+            if (Input.GetKey(KeyCode.W) && cursor.y < cursorMax) 
+            {
+                cursor = new Vector3(cursor.x, cursor.y + 0.025f, cursor.z);
+            } else if (Input.GetKey(KeyCode.S) && cursor.y > cursorMin)
+            {
+                cursor = new Vector3(cursor.x, cursor.y - 0.025f, cursor.z);
+            }
         }
 
         public void PlaceGear()
         {
-            Gear = Instantiate(Gear, cursor, Quaternion.identity);
+            if (Gear.GetComponent<Gear>().attemptToPlace())
+            {
+                if (!CheckWinCondition())
+                {
+                    Gear = Instantiate(Gear, cursor, Quaternion.identity);
+                } else
+                {
+                    Scene scene = SceneManager.GetActiveScene();
+                    SceneManager.LoadScene(scene.name);
+                }
+            }
         }
+
+        public bool CheckWinCondition()
+        {
+            GameObject[] notches = GameObject.FindGameObjectsWithTag("Notch");
+            foreach (GameObject obj in notches)
+            {
+                if (obj.GetComponent<Notch>().correctSolution == false)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        
 
         private void Awake()
         {
             //initialize the input system
-            inputControls = new InputSystem_Actions();
+            inputControls = new InputSystem_Actions_Nick();
         }
 
         private void OnEnable()
@@ -68,6 +101,11 @@
             leftKey.Enable();
             //register to the event
             leftKey.performed += LeftKey;
+
+            resetKey = inputControls.GearsPuzzle.Reset;
+            resetKey.Enable();
+            //register to the event
+            resetKey.performed += ResetKey;
     }
 
         private void OnDisable()
@@ -77,13 +115,20 @@
             slider.Disable();
             leftKey.Disable();
             rightKey.Disable();
+            resetKey.Disable();
         }
 
         //the event I used to register it 
         public void PlayKey(InputAction.CallbackContext context)
         {
-
             Debug.Log("Pressed the play key");
+            if (Gear.GetComponent<Gear>().type < 2)
+            {
+                Gear.GetComponent<Gear>().type++;
+            } else
+            {
+                Gear.GetComponent<Gear>().type = 0;
+            }
         }
         public void StopKey(InputAction.CallbackContext context)
         {
@@ -95,27 +140,27 @@
         {
             Debug.Log("Pressed the right key");
             if (cursor.x >= cursorMax) cursor.x = cursorMin;
-            else cursor.x += 2;
+            else cursor.x += 1;
         }
 
         public void LeftKey(InputAction.CallbackContext context)
         {
             Debug.Log("Pressed the left key");
             if (cursor.x <= cursorMin) cursor.x = cursorMax;
-            else cursor.x -= 2;
+            else cursor.x -= 1;
+        }
+
+        public void ResetKey(InputAction.CallbackContext context)
+        {
+            Debug.Log("Pressed the reset key");
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
 
 
     public void Slider(InputAction.CallbackContext context)
         {   
             Debug.Log(context.ReadValue<float>());
-            if (context.control.device is Keyboard)
-            {
-                intensity = keyboardIntensity;
-            } else
-            {
-                intensity = sliderIntensity;
-            }
             cursor = new Vector3(cursor.x, -3 + context.ReadValue<float>() * intensity, cursor.z);
             //Debug.Log("Slider1 being used");
         }
