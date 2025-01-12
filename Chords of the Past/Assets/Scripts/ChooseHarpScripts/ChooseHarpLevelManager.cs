@@ -1,4 +1,5 @@
 using System;
+using Mono.Cecil;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem; //allows us to use MIDI keyboard :3
@@ -16,10 +17,10 @@ public class ChooseHarpLevelManager : MonoBehaviour
     private InputAction fourthHarpAction;
     private InputAction playSongAction;
 
-    [SerializeField] GameObject firstHarp;
-    [SerializeField] GameObject secondHarp;
-    [SerializeField] GameObject thirdHarp;
-    [SerializeField] GameObject fourthHarp; //VS is god-tier
+    GameObject firstHarp;
+    GameObject secondHarp;
+    GameObject thirdHarp;
+    GameObject fourthHarp; //VS is god-tier
 
     [SerializeField] Vector3 firstHarpPosition;
     [SerializeField] Vector3 secondHarpPosition;
@@ -115,10 +116,10 @@ public class ChooseHarpLevelManager : MonoBehaviour
         {
             firstHarpSelected = true;
             Debug.Log("Harp 1");
-            firstHarp.transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
-            FadeOut(secondHarp);
-            FadeOut(thirdHarp);
-            FadeOut(fourthHarp);
+            harpArray[0].transform.position = Vector3.MoveTowards(firstHarpPosition, new Vector3(0, 0.5f, 0), 5000);
+            FadeOut(harpArray[1]);
+            FadeOut(harpArray[2]);
+            FadeOut(harpArray[3]);
         }
 
 
@@ -236,6 +237,12 @@ public class ChooseHarpLevelManager : MonoBehaviour
         harpArray[2].transform.position = new Vector3(2, 0.5f, 0);
         harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
 
+        harpArray[0] = firstHarp;
+        harpArray[1] = secondHarp;
+        harpArray[2] = thirdHarp;
+        harpArray[3] = fourthHarp;
+
+        //chosenChord.Play();
     }
 
     // Update is called once per frame

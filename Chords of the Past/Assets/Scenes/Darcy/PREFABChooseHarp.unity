@@ -307,18 +307,18 @@ MonoBehaviour:
   - {fileID: 8429224587512158562, guid: da687d0170dae8043aa595e3a815caf6, type: 3}
   - {fileID: -483894932032126562, guid: d7f958a09c1c2f34f95e823df9906ad1, type: 3}
   allHarpChords:
-  - {fileID: 8300000, guid: dba8fe8a80411814fb7ec837f026581c, type: 3}
-  - {fileID: 8300000, guid: 072c6abac4bbd0c4996d25f1d07e014b, type: 3}
-  - {fileID: 8300000, guid: 69f086e8746a88a4c8330acdf50fc7e0, type: 3}
-  - {fileID: 8300000, guid: f0c8eba56b64a324cbd516cc4ecb03df, type: 3}
-  - {fileID: 8300000, guid: e4e2f17cd95afe04689b1f0d68569d3f, type: 3}
-  - {fileID: 8300000, guid: 3864d2477af508747921de0ce933c6a8, type: 3}
-  - {fileID: 8300000, guid: 020fc4a3b129034468517a93c906cba6, type: 3}
-  - {fileID: 8300000, guid: e2e8e14af870ff942a995a05e5964f1d, type: 3}
-  - {fileID: 8300000, guid: 55e5d76d411fb0b40ab272c8e0e39389, type: 3}
-  - {fileID: 8300000, guid: 2f11284e9f6d58f4db86a3f7c2163608, type: 3}
-  - {fileID: 8300000, guid: a207ab4602a56054fb94729cedb13c86, type: 3}
-  - {fileID: 8300000, guid: ea63efffc7ffd7b4e812aad1050385f3, type: 3}
+  - {fileID: 8300000, guid: 50b3c6ed8be8bf346a38691d451b1048, type: 3}
+  - {fileID: 8300000, guid: 211cbf7a9a988ed42bbdd743ffa5880c, type: 3}
+  - {fileID: 8300000, guid: dc2c0e006044d1d4db94d4dea7480f34, type: 3}
+  - {fileID: 8300000, guid: 2a7a70d5fdfcd494d9bdb0bfa05c1c80, type: 3}
+  - {fileID: 8300000, guid: c9c7b6440b7cbd14ebc896e780516561, type: 3}
+  - {fileID: 8300000, guid: 53a7ec4180e3db4439aecf4ef852b041, type: 3}
+  - {fileID: 8300000, guid: 5615347a07835214197eed271a5f84c9, type: 3}
+  - {fileID: 8300000, guid: 807568df04e7ec549a83dda9ec041a73, type: 3}
+  - {fileID: 8300000, guid: 78315ff207db12e46810788f7caa3e9e, type: 3}
+  - {fileID: 8300000, guid: 1a61db9c2e86c184c823184b80b834b8, type: 3}
+  - {fileID: 8300000, guid: b3e2b8ca83e343c408d0629d30e6bcc4, type: 3}
+  - {fileID: 8300000, guid: 9335f99aac4fdb44c8558ca0643a5ecb, type: 3}
   harpPrefab: {fileID: 7923418382984799758, guid: cdf14a733099bdc4a9d263c04f04d6a0, type: 3}
   harpArray:
   - {fileID: 0}
