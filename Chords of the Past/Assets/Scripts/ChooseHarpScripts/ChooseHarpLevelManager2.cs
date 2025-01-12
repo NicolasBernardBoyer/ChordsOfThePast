@@ -261,7 +261,7 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
         if (round_counter >= 4)
         {
             Debug.Log("Game Over");
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("EndOfChooseHarp");
             return;
         }
 
