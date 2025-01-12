@@ -18,14 +18,22 @@ public class HarpController : MonoBehaviour
     [SerializeField] private GameObject thirdCord;
     [SerializeField] private GameObject fourthCord;
 
-    public AudioSource audioSound;
+    [SerializeField] private AudioSource[] cordSounds = new AudioSource[4];
 
     private GameObject selectedCord;
 
     private void Awake()
     {
         inputControls = new InputSystem_Actions();
-        audioSound = GetComponent<AudioSource>();
+
+        // Initialize random pitches for each cord
+        foreach (var sound in cordSounds)
+        {
+            if (sound != null)
+            {
+                sound.pitch = Random.Range(0.5f, 2f);
+            }
+        }
     }
 
     private void OnEnable()
@@ -61,6 +69,7 @@ public class HarpController : MonoBehaviour
         secondCordAction.Disable();
         thirdCordAction.Disable();
         fourthCordAction.Disable();
+        playSongAction.Disable();
         rotationAction.Disable();
     }
 
@@ -97,37 +106,59 @@ public class HarpController : MonoBehaviour
         float rotationValue = context.ReadValue<float>();
         Debug.Log($"Rotation value: {rotationValue}");
 
-        float rotationSpeed = 400f; // Speed of rotation
+        float rotationSpeed = 400f;
         selectedCord.transform.Rotate(0, 0, rotationValue * rotationSpeed * Time.deltaTime);
 
-        // Adjust sound volumes based on rotation
-        AdjustPitch(0.5f);
+        // Get current cord index and adjust its pitch
+        int cordIndex = GetCordIndex(selectedCord);
+        if (cordIndex != -1)
+        {
+            float currentRotation = selectedCord.transform.eulerAngles.z;
+            float normalizedPitch = Mathf.Lerp(0.5f, 2f, (currentRotation % 360) / 360f);
+            AdjustPitch(normalizedPitch, cordIndex);
+        }
     }
 
-
-    // Modify pitch based on a value
-    void AdjustPitch(float value)
+    private int GetCordIndex(GameObject cord)
     {
-        Debug.Log($"audioVolume pitch before: {audioSound.pitch}");
-        audioSound.pitch = Mathf.Clamp(value, -3f, 3f);
-        Debug.Log($"audioVolume pitch after: {audioSound.pitch}");
-        audioSound = GetComponent<AudioSource>();
+        if (cord == firstCord) return 0;
+        if (cord == secondCord) return 1;
+        if (cord == thirdCord) return 2;
+        if (cord == fourthCord) return 3;
+        return -1;
     }
 
-
-    private void AdjustSoundVolumes(float rotationValue)
+    void AdjustPitch(float value, int cordIndex)
     {
-        // Map rotation value to desired volume ratios (50%, 100%, 50%)
-        float normalizedValue = Mathf.Clamp01((rotationValue + 1f) / 2f); // Map rotation (-1 to 1) to (0 to 1)
+        if (cordIndex < 0 || cordIndex >= cordSounds.Length) return;
+        if (cordSounds[cordIndex] == null)
+        {
+            Debug.LogError($"AudioSource for cord {cordIndex} is not assigned!");
+            return;
+        }
 
-        audioSound.volume = Mathf.Lerp(0.5f, 1f, normalizedValue); // Adjust volume of sound1
-
-        Debug.Log($"Volumes - Sound1: {audioSound.volume}");
+        Debug.Log($"Cord {cordIndex} pitch before: {cordSounds[cordIndex].pitch}");
+        cordSounds[cordIndex].pitch = Mathf.Clamp(value, 0.5f, 2f);
+        Debug.Log($"Cord {cordIndex} pitch after: {cordSounds[cordIndex].pitch}");
     }
 
     private void PlaySong(InputAction.CallbackContext context)
     {
-        audioSound.Play();
-        Debug.Log("Playing song...");
+        if (selectedCord == null)
+        {
+            Debug.LogWarning("No cord selected!");
+            return;
+        }
+
+        int cordIndex = GetCordIndex(selectedCord);
+        if (cordIndex != -1 && cordSounds[cordIndex] != null)
+        {
+            cordSounds[cordIndex].Play();
+            Debug.Log($"Playing cord {cordIndex}...");
+        }
+        else
+        {
+            Debug.LogError($"AudioSource for cord {cordIndex} is not assigned!");
+        }
     }
 }
