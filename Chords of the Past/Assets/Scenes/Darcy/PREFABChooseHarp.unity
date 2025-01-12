@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42487765}
-  - component: {fileID: 42487764}
+  - component: {fileID: 42487766}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -272,7 +272,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &42487764
+--- !u!4 &42487765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42487763}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42487766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,18 +296,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 42487763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eca94482a528f74cb64ce2f95ae416a, type: 3}
+  m_Script: {fileID: 11500000, guid: bf1663816e8f243f090e3065d8a400a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstHarp: {fileID: 0}
-  secondHarp: {fileID: 0}
-  thirdHarp: {fileID: 0}
-  fourthHarp: {fileID: 0}
   firstHarpPosition: {x: 0, y: 0, z: 0}
   secondHarpPosition: {x: 0, y: 0, z: 0}
   thirdHarpPosition: {x: 0, y: 0, z: 0}
   fourthHarpPosition: {x: 0, y: 0, z: 0}
-  endOfRoundText: {fileID: 10734515}
+  endOfRoundText: {fileID: 0}
   allHarpSprites:
   - {fileID: 806552100261366753, guid: 18f69a9622651884d82cf2e6fdbf6782, type: 3}
   - {fileID: 6927471007187052643, guid: 13749f7f8bf34234fa3a3207dfdcb705, type: 3}
@@ -325,21 +336,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!4 &42487765
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42487763}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  currentHarpSelection: {fileID: 0}
 --- !u!1 &276313438
 GameObject:
   m_ObjectHideFlags: 0

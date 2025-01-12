@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using System.Threading;
 using Mono.Cecil;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem; //allows us to use MIDI keyboard :3
 using UnityEngine.SceneManagement; //allows us to change scenes in Unity via code!
 
@@ -39,12 +41,16 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
 
     public GameObject[] harpArray = new GameObject[4];
     public GameObject currentHarpSelection;
-    //private GameObject chosenHarp;
+    private GameObject chosenHarp;
+
+
     //public Transform[] harpTransformArray = new Transform[4];
 
     int round_counter = 1;
 
-    bool isPlaying; 
+    bool isPlaying;
+
+    public Timer timer;
 
     private void Awake() //happens before Start()
     {
@@ -113,6 +119,7 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
         chosenHarp.SetActive(true);
     }
 
+
     public void ChooseHarp(InputAction.CallbackContext context)
     {
         if (isPlaying)
@@ -175,6 +182,7 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
             if (i != harpIndex)
             {
                 harpArray[i].GetComponent<Harp>().StartFadeOut();
+
             }
         }
 
@@ -183,7 +191,20 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
         //you would have the check if they clicked the right harp here with
         if (harpArray[harpIndex].GetComponent<Harp>().isChosenHarp)
         {
+            Score.addScore(100);
+            Debug.Log(Score.getHealthScore());
+            //add score
 
+            StartCoroutine(TimeToNextRound());
+            setUpRound();
+        }
+        else
+        {
+            Score.addScore(1); //pity point
+            Debug.Log("Failed the puzzle lol");
+
+            StartCoroutine(TimeToNextRound());
+            setUpRound();
         }
     }
 
@@ -197,11 +218,82 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
         isPlaying = false;
     }
 
+    private IEnumerator TimeToNextRound()
+    {
+        isPlaying = true;
+        yield return new WaitForSeconds(3f);
+        isPlaying = false;
+    }
+
+    private IEnumerator PlayCutScene()
+    {
+        //make sure you cant input single taps until the music is done
+        OnDisable();
+        AudioSource audioSource = chosenHarp.GetComponent<AudioSource>();
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        OnEnable();
+    }
+
+    public void setUpRound()
+    {
+        round_counter += 1;
+        //endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
+
+        for (int i = 0; i < 4; i++)
+        {
+            harpArray[i] = Instantiate(harpPrefab);
+            //harpArray[i].transform.position = harpTransformArray[i].position;
+            //random sprite
+            int randomSprite;
+            do
+            {
+                randomSprite = UnityEngine.Random.Range(0, allHarpSprites.Length);
+            } while (allHarpSprites[randomSprite] == null);
+
+            harpArray[i].GetComponent<SpriteRenderer>().sprite = allHarpSprites[randomSprite];
+            allHarpSprites[randomSprite] = null;
+
+            //randomChord
+            int randomChord;
+            do
+            {
+                randomChord = UnityEngine.Random.Range(0, allHarpChords.Length);
+            } while (allHarpChords[randomChord] == null);
+
+            harpArray[i].GetComponent<AudioSource>().resource = allHarpChords[randomChord];
+            allHarpChords[randomChord] = null;
+
+
+        } //end of for loop
+
+
+        //int chordToMessWith = UnityEngine.Random.Range(0, 4);
+        //harpArray[chordToMessWith].GetComponent<AudioSource>().resource = chosenChord;
+
+        //harcode the starting position
+        harpArray[0].transform.position = new Vector3(-5, 0.5f, 0);
+        harpArray[1].transform.position = new Vector3(-2, 0.5f, 0);
+        harpArray[2].transform.position = new Vector3(2, 0.5f, 0);
+        harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
+
+        //find the right harp
+        int random = UnityEngine.Random.Range(0, 4);
+        harpArray[random].GetComponent<Harp>().isChosenHarp = true;
+        chosenHarp = harpArray[random];
+        //to avoid edge cases
+        currentHarpSelection = harpArray[0];
+
+        StartCoroutine(PlayCutScene());
+    } 
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
+        //endOfRoundText.CrossFadeAlpha(0, 0.01f, false);
 
         for (int i = 0; i < 4; i++)
         {
@@ -241,10 +333,13 @@ public class ChooseHarpLevelManager2 : MonoBehaviour
         harpArray[3].transform.position = new Vector3(5, 0.5f, 0);
 
         //find the right harp
-        harpArray[UnityEngine.Random.Range(0, 4)].GetComponent<Harp>().isChosenHarp = true;
+        int random = UnityEngine.Random.Range(0, 4);
+        harpArray[random].GetComponent<Harp>().isChosenHarp = true;
+        chosenHarp = harpArray[random];
         //to avoid edge cases
         currentHarpSelection = harpArray[0];
 
+        StartCoroutine(PlayCutScene());
     }
 
     // Update is called once per frame
