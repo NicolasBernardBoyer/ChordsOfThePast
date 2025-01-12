@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nick/GearBoxPuzzle.unity
     guid: b32aae4a11e0b60449d8dbda62e7d3d8
+  - enabled: 1
+    path: Assets/Scenes/Darcy/PREFABChooseHarp.unity
+    guid: f81b300ecd9ca324a90e3f9703e7bd59
+  - enabled: 1
+    path: Assets/Scenes/Darcy/EndOfChooseHarp.unity
+    guid: cbf8385201e4465479246dddb5ef1092
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

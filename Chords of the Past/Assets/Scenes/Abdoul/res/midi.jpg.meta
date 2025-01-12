@@ -1,10 +1,19 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Chords of the Past/Assets/Scenes/Abdoul/res/midi.jpg.meta
 guid: da20ee1e641a4024fb7ef8d42ba1583a
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8694603790777942021
     second: midi_0
+========
+guid: 1cc6868c54f388d4693d5f14d0e6f997
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6713820320116649573
+    second: sfsdfa_0
+>>>>>>>> e43ff2ddad8fcfc731c3bd3419ad894792d134c4:Chords of the Past/Assets/Scenes/Darcy/sfsdfa.jpg.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Chords of the Past/Assets/Scenes/Abdoul/res/midi.jpg.meta
       name: midi_0
+========
+      name: sfsdfa_0
+>>>>>>>> e43ff2ddad8fcfc731c3bd3419ad894792d134c4:Chords of the Past/Assets/Scenes/Darcy/sfsdfa.jpg.meta
       rect:
         serializedVersion: 2
         x: 0
         y: 0
+<<<<<<<< HEAD:Chords of the Past/Assets/Scenes/Abdoul/res/midi.jpg.meta
         width: 3521
         height: 2369
+========
+        width: 2260
+        height: 1464
+>>>>>>>> e43ff2ddad8fcfc731c3bd3419ad894792d134c4:Chords of the Past/Assets/Scenes/Darcy/sfsdfa.jpg.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +133,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Chords of the Past/Assets/Scenes/Abdoul/res/midi.jpg.meta
       spriteID: 500851ce41079a870800000000000000
       internalID: 8694603790777942021
+========
+      spriteID: 56e2a5282084c2d50800000000000000
+      internalID: 6713820320116649573
+>>>>>>>> e43ff2ddad8fcfc731c3bd3419ad894792d134c4:Chords of the Past/Assets/Scenes/Darcy/sfsdfa.jpg.meta
       vertices: []
       indices: 
       edges: []
