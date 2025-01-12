@@ -2019,6 +2019,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Next"",
+                    ""type"": ""Button"",
+                    ""id"": ""d253e67b-5842-44f4-a7a2-d6f36cfa1f94"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -2549,6 +2558,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""KeyAS"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""26f17e1e-30d2-42a6-b110-70b94822b570"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Next"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -2686,6 +2706,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_SimonGame_KeyFS = m_SimonGame.FindAction("KeyFS", throwIfNotFound: true);
         m_SimonGame_KeyGS = m_SimonGame.FindAction("KeyGS", throwIfNotFound: true);
         m_SimonGame_KeyAS = m_SimonGame.FindAction("KeyAS", throwIfNotFound: true);
+        m_SimonGame_Next = m_SimonGame.FindAction("Next", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -3350,6 +3371,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_SimonGame_KeyFS;
     private readonly InputAction m_SimonGame_KeyGS;
     private readonly InputAction m_SimonGame_KeyAS;
+    private readonly InputAction m_SimonGame_Next;
     public struct SimonGameActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -3366,6 +3388,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @KeyFS => m_Wrapper.m_SimonGame_KeyFS;
         public InputAction @KeyGS => m_Wrapper.m_SimonGame_KeyGS;
         public InputAction @KeyAS => m_Wrapper.m_SimonGame_KeyAS;
+        public InputAction @Next => m_Wrapper.m_SimonGame_Next;
         public InputActionMap Get() { return m_Wrapper.m_SimonGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -3411,6 +3434,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @KeyAS.started += instance.OnKeyAS;
             @KeyAS.performed += instance.OnKeyAS;
             @KeyAS.canceled += instance.OnKeyAS;
+            @Next.started += instance.OnNext;
+            @Next.performed += instance.OnNext;
+            @Next.canceled += instance.OnNext;
         }
 
         private void UnregisterCallbacks(ISimonGameActions instance)
@@ -3451,6 +3477,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @KeyAS.started -= instance.OnKeyAS;
             @KeyAS.performed -= instance.OnKeyAS;
             @KeyAS.canceled -= instance.OnKeyAS;
+            @Next.started -= instance.OnNext;
+            @Next.performed -= instance.OnNext;
+            @Next.canceled -= instance.OnNext;
         }
 
         public void RemoveCallbacks(ISimonGameActions instance)
@@ -3589,5 +3618,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnKeyFS(InputAction.CallbackContext context);
         void OnKeyGS(InputAction.CallbackContext context);
         void OnKeyAS(InputAction.CallbackContext context);
+        void OnNext(InputAction.CallbackContext context);
     }
 }

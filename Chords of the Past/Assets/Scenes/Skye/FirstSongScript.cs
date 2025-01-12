@@ -57,7 +57,6 @@ public class FirstSongScript : MonoBehaviour
             inputControls.SimonGame.KeyA,//9
             inputControls.SimonGame.KeyAS,//10
             inputControls.SimonGame.KeyB,//11
-            inputControls.SimonGame.Next
             
         };
     }
