@@ -19,8 +19,10 @@ public class ChooseHarpTimer : MonoBehaviour
         //timerText.text = elapsedTime.ToString(); bro I just put in timerText and VS filled everything else in this IDE is so peak oml
         int minutes = Mathf.FloorToInt(totalSecondsLeft / 60);
         int seconds = Mathf.FloorToInt(totalSecondsLeft % 60);
-        timerText.text = string.Format("Timer: {0:00}:{1:00}", minutes, seconds); //{} is where the values of the variables are put
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds); //{} is where the values of the variables are put
         //{0} means to show the first variable in the format of ":00" and {1} is to show the second variable's parameters
+        //originally "("Timer: {0:00}:{1:00}", minutes, seconds)"
+
 
         if (totalSecondsLeft >= 120)
         {

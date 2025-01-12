@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HarpController : MonoBehaviour
 {
@@ -20,21 +22,43 @@ public class HarpController : MonoBehaviour
 
     [SerializeField] private AudioSource[] cordSounds = new AudioSource[4];
 
+    [SerializeField] private Slider pitchSlider; // Slider to control pitch
+    [SerializeField] private Button evaluateButton;
+
     private GameObject selectedCord;
 
     private void Awake()
     {
         inputControls = new InputSystem_Actions();
 
-        // Initialize random pitches for each cord
-        foreach (var sound in cordSounds)
+        // Initialize pitches based on initial rotations
+        for (int i = 0; i < cordSounds.Length; i++)
         {
-            if (sound != null)
+            if (cordSounds[i] != null)
             {
-                sound.pitch = Random.Range(0.5f, 2f);
+                // Calculate pitch based on initial rotation
+                float initialRotation = GetCordByIndex(i).transform.eulerAngles.z;
+                float initialPitch = Mathf.Lerp(0.5f, 2f, (initialRotation % 360) / 360f);
+                cordSounds[i].pitch = initialPitch;
             }
         }
+
+        // Link button to EvaluateAndProceed
+        if (evaluateButton != null)
+        {
+            evaluateButton.onClick.AddListener(EvaluateAndProceed);
+        }
     }
+
+    private GameObject GetCordByIndex(int index)
+    {
+        if (index == 0) return firstCord;
+        if (index == 1) return secondCord;
+        if (index == 2) return thirdCord;
+        if (index == 3) return fourthCord;
+        return null;
+    }
+
 
     private void OnEnable()
     {
@@ -61,6 +85,9 @@ public class HarpController : MonoBehaviour
         fourthCordAction.performed += context => SelectCord(fourthCord);
         playSongAction.performed += PlaySong;
         rotationAction.performed += RotateCord;
+
+        // Bind slider value change event
+        pitchSlider.onValueChanged.AddListener(OnPitchSliderChanged);
     }
 
     private void OnDisable()
@@ -71,6 +98,9 @@ public class HarpController : MonoBehaviour
         fourthCordAction.Disable();
         playSongAction.Disable();
         rotationAction.Disable();
+
+        // Remove slider listener
+        pitchSlider.onValueChanged.RemoveListener(OnPitchSliderChanged);
     }
 
     private void SelectCord(GameObject cord)
@@ -82,6 +112,13 @@ public class HarpController : MonoBehaviour
         // Add border to selected cord
         var border = selectedCord.transform.Find("Border");
         if (border != null) border.gameObject.SetActive(true);
+
+        // Update slider to match the pitch of the selected cord
+        int cordIndex = GetCordIndex(selectedCord);
+        if (cordIndex != -1 && cordSounds[cordIndex] != null)
+        {
+            pitchSlider.value = cordSounds[cordIndex].pitch; // Set slider value
+        }
     }
 
     private void ResetCordBorders()
@@ -116,6 +153,9 @@ public class HarpController : MonoBehaviour
             float currentRotation = selectedCord.transform.eulerAngles.z;
             float normalizedPitch = Mathf.Lerp(0.5f, 2f, (currentRotation % 360) / 360f);
             AdjustPitch(normalizedPitch, cordIndex);
+
+            // Update slider to reflect new pitch
+            pitchSlider.value = cordSounds[cordIndex].pitch;
         }
     }
 
@@ -161,4 +201,39 @@ public class HarpController : MonoBehaviour
             Debug.LogError($"AudioSource for cord {cordIndex} is not assigned!");
         }
     }
+
+    private void OnPitchSliderChanged(float newPitch)
+    {
+        if (selectedCord == null) return;
+
+        int cordIndex = GetCordIndex(selectedCord);
+        if (cordIndex != -1)
+        {
+            AdjustPitch(newPitch, cordIndex);
+        }
+    }
+
+    private void EvaluateAndProceed()
+    {
+        float targetPitch = 1.25f;
+        float totalScore = 0f;
+
+        foreach (var sound in cordSounds)
+        {
+            if (sound != null)
+            {
+                float pitchDifference = Mathf.Abs(sound.pitch - targetPitch);
+                float score = Mathf.Clamp(pitchDifference * 100, 0, 100); // Scaled difference
+
+                totalScore += score;
+            }
+        }
+
+        Debug.Log($"Total Score (Lower is Better): {totalScore}");
+
+        // Proceed to the next scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }
+
