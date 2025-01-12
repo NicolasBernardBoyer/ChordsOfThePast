@@ -95,6 +95,7 @@ public class ChooseHarpLevelManager : MonoBehaviour
     public void FadeOut(GameObject chosenHarp)
     {
         chosenHarp.SetActive(false);
+        Debug.Log("This works");
     }
 
     public void BeVisible(GameObject chosenHarp)
