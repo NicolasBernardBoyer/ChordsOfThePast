@@ -53,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Abdoul/HarpTuning.unity
     guid: 0e7dd03552ee0ef41b2d2465ca95e480
+  - enabled: 1
+    path: Assets/Scenes/Wells/Partition 5.unity
+    guid: 9eace15dfe79b9b4c961855de376ef9c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

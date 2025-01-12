@@ -21,7 +21,7 @@ public class SceneReloader : MonoBehaviour
 
         public void LoadCutscene2()
         {
-            SceneManager.LoadScene("Cutscene 2");
+            SceneManager.LoadScene("Cutscene 2 Finding Harp");
         }
         public void LoadCutscene3()
         {
