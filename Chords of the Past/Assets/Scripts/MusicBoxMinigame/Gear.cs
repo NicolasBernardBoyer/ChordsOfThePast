@@ -9,6 +9,7 @@ public class Gear : MonoBehaviour
     public Sprite smallSprite;
     public Sprite mediumSprite;
     public Sprite largeSprite;
+    public GearsGameManager gameManager;
     
     void Start()
     {
@@ -30,6 +31,7 @@ public class Gear : MonoBehaviour
                 spriteRenderer.sprite = largeSprite;
                 break;
         }
+        transform.Rotate(0.0f, 0.0f, 90.0f * Time.deltaTime, Space.Self);
     }
 
     public bool attemptToPlace()
@@ -56,6 +58,22 @@ public class Gear : MonoBehaviour
                 hovering = collision.GetComponent<Notch>();
                 canPlace = true;
             } else
+            {
+                canPlace = false;
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Notch>() != null)
+        {
+            if (collision.GetComponent<Notch>().taken == false)
+            {
+                hovering = collision.GetComponent<Notch>();
+                canPlace = true;
+            }
+            else
             {
                 canPlace = false;
             }

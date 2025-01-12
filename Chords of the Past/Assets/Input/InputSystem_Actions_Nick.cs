@@ -1323,6 +1323,17 @@ public partial class @InputSystem_Actions_Nick: IInputActionCollection2, IDispos
                     ""action"": ""Reset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ed9c72b-7720-4dff-a212-630e918e055e"",
+                    ""path"": ""<MidiDevice>/note095"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },

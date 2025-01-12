@@ -7,10 +7,12 @@ public class GearsGameManager : MonoBehaviour
     {
         public InputSystem_Actions_Nick inputControls;
         public GameObject Gear;
+        public GameObject canvas;
         public float intensity = 5f;
         public float cursorMax = 5.0f;
         public float cursorMin = -5.0f;
-
+        public bool hasWon = false;
+        
         private Vector3 cursor = new Vector3(-3.0f, -3.0f, 0);
 
         //create a new input action for each different key
@@ -28,13 +30,16 @@ public class GearsGameManager : MonoBehaviour
         private void Update()
         {
             Gear.transform.position = Vector3.MoveTowards(Gear.transform.position, cursor, 1.0f);
-
-            if (Input.GetKey(KeyCode.W) && cursor.y < cursorMax) 
+            
+            if (!hasWon)
             {
-                cursor = new Vector3(cursor.x, cursor.y + 0.025f, cursor.z);
-            } else if (Input.GetKey(KeyCode.S) && cursor.y > cursorMin)
-            {
-                cursor = new Vector3(cursor.x, cursor.y - 0.025f, cursor.z);
+                 if (Input.GetKey(KeyCode.W) && cursor.y < cursorMax) 
+                {
+                    cursor = new Vector3(cursor.x, cursor.y + 0.025f, cursor.z);
+                } else if (Input.GetKey(KeyCode.S) && cursor.y > cursorMin)
+                {
+                    cursor = new Vector3(cursor.x, cursor.y - 0.025f, cursor.z);
+                }
             }
         }
 
@@ -42,13 +47,14 @@ public class GearsGameManager : MonoBehaviour
         {
             if (Gear.GetComponent<Gear>().attemptToPlace())
             {
-                if (!CheckWinCondition())
+                hasWon = CheckWinCondition();
+                if (!hasWon)
                 {
                     Gear = Instantiate(Gear, cursor, Quaternion.identity);
                 } else
                 {
-                    Scene scene = SceneManager.GetActiveScene();
-                    SceneManager.LoadScene(scene.name);
+                    canvas.SetActive(true);
+                    OnDisable();
                 }
             }
         }

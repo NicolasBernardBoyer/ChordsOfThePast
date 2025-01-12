@@ -172,3 +172,4 @@ MonoBehaviour:
   smallSprite: {fileID: -8173196693299195349, guid: 282e4dd5b28cacb45bd3dc781b50e853, type: 3}
   mediumSprite: {fileID: 7631356595286212386, guid: c76350c2776b11540ab1df3b9cfe09d7, type: 3}
   largeSprite: {fileID: 2580343225098560227, guid: c1f41ef4bd29f5941874902efc177b65, type: 3}
+  gameManager: {fileID: 293731340500290542, guid: 0b3a9656c96959e45854feb6c4d56538, type: 3}
