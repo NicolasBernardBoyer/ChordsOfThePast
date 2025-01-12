@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Darcy/MainMenu.unity
     guid: ea9dd9ae5a5b7584fa656d59390e0d42
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Darcy/BADChooseHarp.unity
     guid: 2db3e70bfd3860b40ba8b2951b732f07
   - enabled: 1
@@ -26,6 +26,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Darcy/EndOfChooseHarp.unity
     guid: cbf8385201e4465479246dddb5ef1092
+  - enabled: 1
+    path: Assets/Scenes/Wells/Partition 1.unity
+    guid: bd72cf52bf52b9d46840eaa907eb7cbb
+  - enabled: 1
+    path: Assets/Scenes/Wells/Partition 2.unity
+    guid: d26c441c2141e2646b6b5483ed7a5d5f
+  - enabled: 1
+    path: Assets/Scenes/Wells/Cutscene 2 Finding Harp.unity
+    guid: 3a1675e89d9bc744fb5c9fab69ebeca5
+  - enabled: 1
+    path: Assets/Scenes/Wells/Cutscene 3.unity
+    guid: eb3f045dbd374a74082eeb7e5fc9b128
+  - enabled: 1
+    path: Assets/Scenes/Wells/Cutscene 4.unity
+    guid: c89243fce00f0fc4f83269af8a1ce1c0
+  - enabled: 1
+    path: Assets/Scenes/Wells/Partition 3.unity
+    guid: 522d3848fd884ad4a8d10425e333dbb6
+  - enabled: 1
+    path: Assets/Scenes/Wells/Partition 4.unity
+    guid: abf43f7238d34d94da9be9800b0fac6a
+  - enabled: 1
+    path: Assets/Scenes/Skye/FirstSong.unity
+    guid: 60992b543162e42658e132d3039376ef
+  - enabled: 1
+    path: Assets/Scenes/Abdoul/HarpTuning.unity
+    guid: 0e7dd03552ee0ef41b2d2465ca95e480
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
