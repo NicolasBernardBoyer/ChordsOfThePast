@@ -136,14 +136,18 @@ public class HarpController : MonoBehaviour
         if (border != null) border.gameObject.SetActive(false);
     }
 
+    private float previousRotateContextValue = -1;
     private void RotateCord(InputAction.CallbackContext context)
     {
+
         if (selectedCord == null) return;
 
-        float rotationValue = context.ReadValue<float>();
+        float newValue = context.ReadValue<float>();
+        float rotationValue = 40 * (previousRotateContextValue -  newValue);
+        previousRotateContextValue = newValue;
         Debug.Log($"Rotation value: {rotationValue}");
 
-        float rotationSpeed = 400f;
+        float rotationSpeed = 700f;
         selectedCord.transform.Rotate(0, 0, rotationValue * rotationSpeed * Time.deltaTime);
 
         // Get current cord index and adjust its pitch

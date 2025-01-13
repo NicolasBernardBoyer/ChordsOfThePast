@@ -1217,7 +1217,7 @@ public partial class @InputSystem_Actions_Nick: IInputActionCollection2, IDispos
                 {
                     ""name"": """",
                     ""id"": ""c5d269d9-0202-44d8-9279-af27fac04bcf"",
-                    ""path"": ""<MidiDevice>/control007"",
+                    ""path"": ""<MidiDevice>/control020"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",

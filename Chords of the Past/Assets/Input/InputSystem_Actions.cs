@@ -1721,12 +1721,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Rotate"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""c7272b21-7030-4244-88a1-7077799a8a64"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""ChooseFirstCord"",
@@ -1776,17 +1776,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""f310d246-1f6e-403f-81fb-e89bbef37bf6"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Rotate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""1D Axis"",
                     ""id"": ""e239e454-da98-47a4-8443-19b24157cc71"",
                     ""path"": ""1DAxis"",
@@ -1820,9 +1809,53 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""13a3a649-376d-40ae-b520-f6113813ef88"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""071533eb-e10b-44d2-9da9-dd173dc86124"",
+                    ""path"": ""<MidiDevice>/note091"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""22a308bb-2490-4f00-a263-b43c922dc79a"",
+                    ""path"": ""<MidiDevice>/note092"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11691f74-6cb2-45b5-8083-c3a86ff12276"",
+                    ""path"": ""<MidiDevice>/control016"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": """",
                     ""id"": ""f0b0253b-13b8-4d87-a430-82d2b6e1d429"",
-                    ""path"": """",
+                    ""path"": ""<MidiDevice>/note024"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1844,7 +1877,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0da68644-3d37-434e-a142-50e0ea87ac51"",
-                    ""path"": """",
+                    ""path"": ""<MidiDevice>/note025"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1866,7 +1899,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2e0e5c43-41c2-4105-9f09-dba61164992b"",
-                    ""path"": """",
+                    ""path"": ""<MidiDevice>/note026"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1888,7 +1921,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""763dd989-f198-4dee-835b-d29f9f1844e3"",
-                    ""path"": """",
+                    ""path"": ""<MidiDevice>/note027"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1911,6 +1944,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""03dc8ae4-0141-4fe4-ad10-392e4f9de0c4"",
                     ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlaySong"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7e3b58cc-20e4-41bc-ad5d-5e038499f441"",
+                    ""path"": ""<MidiDevice>/note094"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
