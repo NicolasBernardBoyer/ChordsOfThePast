@@ -550,8 +550,8 @@ Camera:
   m_GameObject: {fileID: 843866073}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2d2661e223972364ba0119f47be922fe, type: 3}
+  m_Texture: {fileID: 8400000, guid: 8a2c0c7f2e0c4d34a9bd5b1252877938, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -758,7 +758,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 630, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059323729
 MonoBehaviour:
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -7119673392616839097, guid: dbc618c96e1eabf4295f61e4f9a58206, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
