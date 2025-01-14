@@ -5,6 +5,7 @@ public class Gear : MonoBehaviour
     public int type = 0;
     public bool canPlace = false;
     public Notch hovering = null;
+    public Gear gearHovering = null;
     public SpriteRenderer spriteRenderer;
     public Sprite smallSprite;
     public Sprite mediumSprite;
@@ -45,6 +46,10 @@ public class Gear : MonoBehaviour
             }
             transform.position = hovering.transform.position;
             return true;
+        } else if (gearHovering != null)
+        {
+            hovering.taken = false;
+            Destroy(gearHovering.gameObject);
         }
         return false;
     }
@@ -62,6 +67,10 @@ public class Gear : MonoBehaviour
                 canPlace = false;
             }
         }
+        if (collision.GetComponent<Gear>() != null)
+        {
+            gearHovering = collision.GetComponent<Gear>();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -78,6 +87,10 @@ public class Gear : MonoBehaviour
                 canPlace = false;
             }
         }
+        if (collision.GetComponent<Gear>() != null)
+        {
+            gearHovering = collision.GetComponent<Gear>();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -89,6 +102,10 @@ public class Gear : MonoBehaviour
                 hovering = null;
                 canPlace = false;
             }
+        }
+        if (collision.GetComponent<Gear>() != null)
+        {
+            gearHovering = null;
         }
     }
 }

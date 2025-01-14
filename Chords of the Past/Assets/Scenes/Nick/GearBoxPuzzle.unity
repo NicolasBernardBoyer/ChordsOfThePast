@@ -2423,6 +2423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6345823073452127005, guid: fe287d83de41bc84db24e18296652ce7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6670081104695985925, guid: fe287d83de41bc84db24e18296652ce7, type: 3}
       propertyPath: type
       value: 0

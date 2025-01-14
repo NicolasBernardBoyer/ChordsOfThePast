@@ -147,7 +147,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   type: 0
   canPlace: 0
   hovering: {fileID: 0}
+  gearHovering: {fileID: 0}
   spriteRenderer: {fileID: 6083885959016384499}
   smallSprite: {fileID: -8173196693299195349, guid: 282e4dd5b28cacb45bd3dc781b50e853, type: 3}
   mediumSprite: {fileID: 7631356595286212386, guid: c76350c2776b11540ab1df3b9cfe09d7, type: 3}
