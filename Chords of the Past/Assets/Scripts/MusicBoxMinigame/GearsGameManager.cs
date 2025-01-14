@@ -35,10 +35,10 @@ public class GearsGameManager : MonoBehaviour
             {
                  if (Input.GetKey(KeyCode.W) && cursor.y < cursorMax) 
                 {
-                    cursor = new Vector3(cursor.x, cursor.y + 0.025f, cursor.z);
+                    cursor = new Vector3(cursor.x, cursor.y + 0.025f + Time.deltaTime, cursor.z);
                 } else if (Input.GetKey(KeyCode.S) && cursor.y > cursorMin)
                 {
-                    cursor = new Vector3(cursor.x, cursor.y - 0.025f, cursor.z);
+                    cursor = new Vector3(cursor.x, cursor.y - 0.025f - Time.deltaTime, cursor.z);
                 }
             }
         }
@@ -159,8 +159,7 @@ public class GearsGameManager : MonoBehaviour
         public void ResetKey(InputAction.CallbackContext context)
         {
             Debug.Log("Pressed the reset key");
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            Gear.GetComponent<Gear>().attemptToRemove();
         }
 
 

@@ -46,10 +46,19 @@ public class Gear : MonoBehaviour
             }
             transform.position = hovering.transform.position;
             return true;
-        } else if (gearHovering != null)
+        } 
+        return false;
+    }
+    public bool attemptToRemove()
+    {
+        if (gearHovering != null)
         {
-            hovering.taken = false;
-            Destroy(gearHovering.gameObject);
+            if (hovering != null)
+            {
+                hovering.taken = false;
+                Destroy(gearHovering.gameObject);
+                return true;
+            }
         }
         return false;
     }
